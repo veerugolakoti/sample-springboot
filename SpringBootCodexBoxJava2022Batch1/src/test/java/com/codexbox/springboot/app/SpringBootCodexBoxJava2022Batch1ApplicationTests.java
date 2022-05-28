@@ -6,8 +6,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 
+
 	@Test
 	void contextLoads() {
 	}
+
 
 }
