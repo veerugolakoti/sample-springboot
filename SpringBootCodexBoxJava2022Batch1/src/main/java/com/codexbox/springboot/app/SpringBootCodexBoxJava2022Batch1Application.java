@@ -19,7 +19,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		List<EmployeeList> employeeLists = new ArrayList<>();
 		Scanner scanner=new Scanner(System.in);
 
-		for (int i = 1; i <=2; i++) {
+		for (int i = 1; i <=29; i++) {
 
 			EmployeeList employeeList=new EmployeeList();
 			System.out.println("Enter Employee " +  i  + " Details ");
