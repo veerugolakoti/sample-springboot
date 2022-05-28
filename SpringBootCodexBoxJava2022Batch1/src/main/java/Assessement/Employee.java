@@ -14,4 +14,16 @@ public class Employee {
         this.id = id;
         this.address = address;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getAddress() {
+        return address;
+    }
 }

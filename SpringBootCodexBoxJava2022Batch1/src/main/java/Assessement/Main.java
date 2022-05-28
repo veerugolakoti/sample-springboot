@@ -19,7 +19,9 @@ public class Main {
 
             Employee emp = new Employee(name, id, address);
             empList.add(emp);
-
+        }
+        for(Employee empl:empList) {
+            System.out.println(empl.getName() + " " + empl.getId() + " " + empl.getAddress());
         }
     }
 }
