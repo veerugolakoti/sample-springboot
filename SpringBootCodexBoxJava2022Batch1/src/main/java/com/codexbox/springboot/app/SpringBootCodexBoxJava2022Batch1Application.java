@@ -1,20 +1,22 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.swathi.assesment.EmployeeDetails;
+import com.codexbox.springboot.app.swathi.assesment.collections.StackExample;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
-        SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
+        //SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
         //
-
+/*
         List<EmployeeDetails> employees = new ArrayList<>();
         //for ( EmployeeDetails var:employees)
         for (int i = 1; i <= 29; i++) {
@@ -41,7 +43,23 @@ public class SpringBootCodexBoxJava2022Batch1Application {
         for (int i = 0; i <employees.size(); i++) {
             // System.out.println(Employee.get(i).printEmployeeDetails());
             employees.get(i).printEmployeeDetails();
-        }
-
+        }*/
+        StackExample object=new StackExample();
+            Stack<Integer> stack1 = new Stack<>();
+            Stack<String> stack2 = new Stack<>();
+            stack1.push(object.a);
+            stack1.push(object.b);
+            stack1.push(object.c);
+        System.out.println("adding elements");
+        System.out.println(stack1);
+       // for (int i=0;i<4;i++) {
+            System.out.println(stack1.pop());
+       // }
+        stack2.push(object.name);
+        stack2.push(object.name1);
+        System.out.println("adding elements" + stack2);
+        System.out.println(stack2.pop());
+      //  for (int i=0;i<4;i++){
     }}
+//
 
