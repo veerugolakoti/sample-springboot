@@ -16,7 +16,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		Scanner sc=new Scanner(System.in);
 
 		for (int i=1;i<=2;i++) {
-			System.out.println(">>>>Employee details<<<<");
+			System.out.println(">>>>Employee " +i+ " details<<<<");
 			System.out.print(" Empid :");
 			String Id=sc.next();
 			System.out.print(" EmpName:");
@@ -29,7 +29,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		}
 		System.out.println("my total employee :");
 		for (Employee e:list) {
-			System.out.println(e.Id+" : "+e.Name+" : "+e.Address);
+			System.out.println(e.id+" : "+e.name+" : "+e.address);
 		}
 	}
 }

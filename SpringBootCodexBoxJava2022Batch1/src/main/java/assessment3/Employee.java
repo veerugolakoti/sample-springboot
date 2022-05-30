@@ -1,14 +1,14 @@
 package assessment3;
 
 public  class Employee {
-     public  Integer Id;
-     public String Name;
-     public  String Address;
-     public Employee(String Id, String name, String address)
+     public  String id;
+     public String name;
+     public  String address;
+     public Employee(String id, String name, String address)
      {
-          this.Id = Integer.valueOf(Id);
-          this.Name = name;
-          this.Address=address;
+          this.id = String.valueOf(id);
+          this.name = name;
+          this.address=address;
      }
 }
 
