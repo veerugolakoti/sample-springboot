@@ -1,6 +1,7 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.vamshi.collections.Employee;
+import com.codexbox.springboot.app.vamshi.collections.StackExample;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -15,9 +16,9 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 	public static void main(String[] args) {
 //		SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 
-		List<Employee> list = new ArrayList<>();
+		/*List<Employee> list = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
-		for (int i = 1; i <= 2; i++) {
+		for (int i = 1; i <= 29; i++) {
 			System.out.println("Enter Details of Employee" + i + "");
 			System.out.println("Enter ID: ");
 			String IdNo = scanner.next();
@@ -32,8 +33,12 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		System.out.println("Total details of employees"+list.size());
 		for (Employee e:list) {
 			System.out.println(e.IdNo+" : "+e.name+" : "+e.address);
-		}
+		}*/
+
+		StackExample example = new StackExample();
+		example.stackOperation();
 	}
+
 }
 
 
