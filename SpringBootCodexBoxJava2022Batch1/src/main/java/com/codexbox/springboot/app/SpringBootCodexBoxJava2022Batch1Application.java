@@ -3,33 +3,40 @@ import assessment3.Employee;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 
-		List<Employee> list = new java.util.ArrayList<>();
-		Scanner sc=new Scanner(System.in);
-
-		for (int i=1;i<=2;i++) {
-			System.out.println(">>>>Employee " +i+ " details<<<<");
-			System.out.print(" Empid :");
-			String Id=sc.next();
-			System.out.print(" EmpName:");
-			String Name=sc.next();
-			System.out.print(" EmpAddress:");
-			String Address=sc.next();
-
-			Employee employee=new Employee(Id,Name,Address);
+		List<Employee> list = new ArrayList<>();
+		for (int i = 1; i < 2; i++) {
+			Employee employee = new Employee();
+			System.out.println(">>>>Employee " + i + " details<<<<");
+			employee.Details();
 			list.add(employee);
 		}
-		System.out.println("my total employee :");
-		for (Employee e:list) {
-			System.out.println(e.id+" : "+e.name+" : "+e.address);
+		for (Employee e : list) {
+			e.Details();
+		}
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Employee Absent Name : ");
+		String str = sc.next();
+		Employee emp = new Employee();
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId().equalsIgnoreCase(str)) {
+				System.out.println(">>>>New employee details<<<<");
+				emp.Details();
+				list.set(i, emp);
+				break;
+			}
+		}
+			for (Employee em : list) {
+				em.Details();
+			}
 		}
 	}
-}
+
