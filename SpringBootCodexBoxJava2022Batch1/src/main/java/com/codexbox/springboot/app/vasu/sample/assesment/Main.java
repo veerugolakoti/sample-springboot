@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.vasu.sample;
+package com.codexbox.springboot.app.vasu.sample.assesment;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,10 +9,10 @@ import java.util.Scanner;
     public class Main {
 
         public static void main(String[] args) {
-            List<Employee> employeeList=new ArrayList<>();
+           /* List<Employee> employeeList=new ArrayList<>();
             Scanner obj=new Scanner(System.in);
             for (int i = 1; i <=29 ; i++) {
-                System.out.println("Employee details" +i+ "Details");
+                System.out.println("Enter Employee" + i + "Details");
 
                 System.out.println("Enter employee name: ");
                 String name =obj.next();
@@ -25,8 +25,11 @@ import java.util.Scanner;
                 employeeList.add(employee);
             }
             System.out.println("my total employees:" +employeeList.size());
-        }
+        }*/
 
+            // }
+
+        }
     }
 
 

@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.vasu.sample;
+package com.codexbox.springboot.app.vasu.sample.assesment;
 public class Employee {
     private String Name;
     private Integer Id;
