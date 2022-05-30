@@ -1,18 +1,21 @@
 package com.codexbox.springboot.app.swathi.assesment.mainmethod;
 
 import com.codexbox.springboot.app.swathi.assesment.EmployeeDetails;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+
+
+        public static void main(String[] args) {
         // SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 
         List<EmployeeDetails> employees = new ArrayList<>();
-
-        for (int i = 1; i < 29; i++) {
+        //for ( EmployeeDetails var:employees)
+        for (int i = 1; i <= 3; i++) {
             Scanner object = new Scanner(System.in);
             System.out.println("employee name");
             String EmployeeName = object.next();
@@ -23,12 +26,21 @@ public class Main {
             EmployeeDetails employee = new EmployeeDetails(EmployeeName, EmployeeId, employeeAddress);
            employees.add(employee);
 
-            //employee.printEmployeeDetails();
+
         }
-        for (int i = 1; i < 29; i++) {
+
+        for (int i = 0; i <employees.size(); i++) {
            // System.out.println(Employee.get(i).printEmployeeDetails());
             employees.get(i).printEmployeeDetails();
         }
+
+        employees.remove(employees.get(1));
+
+        for (int i = 0; i <employees.size(); i++) {
+            // System.out.println(Employee.get(i).printEmployeeDetails());
+            employees.get(i).printEmployeeDetails();
+        }
+
     }}
 
 
