@@ -16,39 +16,40 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 		//LinkedListExample example = new LinkedListExample();
 		//System.out.println(example.loadMyList());
-		Scanner sc = new Scanner (System.in);
+		Scanner sc = new Scanner(System.in);
 		List<Employee> list = new LinkedList<>();
-		Employee emp = new Employee();
-		for(int i=1;i<=3;i++){
-			System.out.println("Enter employee "+ i +" details:");
-			System.out.println("enter employee id");
-			Integer eid = sc.nextInt();
-			System.out.println("enter employee name");
-			String name = sc.next();
-			System.out.println("enter the address ");
-			String address = sc.next();
-			Employee emp1 = new Employee(eid,name,address);
-			list.add(emp1);
+
+		for (int i = 0; i < 2; i++) {
+			Employee emp = new Employee();
+			System.out.println("Enter employee " + (i+1) + " details:");
+			emp.setDetails();
+			list.add(emp);
 		}
-		System.out.println(list);
+		for (Employee e : list) {
+			e.showDetails();
+		}
 		System.out.println("enter how many employees absent");
 		Integer number = sc.nextInt();
-		if(number>0) {
+		if (number > 0) {
 			System.out.println("enter name of employee/employees is/are absent");
-			for (int i = 1; i <= number; i++) {
+			for (int i = 0; i < list.size(); i++) {
+				Employee employee = new Employee();
 				String absent = sc.next();
-				//System.out.println(list.indexOf(absent));
-				 emp.setDetails();
-				System.out.println("enter the index of a employee");
-				Integer index = sc.nextInt();
-				list.set(index,emp);
-				break;
+				if (list.get(i).getEmployee_name().equalsIgnoreCase(absent)) {
+					System.out.println("enter new employee details:");
+					employee.setDetails();
+					System.out.println("index of old employee is");
+					Integer index = list.indexOf(list.get(i).getEmployee_name());
+					System.out.println(index);
+					list.set(i, employee);
 				}
-			System.out.println(list);
+				break;
+			}
+				for (Employee e : list) {
+					e.showDetails();
+				}
 
 			}
-
 		}
-
 	}
 

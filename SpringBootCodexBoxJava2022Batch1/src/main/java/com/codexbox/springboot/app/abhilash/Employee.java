@@ -16,30 +16,34 @@ public class Employee {
         this.employee_name = employee_name;
         this.address = address;
     }
-    public void setDetails(){
-       Scanner sc= new Scanner(System.in);
-        List<Employee> list = new ArrayList<>();
-        Employee emp = null;
-            System.out.println("Enter employee details:");
-            System.out.println("enter employee id");
-            Integer eid = sc.nextInt();
-            System.out.println("enter employee name");
-            String name = sc.next();
-            System.out.println("enter the address ");
-            String address = sc.next();
-        emp = new Employee(eid,name,address);
-        list.add(emp);
 
+    public Integer getEmployee_id() {
+        return employee_id;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "employee_id=" + employee_id +
-                ", employee_name='" + employee_name + '\'' +
-                ", address='" + address + '\'' +
-                '}'+"\n";
+    public String getEmployee_name() {
+        return employee_name;
     }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setDetails() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter employee details:");
+        System.out.println("enter employee id");
+        employee_id = sc.nextInt();
+        System.out.println("enter employee name");
+        employee_name = sc.next();
+        System.out.println("enter the address ");
+        address = sc.next();
+    }
+    public void showDetails() {
+        System.out.println("employee details:");
+        System.out.println("employee id is :" + getEmployee_id() );
+        System.out.println("employee name is: " + getEmployee_name());
+        System.out.println("employee address is: " + getAddress());
+    }
+
 }
