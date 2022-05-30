@@ -10,22 +10,40 @@ public class AssignementCollection {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the employee details:");
 
-        EmpDetails empDitelsObj = new EmpDetails();
 
-        for(int i=0; i<29; i++){
+
+        for(int i=1; i<=2; i++){
+            EmpDetails empObj1 = new EmpDetails();
             System.out.println("enter id:"+i);
-            empDitelsObj.setEmpId(sc.nextInt());
+            empObj1.setEmpId(sc.nextInt());
             System.out.println("enter name:");
-            empDitelsObj.setEmpName(sc.next());
+            empObj1.setEmpName(sc.next());
             System.out.println("enter address:");
-            empDitelsObj.setEmpAdd(sc.next());
+            empObj1.setEmpAdd(sc.next());
 
-            empList.add(empDitelsObj);
+            empList.add(empObj1);
+        }
+        for(EmpDetails emp: empList) {
+            emp.empMethod();
+
         }
 
 
-        for (EmpDetails empDetails: empList) {
-            empDetails.empDataDisplay();
+        Scanner sc2 = new Scanner(System.in);
+        System.out.println("enter the absent employee name u want to remove :");
+        String str = sc2.nextLine();
+        EmpDetails empObj2 = new EmpDetails();
+
+        for(int i = 0; i <empList.size(); i++) {
+            if (empList.get(i).getEmpId().equals(str)) {
+                System.out.println("enter the emp details :");
+                empObj2.setEmpId(i);
+                empList.set(i, empObj2);
+
+            }break;
+        }
+        for(EmpDetails emp: empList) {
+            emp.empMethod();
 
         }
     }
