@@ -19,7 +19,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		int count = 1;
 		List<Employee> list = new LinkedList<>();
 		Scanner s = new Scanner(System.in);
-		for (int i = 1; i <= 29; i++) {
+		for (int i = 1; i <= 3L; i++) {
 			System.out.println("========Enter the employee " + i + " details=========");
 			System.out.println("Enter the Employee id");
 			Integer id = Integer.parseInt(s.nextLine());
@@ -39,7 +39,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			System.out.println("========Remove person=========");
 			System.out.println("Enter the Employee id ");
 			Integer id = Integer.parseInt(s.nextLine());
-		for (int i=1;i<=29;i++){
+		for (int i=1;i<=3;i++){
 
 				if (id == list.get(i).getId()){
 					System.out.println(list.get(i).getId() + " Employee  Removed");
