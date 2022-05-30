@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.dhivya;
+package com.codexbox.springboot.app.dhivya.assisment;
 public class EmployeeList {
     public String name;
     public Integer Id;
