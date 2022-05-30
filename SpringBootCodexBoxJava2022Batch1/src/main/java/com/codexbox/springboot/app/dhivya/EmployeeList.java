@@ -1,6 +1,4 @@
 package com.codexbox.springboot.app.dhivya;
-
-import java.util.Scanner;
 public class EmployeeList {
     public String name;
     public Integer Id;
@@ -24,18 +22,11 @@ public class EmployeeList {
     public void setAddress(String address) {
         this.address = address;
     }
-
-public  void detils(){
-    System.out.println("---------------------------------------------------");
-    System.out.println(name + " " + Id  + " " +  address);
-    //System.out.println(Id);
-    //System.out.println(address);
-
-}
-
-
-
-
-
+    public  void detils(){
+        System.out.println("---------------------------------------------------");
+        System.out.println(name + " " + Id  + " " +  address);
+        //System.out.println(Id);
+        //System.out.println(address);
     }
+}
 
