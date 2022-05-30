@@ -19,4 +19,16 @@ public void display(){
     System.out.println("Enter the Employee name = " +  name);
     System.out.println("Enter the Employee address  = " +  address);
 }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
 }
