@@ -7,17 +7,17 @@ import java.util.Scanner;
 
 public class SpringBootCodexBoxJava2022Batch1Application {
     public static void main(String[] args) {
-        SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
+//        SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
         List<CodexBoxEmployee> addEmpdetails = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        for (int i=1; i<=2 ;i++){
-            System.out.println("Enter Employee" + i + "Details");
-            System.out.println("Enter name");
-            String name = scanner.next();
-            System.out.println("Enter Id");
-            Integer id = scanner.nextInt();
-            System.out.println("Enter Address");
-            String address = scanner.next();
+        for (int i=1; i<3 ;i++){
+            System.out.println("Enter Employee" + i + " Details");
+            System.out.println("Enter Employee " + i + " name");
+            String name = scanner.nextLine();
+            System.out.println("Enter Employee" + i +  " Id");
+            Integer id = Integer.parseInt(scanner.nextLine());
+            System.out.println("Enter Employee"  +i + " Address");
+            String address = scanner.nextLine();
 
             CodexBoxEmployee codexBoxEmployee = new CodexBoxEmployee(name,id, address);
             addEmpdetails.add(codexBoxEmployee);
@@ -25,6 +25,29 @@ public class SpringBootCodexBoxJava2022Batch1Application {
         for (CodexBoxEmployee cx:addEmpdetails) {
             cx.display();
         }
-        System.out.println("My total employee" + addEmpdetails.size());
+        System.out.print("Enter the id you want to remove: ");
+        int num = scanner.nextInt();
+        try
+        {
+            for (int i = 0; i < addEmpdetails.size(); i++) {
+                if (num == addEmpdetails.get(i).getEmployeeId()){
+                    addEmpdetails.remove(num);
+                }
+
+
+
+            }
+        }
+        catch(IndexOutOfBoundsException e){
+            System.out.println("enter right number to remove:"+ e);
+            System.out.print("Enter the id you want to remove: ");
+            num = scanner.nextInt();
+        }
+
+        for (CodexBoxEmployee cx:addEmpdetails) {
+            cx.display();
+        }
+
+        System.out.println("My total employee: " + addEmpdetails.size());
     }
 }

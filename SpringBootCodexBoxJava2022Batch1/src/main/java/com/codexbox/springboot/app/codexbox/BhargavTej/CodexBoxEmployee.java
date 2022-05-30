@@ -1,6 +1,7 @@
 package com.codexbox.springboot.app.codexbox.BhargavTej;
 
-public class CodexBoxEmployee { private String employeename ;
+public class CodexBoxEmployee {
+    private String employeename ;
     private Integer employeeId;
     private String employeeAddress;
 
@@ -10,10 +11,21 @@ public class CodexBoxEmployee { private String employeename ;
         this.employeeAddress = Address;
     }
     public void display(){
-        System.out.println("Details of Empoyees");
-        System.out.println("Employee name is :" + employeename + " "+ employeeId + "  " + employeeAddress );
-//        System.out.println("Employee Id is :" + employeeId);
-//        System.out.println("Employee Address is :" +employeeAddress);
+        System.out.println("Details of Employees " );
+        System.out.println("Employee name is :" + employeename );
+        System.out.println("Employee Id is :" + employeeId);
+        System.out.println("Employee Address is :" +employeeAddress);
     }
 
+    public String getEmployeename() {
+        return employeename;
+    }
+
+    public Integer getEmployeeId() {
+        return employeeId;
+    }
+
+    public String getEmployeeAddress() {
+        return employeeAddress;
+    }
 }
