@@ -9,31 +9,29 @@ public class Employee {
     private  long empid = sc.nextInt();
     private String city = sc.next();
 
-/*public Employee(String name,long empid,String city){
-    this.name=name;
-    this.empid=empid;
-    this.city=city;
-}*/
+/*    private String name;
+    private  long empid ;
+    private String city ;
+    public Employee(String name,long empid,String city){
+        this.name=name;
+        this.empid=empid;
+        this.city=city;
+    }*/
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public long getEmpid() {
         return empid;
     }
-
     public void setEmpid(long empid) {
         this.empid = empid;
     }
-
     public String getCity() {
         return city;
     }
-
     public void setCity(String city) {
         this.city = city;
     }
