@@ -12,18 +12,11 @@ public class Employee {
          this.id= id;
          this.name=name;
          this.address=address;
-
-
-
-
-
-
-
     }
 public void display(){
     System.out.println("============Enter the Employee details=========");
-    System.out.println("Enter the Employee id 1= " +  id);
-    System.out.println("Enter the Employee name 1= " +  name);
-    System.out.println("Enter the Employee address 1 = " +  address);
+    System.out.println("Enter the Employee id = " +  id);
+    System.out.println("Enter the Employee name = " +  name);
+    System.out.println("Enter the Employee address  = " +  address);
 }
 }
