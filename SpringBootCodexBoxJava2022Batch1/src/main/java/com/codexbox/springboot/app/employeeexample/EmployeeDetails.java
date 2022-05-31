@@ -8,6 +8,7 @@ public class EmployeeDetails {
    private String name;
    private int id;
    private String address;
+   private String absent;
 
    public void setName(String name) {
       this.name = name;
@@ -24,7 +25,7 @@ public class EmployeeDetails {
 
     public void getDetails()
     {
-       System.out.println("|||||||||||||||||||||||||||||||||||||||");
+       System.out.println(".......................");
 
        System.out.println(name+" "+id +" "+ address);
     }
