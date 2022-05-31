@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app;
 
+import com.codexbox.springboot.app.rehana.collection.PriorityQueueExample;
 import com.codexbox.springboot.app.rehana.collection.StackOperations;
 import com.codexbox.springboot.app.rehana.stackexamples.Student;
 import com.codexbox.springboot.app.rehana.stackexamples.Student3;
@@ -44,6 +45,8 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 		StackOperations s = new StackOperations();
 		s.operations();
+		PriorityQueueExample p = new PriorityQueueExample();
+		p.operations();
 
 
 
