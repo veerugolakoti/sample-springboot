@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app;
 
+import com.codexbox.springboot.app.abhilash.collection.SetArrayExample;
 import com.codexbox.springboot.app.abhilash.collection.SetExample;
 import com.codexbox.springboot.app.abhilash.collection.StackExample;
 import org.junit.jupiter.api.Test;
@@ -21,5 +22,9 @@ public class AbhilashTestClass {
         SetExample setExample = new SetExample();
         setExample.methodOnSet();
    }
-
+   @Test
+    public void testSetArrayExample() {
+       SetArrayExample setArrayExample = new SetArrayExample();
+       setArrayExample.setArray();
+}
 }

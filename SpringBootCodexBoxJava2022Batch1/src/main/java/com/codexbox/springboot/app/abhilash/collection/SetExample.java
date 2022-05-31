@@ -18,5 +18,6 @@ public class SetExample {
         System.out.println(hashset);
         ArrayList<String> arrayList = new ArrayList(hashset);
         System.out.println(arrayList);
+
     }
 }
