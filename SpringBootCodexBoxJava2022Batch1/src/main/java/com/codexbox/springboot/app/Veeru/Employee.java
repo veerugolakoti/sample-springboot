@@ -11,4 +11,15 @@ public class Employee {
         this.address = address;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Integer getEid() {
+        return eid;
+    }
+
+    public String getAddress() {
+        return address;
+    }
 }

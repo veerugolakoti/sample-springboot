@@ -2,6 +2,7 @@ package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.Veeru.Collections.MyAbstractList;
 import com.codexbox.springboot.app.Veeru.Collections.StackExample;
+import com.codexbox.springboot.app.Veeru.Employee;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -101,14 +102,43 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 	}
 	@Test
 	public  void testMapOperations() {
-		Map<String, Integer> map = new HashMap();
-		map.put("Veeru", 21);
-		map.put("Ram", 32);
-		map.put("Ram", 10);
+		Map<Integer, String> map = new HashMap();
+		map.put(1, "Veeru");
+		map.put(2, "Ram");
+		map.put(3, "Ravali");
+		map.put(45, "Viswa");
+
+		Employee employee1 = new Employee("Bhargav", 202284, "Nellore");
+		Employee employee2 = new Employee("Kalayan", 202286, "NZB");
+		Employee employee3 = new Employee("Ramesh", 202290, "Ongole");
+
+		Map<String, Employee> employeeMap =  new HashMap<>();
+		employeeMap.put("employee1", employee1);
+		employeeMap.put("employee2", employee2);
+		employeeMap.put("employe3", employee3);
+
+		System.out.println("My employee map : " + employeeMap);
+		Collection<Employee> employeeCollection =  employeeMap.values();
+
+		for (Employee emp :  employeeCollection) {
+			System.out.println("employee name is : " + emp.getName());
+		}
+
+		Employee emp = employeeMap.get("employee2");
+		System.out.println("employee2 name is : " + emp.getName());
+
 		System.out.println("My map : " + map);
-		System.out.println("Rams value is : " + map.get("Ram"));
-		Set<String> myKest = map.keySet();
+		System.out.println("Rams value is : " + map.get(2));
+		Set<Integer> myKest = map.keySet();
 		System.out.println("My all keys from my map: "+ myKest);
+		System.out.println("My all values from my map: " + map.values());
+
+		for (Map.Entry<String, Employee> entry : employeeMap.entrySet()) {
+			System.out.println("My key: " + entry.getKey( ) + " My Value " + entry.getValue().getName());
+		}
+
+
+
 	}
 
 
