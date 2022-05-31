@@ -4,6 +4,9 @@ import com.codexbox.springboot.app.renuProjects.assessments.EmployeeDetails;
 import com.codexbox.springboot.app.renuProjects.collections.ExampleOfQueue;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Stack;
 
 public class RenuTest {
@@ -37,4 +40,29 @@ public class RenuTest {
         example.QueueMethod();
 
     }
+
+
+    @Test
+    public void setExamples(){
+        HashSet<Character> charset=new HashSet<>();
+        charset.add('d');
+        charset.add('b');
+        charset.add('c');
+        charset.add('c');
+        charset.add('a');
+        charset.add('e');
+        charset.add('g');
+        charset.add('f');
+
+        System.out.println(charset);
+        System.out.println(charset.stream().count());
+        System.out.println(charset.equals('c'));
+        System.out.println(charset.contains('c'));
+        ArrayList<Character> chararray=new ArrayList<>(charset);
+        System.out.println(chararray);
+    }
+
+
+
+
 }
