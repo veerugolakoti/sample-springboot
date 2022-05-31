@@ -3,51 +3,58 @@ package com.codexbox.springboot.app;
 import ch.qos.logback.core.BasicStatusManager;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 
 public class JhansiTest {
 
 
+    private String[] hashSet;
+
     @Test
     void contextLoads() {
-        LinkedHashSet<String> hashSet = new LinkedHashSet<>();
-        hashSet.add("jhansi");
-        hashSet.add("renuka");
-        hashSet.add("dhinesh");
-        hashSet.add("swath");
-        hashSet.add("harsha");
-        hashSet.add("shiva");
-        hashSet.add("mouni");
-        hashSet.add("divya");
-        hashSet.add("sruti");
-        System.out.println("the values from my set is" + hashSet);
-        for (String name : hashSet) {
-            System.out.println(name);
-            // System.out.println(" the value of inded 1 from my set is:"+hashSet.iterator().next());
+        HashSet<Integer> hash = new HashSet<>();
+        int[] a={3,4,5,3,6,4};
+        for (int i=0;i<a.length;i++){
+            if (hash.add(a[i])==false){
+                System.out.println(a[i]+"duplicated in the array");
+            }}
+        {
+        }}
+
+    @Test
+    void priorityqueue() {
+       PriorityQueue<Integer> queue=new PriorityQueue<>();
+       queue.add(12);
+       queue.add(58);
+       queue.add(96);
+        System.out.println("printing the elements" +queue);
+        System.out.println(queue.peek());
+        queue.remove(96);
+        System.out.println(" After remove "+queue);
+
+    }
+    @Test
+    public void treeset(){
+        NavigableSet<String> ts=new TreeSet<>();
+
+        ts.add("india");
+        ts.add("america");
+        ts.add("london");
+
+        System.out.println("adding elements:"+ts);
+        System.out.println("treeset is"+ts);
+        String check="india";
+        System.out.println("contains "+check+" "+ ts.contains(check));
+        System.out.println("last value "+ts.last());
+        System.out.println("first value "+ts.first());
+        String st1="india";
 
 
-            HashSet<String> array = new HashSet<>();
-            array.add("jhansi");
-            array.add("renuka");
-            array.add("dhinesh");
-            array.add("swath");
-            array.add("harsha");
-            array.add("shiva");
-            array.add("mouni");
-            array.add("divya");
-            array.add("sruti");
-            array.add("mouni");
+    }
+    }
 
 
 
-
-                    }
-                }
-
-            }
 
 
 
