@@ -73,6 +73,44 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 
 	}
 
+	@Test
+	public void testTreeSet() {
+		ArrayDeque queue = new ArrayDeque<>();
+		queue.add("Mounika");//0
+		//queue.add(1);
+		queue.add("Name2");//1
+		queue.add("Name3");//2
+
+		HashSet<String> hashSet	= new HashSet<>();
+		hashSet.add("Veeru");
+		hashSet.add("Mounika");
+		hashSet.add("Divya");
+		hashSet.add("Divya");
+		System.out.println("Before sorting : " + hashSet);
+		hashSet.retainAll(queue);
+
+		System.out.println("After retain all method : " + hashSet);
+
+		List<String> namesSet = new ArrayList<>(hashSet);
+		namesSet.add("teja");
+		namesSet.add("Bhargav");
+		System.out.println("After sorting : " + namesSet);
+		System.out.println("Split iterator:" + namesSet.spliterator().characteristics());
+
+
+	}
+	@Test
+	public  void testMapOperations() {
+		Map<String, Integer> map = new HashMap();
+		map.put("Veeru", 21);
+		map.put("Ram", 32);
+		map.put("Ram", 10);
+		System.out.println("My map : " + map);
+		System.out.println("Rams value is : " + map.get("Ram"));
+		Set<String> myKest = map.keySet();
+		System.out.println("My all keys from my map: "+ myKest);
+	}
+
 
 
 }
