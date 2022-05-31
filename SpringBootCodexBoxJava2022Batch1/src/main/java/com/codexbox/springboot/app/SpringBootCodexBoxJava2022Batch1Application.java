@@ -1,9 +1,11 @@
 package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.dhivya.assisment.EmployeeList;
+import com.codexbox.springboot.app.dhivya.collections.HashsetOperation;
 import com.codexbox.springboot.app.dhivya.collections.QueueOperation;
 import com.codexbox.springboot.app.dhivya.collections.StackExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 @SpringBootApplication
@@ -52,12 +54,19 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 
 //stack operations
-		StackExample stackExample=new StackExample();
-		stackExample.stackoperation();
+		/*StackExample stackExample=new StackExample();
+		stackExample.stackoperation();*/
 
 //Queue operations
 		//QueueOperation queueOperation=new QueueOperation();
 		//queueOperation.queueExample();
+
+//Hash set operations
+		HashsetOperation hashsetOperation=new HashsetOperation();
+		hashsetOperation.hashsetExample();
+
+
+
 
 	}
 }
