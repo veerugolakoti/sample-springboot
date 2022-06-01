@@ -1,9 +1,7 @@
 package com.codexbox.springboot.app.Veeru;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class WordCountFromFile {
     public static void main(String[] args) {
@@ -38,5 +36,16 @@ public class WordCountFromFile {
 
     private static void findWordCount(String[] words) {
 
+
+        HashMap<String, Integer> word = new HashMap<String, Integer>();
+        for (String str : words) {
+            if (word.containsKey(str)) {
+                word.put(str, 1 + word.get(str));
+            } else {
+                word.put(str, 1);
+            }
+        }
+        System.out.println(word);
     }
+
 }
