@@ -41,6 +41,6 @@ public class BhargavTestClass {
     public void myMapExamples() {
     MapExamples mapExamples = new MapExamples();
     mapExamples.myMapExamples();
-    }
+}
 
 }

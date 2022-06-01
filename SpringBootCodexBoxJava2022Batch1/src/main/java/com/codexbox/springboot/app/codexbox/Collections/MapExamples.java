@@ -1,6 +1,7 @@
 package com.codexbox.springboot.app.codexbox.Collections;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -13,5 +14,6 @@ public class MapExamples {
         myMap.put(202285, "K.Kalyan");
         System.out.println(myMap.keySet() + " = " + myMap.values());
         System.out.println(myMap.get(202239));
+
     }
 }
