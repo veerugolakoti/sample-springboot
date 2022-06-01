@@ -1,9 +1,7 @@
 package com.codexbox.springboot.app.Veeru;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class WordCountFromFile {
     public static void main(String[] args) {
@@ -37,6 +35,14 @@ public class WordCountFromFile {
     }
 
     private static void findWordCount(String[] words) {
-
+        for (String str : words) {
+            System.out.println(str + " : " + Collections.frequency(Collections.singleton(words), str));
+        }
+        TreeSet<String> hashset = new TreeSet<>(Arrays.asList(words));
+        System.out.println(hashset);
     }
 }
+
+
+
+
