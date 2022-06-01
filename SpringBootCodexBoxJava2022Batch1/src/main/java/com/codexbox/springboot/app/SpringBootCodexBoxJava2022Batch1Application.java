@@ -19,7 +19,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		/*LinkedListExample example = new LinkedListExample();
 		System.out.println(example.loadMyList());
 		*/
-		List<EmployeesDetails> empList = new ArrayList<>();
+		List<EmployeesDetails> empList = new ArrayList<>(); 
 		Scanner sc =new Scanner(System.in);
 		for(int i = 0; i <=2 ; i++) {
 			System.out.println("Enter employee " + i + "Details");
