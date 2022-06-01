@@ -37,6 +37,17 @@ public class WordCountFromFile {
     }
 
     private static void findWordCount(String[] words) {
+        String s = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non sodales neque sodales ut. Gravida arcu ac tortor dignissim convallis aenean et tortor Ultricies mi eget mauris pharetra et ultrices neque. Vel eros donec ac odio tempor orci.";
+        String a[] = s.split(" ");
+        Map<String, Integer> word = new HashMap<>();
+        for (String str : a) {
+            if (word.containsKey(str)) {
+                word.put(str, 1 + word.get(str));
+            } else {
+                word.put(str, 1);
+            }
+        }
+        System.out.println(word);
 
     }
 }
