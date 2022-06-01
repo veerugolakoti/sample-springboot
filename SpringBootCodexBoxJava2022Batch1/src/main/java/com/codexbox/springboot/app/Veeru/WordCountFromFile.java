@@ -18,7 +18,7 @@ public class WordCountFromFile {
         try {
             br = new BufferedReader(new FileReader(file));
         } catch (FileNotFoundException e) {
-            System.out.println("Specifed file not found in location : " + filePath);
+            System.out.println("Specified file not found in location : " + filePath);
             e.printStackTrace();
         }
 
