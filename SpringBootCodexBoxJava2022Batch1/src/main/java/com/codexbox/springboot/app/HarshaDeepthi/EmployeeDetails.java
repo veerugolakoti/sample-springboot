@@ -20,7 +20,19 @@ public class EmployeeDetails {
 
 }
 
-        public void display() {
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public String getEmployeeAddress() {
+        return employeeAddress;
+    }
+
+    public void display() {
             System.out.println("Employee name is:" +employeeName);
             System.out.println("Employee id:" +employeeId);
             System.out.println("Employee address:" +employeeAddress);
@@ -28,6 +40,11 @@ public class EmployeeDetails {
 
 
         }
+
+
+    public String getName() {
+        return null;
+    }
 }
 
 
