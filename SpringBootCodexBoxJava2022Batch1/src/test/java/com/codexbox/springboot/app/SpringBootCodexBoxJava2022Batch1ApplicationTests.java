@@ -1,12 +1,13 @@
 package com.codexbox.springboot.app;
 
+import com.codexbox.springboot.app.dhivya.assisment.EmployeeList;
 import com.codexbox.springboot.app.dhivya.collections.HashsetOperation;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 
-//@SpringBootTest
+@SpringBootTest
 class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 
 	@Test
@@ -48,21 +49,51 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 	}
 
 	@Test
-	public void hashMap(){
-		Map<String ,Integer> hashmap=new HashMap<>();
-		hashmap.put("dhivya",12);
-		hashmap.put("mouni",21);
-		hashmap.put("sohail",3);
-		hashmap.put("junaid",-10);
-		hashmap.put("dinesh",10);
-		System.out.println("total size: " + hashmap.size() );
+	public void hashMap() {
+		Map<String, Integer> hashmap = new HashMap<>();
+		hashmap.put("dhivya", 12);
+		hashmap.put("mouni", 21);
+		hashmap.put("sohail", 3);
+		hashmap.put("junaid", -10);
+		hashmap.put("dinesh", 10);
+		System.out.println("total size: " + hashmap.size());
 		System.out.println(" names : " + hashmap);
 
+		EmployeeList employeeList1 = new EmployeeList();
+		employeeList1.setName("divya");
+		employeeList1.setId(1);
+		employeeList1.setAddress("chennai");
+		EmployeeList employeeList2 = new EmployeeList();
+		employeeList2.setName("mounika");
+		employeeList2.setId(2);
+		employeeList2.setAddress("guntur");
+		EmployeeList employeeList3 = new EmployeeList();
+		employeeList3.setName("sohail");
+		employeeList3.setId(3);
+		employeeList3.setAddress("hyderabad");
+
+		Map<String, EmployeeList> employeeMap = new LinkedHashMap<>();
+		employeeMap.put("employee1", employeeList1);
+		employeeMap.put("employee2", employeeList2);
+		employeeMap.put("employee3", employeeList3);
+
+		System.out.println("my Employee details : " + employeeMap);
+		Collection<EmployeeList> employeeListCollection = employeeMap.values();
+
+		for (EmployeeList emp : employeeListCollection) {
+			System.out.println("employee name is : " + emp.getName());
+		}
+//		EmployeeList emp=employeeMap.get(employeeList2);
+//		System.out.println("employee2 name is : " + emp.getName());
+
+		System.out.println(employeeMap);
+		for (Map.Entry<String, EmployeeList> entry : employeeMap.entrySet()) {
+			System.out.println(entry.getValue());
+
+		}
 
 
 	}
 
+	}
 
-
-
-}
