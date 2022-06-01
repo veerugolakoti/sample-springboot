@@ -1,6 +1,7 @@
 package com.codexbox.springboot.app.swathitest;
 
 import com.codexbox.springboot.app.swathi.assesment.collections.FindingDuplicates;
+import com.codexbox.springboot.app.swathi.assesment.collections.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -8,7 +9,7 @@ import java.util.*;
 
 
 @SpringBootTest
-    public class TestApplication {
+public class TestApplication {
     @Test
     void priorityqueue() {
 
@@ -62,10 +63,31 @@ import java.util.*;
         map.put("swathi", 10);
         map.put("jhansi", 30);
         map.put("renuka", 20);
-        System.out.println(map);
+        // System.out.println(map);
+        for (Map.Entry<String , Integer> variable:map.entrySet()) {
+            System.out.println(variable.getKey());
+            System.out.println(variable.getValue());
+        }
+        Student student1=new Student( "swathi", 64, "mulugu");
+        Student student2=new Student("jhansi" ,66 , "karimnagar");
+        Student student3=new Student( "renuka",60,"khammam");
 
+        Map<String ,Student> studentHashMap= new HashMap<>();
+        studentHashMap.put("student-1", student1);
+        studentHashMap.put("student-2", student2);
+        studentHashMap.put("student-3", student3);
+
+        System.out.println(studentHashMap);
+
+        for (Map.Entry<String,Student> studentEntry:studentHashMap.entrySet()) {
+            System.out.println("student details " + studentEntry.getKey() + " : " + studentEntry.getValue().getName() + " " + studentEntry.getValue().getId() + " " + studentEntry.getValue().getAddress());
         }
-        }
+
+        Student std = studentHashMap.get("student-2");
+        System.out.println("student-3 details" + std.getName());
+
+    }
+}
 
 
 
