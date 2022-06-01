@@ -5,9 +5,26 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeDetails {
-   private String name;
-   private int id;
-   private String address;
+   public String name;
+
+   public String getName() {
+      return name;
+   }
+
+   public int getId() {
+      return id;
+   }
+
+   public String getAddress() {
+      return address;
+   }
+
+   public String getAbsent() {
+      return absent;
+   }
+
+   public int id;
+   public String address;
    private String absent;
 
    public void setName(String name) {

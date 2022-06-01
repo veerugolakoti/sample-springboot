@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app;
 
+import com.codexbox.springboot.app.employeeexample.EmployeeDetails;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -48,16 +49,45 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 		System.out.println("Divya value is :" + hashmap.get("Divya"));
 
 
-		}
+			EmployeeDetails employeeDetails1 = new EmployeeDetails();
+			employeeDetails1.setName("dhivya");
+			employeeDetails1.setId(124);
+			employeeDetails1.setAddress("chennai");
+			 EmployeeDetails employeeDetails2 = new EmployeeDetails();
+			employeeDetails2 .setName("sohail");
+			employeeDetails2.setId(456);
+			employeeDetails2.setAddress("hyderabad");
+			EmployeeDetails employeeDetails3 = new EmployeeDetails();
+			employeeDetails3.setName("dinesh");
+			employeeDetails3.setId(789);
+			employeeDetails3.setAddress("kurnool");
+			Map<String,EmployeeDetails> empdetails = new HashMap<>();
+			empdetails.put("employee2",employeeDetails2);
+			empdetails.put("employee3",employeeDetails3);
+			System.out.println( empdetails);
 
 
 
-	@Test
+			for(EmployeeDetails emp :empdetails.values()) {
+				System.out.println(" employee name is :" + emp.getName());
+				System.out.println("employee id is :" +emp.getId());
+				System.out.println("employee address is "+ emp.getAddress());
 
-	      public void setexample(){
+			}
+			EmployeeDetails emp = empdetails.get(employeeDetails1);
+			System.out.println("employee1 name is : "+emp.getName());
+
+			}
 
 
-	}
-		}
+
+			}
+
+
+
+
+
+
+
 
 
