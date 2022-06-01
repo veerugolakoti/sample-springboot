@@ -21,16 +21,9 @@ public class SetEx {
         set1.add("z");
         set1.add("b");
         set1.add("b");
-
-
-
-
         System.out.println("insertion order :"+set1);
 
         Set<String> treset = new TreeSet<>(set1);
-
-
-
 
         System.out.println("shorted order :"+ treset);
         set1.addAll(set);
@@ -47,8 +40,6 @@ public class SetEx {
         System.out.println(set);
         set1.containsAll(set);
         System.out.println(set1);
-
-
 
     }
 }

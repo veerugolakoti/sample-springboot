@@ -1,8 +1,5 @@
 package feature_ranjan.collection;
 
-import feature_ranjan.assignement.EmpDetails;
-
-import java.util.List;
 import java.util.Stack;
 
 public class StackEx {
