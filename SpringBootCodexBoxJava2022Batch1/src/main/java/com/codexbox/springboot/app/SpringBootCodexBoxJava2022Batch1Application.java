@@ -1,58 +1,33 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.HarshaDeepthi.EmployeeDetails;
-import com.codexbox.springboot.app.HarshaDeepthi.StackExample;
-import org.springframework.boot.SpringApplication;
+import com.codexbox.springboot.app.Veeru.Employee;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Stack;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
+		//int count = 1;
+		List<Employee> empList = new ArrayList<>();
+		Scanner scanner = new Scanner(System.in);
+		for (int i = 1; i <= 29 ; i++) {
 
+			System.out.println("Enter Employee" + i + " Details: ");
+			System.out.println("Enter emp name: ");
+			String name = scanner.next();
+			System.out.println("Enter emp id: ");
+			Integer id = scanner.nextInt();
+			System.out.println("Enter emp address: ");
+			String address = scanner.next();
 
-		List<EmployeeDetails> employeeDetailsList = new ArrayList<>();
-
-		for (int i = 1; i <= 5; i++) {
-			Scanner scanner = new Scanner((System.in));
-			System.out.println("enter emp id:");
-			Integer empId = scanner.nextInt();
-
-			System.out.println("enter emp name:");
-			String empName = scanner.next();
-
-			System.out.println("enter the emp address:");
-			String empadd = scanner.next();
-			EmployeeDetails empDetl = new EmployeeDetails(empId, empName, empadd);
-
-			employeeDetailsList.add(empDetl);
-
+			Employee employee = new Employee(name, id, address);
+			empList.add(employee);
 		}
-
-		for (int i = 0; i < employeeDetailsList.size(); i++) {
-			employeeDetailsList.get(i).display();
-		}
-		employeeDetailsList.remove(0);
-
-		for (int i = 0; i < employeeDetailsList.size(); i++) {
-			employeeDetailsList.get(i).display();
-		}
+		System.out.println("My total employees : " + empList.size());
 	}
 
-	}
-//		StackExample  var=new StackExample();
-//		Stack<String> variable=new Stack<>();
-//		variable.push(var.name);
-//		variable.push(var.name1);
-//		variable.push(var.name2);
-//
-//		System.out.println(variable);
-//
-//
-//	}
-//}
+}
