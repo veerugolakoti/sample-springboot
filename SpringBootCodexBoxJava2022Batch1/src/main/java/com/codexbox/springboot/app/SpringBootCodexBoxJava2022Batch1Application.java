@@ -1,14 +1,7 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.TejaAravind.Employee;
-import com.codexbox.springboot.app.TejaAravind.ListOfEmployees;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Scanner;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -16,6 +9,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 	public static void main(String[] args) {
 		List<Employee> list = new ArrayList<>();
 		for (int i = 0; i < 2; i++) {
+
 			Employee employee = new Employee();
 			System.out.println("Enter the Employee "+(i+1)+" details : ");
 			employee.setDetails();
