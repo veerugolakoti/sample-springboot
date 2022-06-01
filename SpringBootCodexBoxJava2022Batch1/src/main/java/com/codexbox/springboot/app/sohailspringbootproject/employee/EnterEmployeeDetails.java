@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.sohailspringbootproject;
+package com.codexbox.springboot.app.sohailspringbootproject.employee;
 
 import java.util.ArrayList;
 import java.util.List;

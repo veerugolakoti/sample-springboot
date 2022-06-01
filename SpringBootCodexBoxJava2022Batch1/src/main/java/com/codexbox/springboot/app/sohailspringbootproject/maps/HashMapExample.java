@@ -1,6 +1,6 @@
 package com.codexbox.springboot.app.sohailspringbootproject.maps;
 
-import com.codexbox.springboot.app.sohailspringbootproject.Employee;
+import com.codexbox.springboot.app.sohailspringbootproject.employee.Employee;
 import org.junit.Test;
 
 import java.util.*;

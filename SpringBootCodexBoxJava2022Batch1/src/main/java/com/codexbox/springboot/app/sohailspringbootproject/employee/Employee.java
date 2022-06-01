@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.sohailspringbootproject;
+package com.codexbox.springboot.app.sohailspringbootproject.employee;
 
 public  class Employee {
     private String name;
