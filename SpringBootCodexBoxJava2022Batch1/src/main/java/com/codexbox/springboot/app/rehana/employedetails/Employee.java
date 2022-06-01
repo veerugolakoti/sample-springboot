@@ -16,5 +16,16 @@ public class Employee {
 
     }
 
-        }
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+}
 
