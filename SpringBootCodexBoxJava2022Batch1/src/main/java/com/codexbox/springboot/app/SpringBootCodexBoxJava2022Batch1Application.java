@@ -1,12 +1,9 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.vamshi.collections.Employee;
-import com.codexbox.springboot.app.vamshi.collections.StackExample;
-import org.springframework.boot.SpringApplication;
+import com.codexbox.springboot.app.Veeru.Employee;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,37 +11,23 @@ import java.util.Scanner;
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
-//		SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
-
-		/*List<Employee> list = new ArrayList<>();
+		//int count = 1;
+		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
-		for (int i = 1; i <= 29; i++) {
-			System.out.println("Enter Details of Employee" + i + "");
-			System.out.println("Enter ID: ");
-			String IdNo = scanner.next();
-			System.out.println("Enter Employee Name: ");
+		for (int i = 1; i <= 29 ; i++) {
+
+			System.out.println("Enter Employee" + i + " Details: ");
+			System.out.println("Enter emp name: ");
 			String name = scanner.next();
-			System.out.println("Enter Address:");
+			System.out.println("Enter emp id: ");
+			Integer id = scanner.nextInt();
+			System.out.println("Enter emp address: ");
 			String address = scanner.next();
 
-			Employee employee = new Employee(IdNo, name, address);
-			list.add(employee);
+			Employee employee = new Employee(name, id, address);
+			empList.add(employee);
 		}
-		System.out.println("Total details of employees"+list.size());
-		for (Employee e:list) {
-			System.out.println(e.IdNo+" : "+e.name+" : "+e.address);
-		}*/
-
-		StackExample example = new StackExample();
-		example.stackOperation();
+		System.out.println("My total employees : " + empList.size());
 	}
 
 }
-
-
-
-
-
-	/*LinkedListExample example = new LinkedListExample();
-		System.out.println(example.loadMyList());
-	}*/
