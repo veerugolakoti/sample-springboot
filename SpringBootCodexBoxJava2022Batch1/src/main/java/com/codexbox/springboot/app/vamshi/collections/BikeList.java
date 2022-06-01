@@ -1,13 +1,10 @@
 package com.codexbox.springboot.app.vamshi.collections;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class BikeList {
     public void addBikes() {
-        HashSet<String> bikes = new HashSet<>();
+        Set<String> bikes = new LinkedHashSet<>();
         bikes.add("YAMAHA");
         bikes.add("HUSQVARNA");
         bikes.add("KTM");
@@ -22,31 +19,25 @@ public class BikeList {
         bikes.add("JAWA");
         System.out.println("companies of bikes i like "+bikes);
 
-        List<String> testBikes = new ArrayList<>();
-        testBikes.add("audi");
-        testBikes.add("bmw");
-        testBikes.add("ferarri");
-        testBikes.add("nissan");
-        testBikes.add("rover");
-        testBikes.add("benz");
-        testBikes.add("minicopper");
-        testBikes.add("ford");
-        testBikes.add("shelby");
-        testBikes.add("porsche");
-        testBikes.add("lambo");
-        testBikes.add("masirati");
+        List<String> testCars = new ArrayList<>();
+        testCars.add("Maserati");
+        testCars.add("Shelby");
+        testCars.add("Porsche");
+        testCars.add("Lamborghini");
+        testCars.add("Mini cooper");
+        testCars.add("Ferrari");
+        testCars.add("Nissan");
+        testCars.add("Rover");
+        testCars.add("Audi");
+        testCars.add("Bmw");
+        testCars.add("Benz");
+        testCars.add("Ford");
+        System.out.println("Company of cars"+testCars);
 
         List<String> cars = new ArrayList<>(bikes);
-        /**/
-        System.out.println("list of cars i like "+cars);
-        System.out.println("bikes number 7 "+cars.get(7));
 
+        System.out.println("bike number 7 " + cars.get(7));
     }
-
-
-
-
-
 }
 
 
