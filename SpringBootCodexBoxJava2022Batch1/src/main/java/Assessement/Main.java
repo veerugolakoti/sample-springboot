@@ -1,6 +1,7 @@
 package Assessement;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class Main {
     public static  void main(String[] args) {
         List<Employee> empList = new ArrayList<>();
         Scanner inp = new Scanner(System.in);
-        for(int i = 1; i <= 29; i++) {
+        for(int i = 1; i <= 3 ; i++) {
             System.out.println("Enter employee " + i + " details");
             System.out.print("Enter employee name: ");
             String name = inp.next();
@@ -20,8 +21,10 @@ public class Main {
             Employee emp = new Employee(name, id, address);
             empList.add(emp);
         }
+
         for(Employee empl:empList) {
             System.out.println(empl.getName() + " " + empl.getId() + " " + empl.getAddress());
         }
+
     }
 }
