@@ -1,11 +1,12 @@
-package com.codexbox.springboot.app;
+package com.codexbox.springboot.app.ganesh.Scanner.collection;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class LinkedListExample {
 
-   public void m1() {
+
+    public void m1() {
        List<String> list = new LinkedList<>();
 
        list. add("gun");

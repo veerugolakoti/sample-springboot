@@ -1,23 +1,18 @@
-package com.codexbox.springboot.app;
+package com.codexbox.springboot.app.ganesh.Scanner.collection;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 
 @SpringBootTest
-class GanestTestApp {
+public
+class ArrayListExample {
 
 
 	@Test
-	void contextLoads() {
-	}
-
-	@Test
-	public void calculate() {
-		Collection<String> empCollections = new ArrayList<>();
+	public void test() {
+		Collection<String> empCollections = new java.util.ArrayList<>();
 		empCollections.add("ganesh");
 		empCollections.add("leela");
 		empCollections.add("jaddu");
@@ -36,13 +31,12 @@ class GanestTestApp {
 		empCollections.add("shiva");
 		empCollections.add("chandan");
 		empCollections.add("rehana");
+		System.out.println(empCollections.parallelStream());
 
-		int count =0;
-
-		HashSet<String> var = new HashSet<>(empCollections);
-		for (String str : var)
-			System.out.println(str);
-//        System.out.println(str+"name is "+Collections.frequency(empCollections,str));
+//		HashSet<String> var = new HashSet<>(empCollections);
+//		for (String str : var)
+//			System.out.println(str);
+//     System.out.println(str+"name is "+Collections.frequency(empCollections,str));
 	}
 
 

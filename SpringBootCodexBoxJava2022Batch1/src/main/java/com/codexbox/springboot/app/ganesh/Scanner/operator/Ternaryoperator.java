@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.ganesh.Scanner.Assessment.collection.operator;
+package com.codexbox.springboot.app.ganesh.Scanner.operator;
 
 public class Ternaryoperator {
     int number1 = 454, number2 = 963, result;
