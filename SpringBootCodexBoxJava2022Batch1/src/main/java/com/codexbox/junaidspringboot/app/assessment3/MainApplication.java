@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.junaidspringbootproject.assessment3;
+package com.codexbox.junaidspringboot.app.assessment3;
 
 import java.util.ArrayList;
 import java.util.List;
