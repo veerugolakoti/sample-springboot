@@ -1,9 +1,7 @@
 package com.codexbox.springboot.app.Veeru;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class WordCountFromFile {
     public static void main(String[] args) {
@@ -21,9 +19,8 @@ public class WordCountFromFile {
             System.out.println("Specifed file not found in location : " + filePath);
             e.printStackTrace();
         }
-
         String line = null;
-        String[] words = null;
+        List<String> words =new ArrayList<>();
         while (true) {
             try {
                 if (!((line = br.readLine()) != null)) break;
@@ -31,12 +28,31 @@ public class WordCountFromFile {
                 System.out.println("Got IOException while reading the content from file" + filePath);
                 e.printStackTrace();
             }
-            words = line.split(" ");
-            findWordCount(words);
+            words.addAll(Arrays.asList(line.split(" ")));
+        }
+        findWordCount(words);
+    }
+
+    private static void findWordCount(List<String> words) {
+
+        Map<String, Integer> word = new HashMap<>();
+        for (String str : words) {
+            if (word.containsKey(str)) {
+                word.put(str, 1 + word.get(str));
+            } else {
+                word.put(str, 1);
+
+            }
+        }
+
+        List<Map.Entry<String, Integer>> wordcount = new ArrayList<>(word.entrySet());
+        Collections.sort(wordcount,new MyComparator());
+
+        for (Map.Entry<String,Integer> count : wordcount){
+            System.out.println( count.getValue()+" "+count.getKey());
+
         }
     }
 
-    private static void findWordCount(String[] words) {
-
-    }
 }
+

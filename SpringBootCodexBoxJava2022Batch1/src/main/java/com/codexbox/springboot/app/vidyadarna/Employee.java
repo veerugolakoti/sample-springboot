@@ -3,8 +3,19 @@ package com.codexbox.springboot.app.vidyadarna;
 public class Employee {
 
 
+    public static Object employee;
+
+
     public String getEmployeeName() {
         return EmployeeName;
+    }
+
+    public Integer getEmployeeId() {
+        return EmployeeId;
+    }
+
+    public String getEmployeeAddress() {
+        return EmployeeAddress;
     }
 
     private String EmployeeName;
