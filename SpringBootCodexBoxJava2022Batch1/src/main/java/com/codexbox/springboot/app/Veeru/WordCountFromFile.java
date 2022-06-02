@@ -1,9 +1,7 @@
 package com.codexbox.springboot.app.Veeru;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class WordCountFromFile {
     public static void main(String[] args) {
@@ -23,7 +21,7 @@ public class WordCountFromFile {
         }
 
         String line = null;
-        String[] words = null;
+        List<String[]> words = new ArrayList<>();
         while (true) {
             try {
                 if (!((line = br.readLine()) != null)) break;
@@ -31,12 +29,41 @@ public class WordCountFromFile {
                 System.out.println("Got IOException while reading the content from file" + filePath);
                 e.printStackTrace();
             }
-            words = line.split(" ");
-            findWordCount(words);
+            words.add(line.split(" "));
         }
+        ArrayList<String> lines = new ArrayList<>();
+        for (int i = 0;i < words.size(); i++ ){
+            for(String string:words.get(i)){
+                lines.add(string);
+            }
+        }
+       findWordCount(lines);
     }
 
-    private static void findWordCount(String[] words) {
+    private static void findWordCount(ArrayList<String> words)  {
+        Map<String, Integer> stringConut = new HashMap<>();
+        for (String word : words) {
+            if (stringConut.containsKey(word)) {
+                stringConut.put(word, stringConut.get(word) + 1);
+            } else {
+                stringConut.put(word, 1);
+            }
+        }
+            //System.out.println(stringConut.entrySet());
+           List<Map.Entry<String,Integer>> list= new ArrayList<>(stringConut.entrySet());
+            Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+                @Override
+                public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                    return o2.getValue().compareTo(o1.getValue());
+                }
+            });
+        for (Map.Entry<String,Integer> entry:list) {
+
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
+
+        }
+
 
     }
-}
+
