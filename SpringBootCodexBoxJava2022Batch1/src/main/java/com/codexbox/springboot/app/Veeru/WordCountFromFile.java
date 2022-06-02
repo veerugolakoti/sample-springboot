@@ -21,7 +21,7 @@ public class WordCountFromFile {
         }
 
         String line = null;
-        String[] words = null;
+        ArrayList<String[]> arr=new ArrayList<>();
         while (true) {
             try {
                 if (!((line = br.readLine()) != null)) break;
@@ -29,19 +29,36 @@ public class WordCountFromFile {
                 System.out.println("Got IOException while reading the content from file" + filePath);
                 e.printStackTrace();
             }
-            words = line.split(" ");
-            findWordCount(words);
+            arr.add(line.split(" "));
+        }
+        ArrayList<String> num=new ArrayList<>();
+        for (int i=0;i<arr.size();i++){
+            for (String str:arr.get(i)) {
+                num.add(str);
+            }
+        }
+        findWordCount(num);
+    }
+    private static void findWordCount( ArrayList<String> num) {
+
+        Map<String, Integer> wordMap = new TreeMap<>();
+        for (String word : num) {
+            if (wordMap.containsKey(word)) {
+                wordMap.put(word, wordMap.get(word) + 1);
+            } else {
+                wordMap.put(word, 1);
+            }
+        }
+
+            List<Map.Entry<String,Integer>> entryList=new ArrayList<>(wordMap.entrySet());
+            Collections.sort(entryList,new WordComparator());
+
+            for (Map.Entry<String, Integer> entry : entryList){
+                System.out.println(entry.getKey() + " : " + entry.getValue());
+            }
         }
     }
 
-    private static void findWordCount(String[] words) {
-        for (String str : words) {
-            System.out.println(str + " : " + Collections.frequency(Collections.singleton(words), str));
-        }
-        TreeSet<String> hashset = new TreeSet<>(Arrays.asList(words));
-        System.out.println(hashset);
-    }
-}
 
 
 
