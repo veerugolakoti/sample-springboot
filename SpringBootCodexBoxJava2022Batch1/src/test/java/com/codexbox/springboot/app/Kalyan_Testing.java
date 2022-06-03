@@ -4,6 +4,7 @@ import collections.MapsExamples;
 import collections.TreeSetExample;
 import duplicateNames.DuplicateExample;
 import org.junit.jupiter.api.Test;
+import rateofInterest.InterestExample;
 
 public class Kalyan_Testing {
 
@@ -19,4 +20,5 @@ public class Kalyan_Testing {
     public void testMapExample(){
         MapsExamples.setMap();
     }
+
 }
