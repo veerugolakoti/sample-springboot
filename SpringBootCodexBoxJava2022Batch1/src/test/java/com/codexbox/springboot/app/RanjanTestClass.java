@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app;
 
+import feature_ranjan.assignment2.StudentGrade;
 import feature_ranjan.collection.*;
 import org.junit.jupiter.api.Test;
 
@@ -39,4 +40,9 @@ public class RanjanTestClass {
      me.map();
 }
 
+/*@Test
+    void studentAssignment(){
+    StudentGrade sg = new StudentGrade();
+    sg.studentGrade();
+}*/
 }
