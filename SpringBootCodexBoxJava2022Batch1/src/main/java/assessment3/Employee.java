@@ -4,6 +4,9 @@ public  class Employee {
     public String id;
     public String name;
     public String address;
+
+    public Employee(String name, Integer id, String address) {
+    }
     public void Details() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Name : ");

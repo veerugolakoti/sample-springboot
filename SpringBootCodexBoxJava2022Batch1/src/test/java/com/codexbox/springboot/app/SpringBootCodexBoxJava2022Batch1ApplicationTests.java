@@ -1,6 +1,5 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Collections.MyAbstractList;
 import com.codexbox.springboot.app.Veeru.Collections.StackExample;
 import com.codexbox.springboot.app.Veeru.Employee;
 import org.junit.jupiter.api.Test;
