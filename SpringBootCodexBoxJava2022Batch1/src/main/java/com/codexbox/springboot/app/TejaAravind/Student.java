@@ -1,13 +1,67 @@
 package com.codexbox.springboot.app.TejaAravind;
 
+import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Student {
     private Integer rollNo;
     private String name;
     private String address;
     private Integer marks;
     private String grade;
+    private static final Integer totalMarks = 600;
 
-    public String calulateGrade(Integer marks){
+    public void setStudentDetails(List<Student> list, int numOfStudents) {
+        Scanner inp = new Scanner(System.in);
+        for (int i = 0; i < numOfStudents;i++) {
+            Student student = new Student();
+            System.out.println("Enter the Student "+(i+1)+ " Details");
+            System.out.println("Enter the Student Roll No : ");
+            student.setRollNo(Integer.parseInt(inp.nextLine()));
+            System.out.println("Enter the Student Name : ");
+            student.setName(inp.nextLine());
+            System.out.println("Enter the Student Address : ");
+            student.setAddress(inp.nextLine());
+            System.out.println("Enter the Student marks out of 600 : ");
+            int marks = Integer.parseInt(inp.nextLine());
+            student.setMarks(marks);
+            student.calculateGrade(student.getMarks());
+            list.add(student);
+        }
+		System.out.println("Before Sorting : ");
+		for (Student student : list) {
+			student.display();
+		}
+    }
+
+    public void sortedList(List<Student> list) {
+        list.sort(new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                if (o1.getGrade().equalsIgnoreCase(o2.getGrade())) {
+                    if (o2.getName().equalsIgnoreCase(o1.getName())) {
+                        if (Objects.equals(o2.getMarks(), o1.getMarks())) {
+                            return o1.getRollNo().compareTo(o2.getRollNo());
+                        }
+                        return o2.getMarks().compareTo(o1.getMarks());
+                    }
+                    return o1.getName().compareTo(o2.getName());
+                }
+                return o1.getGrade().compareTo(o2.getGrade());
+
+            }
+        });
+
+		System.out.println("After Sorting");
+		for (Student stud : list) {
+			stud.display();
+		}
+    }
+
+    public String calculateGrade(Integer marks){
+        marks = (marks * 100) / totalMarks;
         if(marks >= 90){
             this.grade =  "G1";
             return "G1";
@@ -20,6 +74,7 @@ public class Student {
             this.grade =  "G3";
             return "G3";
         }
+
         this.grade =  "G4";
         return "G4";
 
