@@ -2,7 +2,7 @@ package com.codexbox.springboot.app.TejaAravind;
 
 import java.util.Scanner;
 
-public class Employee {
+public abstract class Employee{
     private String name;
     private Integer empId;
     private String address;
