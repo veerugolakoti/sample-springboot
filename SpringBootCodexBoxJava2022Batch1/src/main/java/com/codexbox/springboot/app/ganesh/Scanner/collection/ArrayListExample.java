@@ -1,7 +1,6 @@
 package com.codexbox.springboot.app.ganesh.Scanner.collection;
 
 import org.springframework.boot.test.context.SpringBootTest;
-import org.testng.annotations.Test;
 
 import java.util.Collection;
 
@@ -10,7 +9,7 @@ public
 class ArrayListExample {
 
 
-	@Test
+
 	public void test() {
 		Collection<String> empCollections = new java.util.ArrayList<>();
 		empCollections.add("ganesh");

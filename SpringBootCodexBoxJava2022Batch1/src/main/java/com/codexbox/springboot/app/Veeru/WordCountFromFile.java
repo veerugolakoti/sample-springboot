@@ -1,9 +1,7 @@
 package com.codexbox.springboot.app.Veeru;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class WordCountFromFile {
     public static void main(String[] args) {
@@ -23,7 +21,9 @@ public class WordCountFromFile {
         }
 
         String line = null;
-        String[] words = null;
+
+        List<String[]>array = new ArrayList<>();
+        
         while (true) {
             try {
                 if (!((line = br.readLine()) != null)) break;
@@ -31,12 +31,46 @@ public class WordCountFromFile {
                 System.out.println("Got IOException while reading the content from file" + filePath);
                 e.printStackTrace();
             }
-            words = line.split(" ");
-            findWordCount(words);
+            
+             array.add(line.split(" ")) ; 
+
         }
+        ArrayList <String> list = new ArrayList<>();
+        for (int i = 0; i < array.size(); i++) {
+            for (String ht:array.get(i)) {
+                list.add(ht);
+            }
+
+        }
+        findWordCount(list);
     }
 
-    private static void findWordCount(String[] words) {
+    private static void findWordCount(ArrayList<String> list) {
 
+        Map<String,Integer> word = new TreeMap<>();
+        for ( String letter:list) {
+            if (word.containsKey(letter))
+            {
+                word.put(letter,word.get(letter)+1 );
+
+            } else {word.put(letter,1);
+
+
+
+            }
+
+
+        }
+        System.out.println(word);
+        List <Map.Entry<String,Integer>> entry = new Vector<>(word.entrySet());
+        Collections.sort(entry, new Comparator<Map.Entry<String, Integer>>() {
+            @Override
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                return o2.getValue().compareTo(o1.getValue());
+            }
+        });
+        for (Map.Entry<String,Integer> entry1:entry) {
+            System.out.println(entry1.getKey()+entry1.getValue());
+        }
     }
 }
