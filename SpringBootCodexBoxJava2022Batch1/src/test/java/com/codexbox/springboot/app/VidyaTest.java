@@ -2,6 +2,7 @@ package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.collections.ExampleStack;
 import com.codexbox.springboot.app.vidyadarna.Employee;
+import com.codexbox.springboot.app.vidyadarna.StudentAssesment;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -125,38 +126,53 @@ public class VidyaTest {
         boolean result = mapex.isEmpty();
         System.out.println("the map is " + result);
 
-        Employee employee1 = new Employee("veeru",100,"hyd");
-        Employee employee2 = new Employee("abhi",104,"sidhipet");
-        Employee employee3 = new Employee("sandya",105,"jangon");
-        Employee employee4 = new Employee("sravani",106,"gnp");
-        Employee employee5 = new Employee("sathya",166,"tkd");
-        Employee employee6 = new Employee("kavya",177,"uppal");
+        Employee employee1 = new Employee("veeru", 100, "hyd");
+        Employee employee2 = new Employee("abhi", 104, "sidhipet");
+        Employee employee3 = new Employee("sandya", 105, "jangon");
+        Employee employee4 = new Employee("sravani", 106, "gnp");
+        Employee employee5 = new Employee("sathya", 166, "tkd");
+        Employee employee6 = new Employee("kavya", 177, "uppal");
 
-        Map<String,Employee > employeeMap = new TreeMap<>();
-        employeeMap.put("employee1",employee1);
-        employeeMap.put("employee2",employee2);
-        employeeMap.put("employee3",employee3);
-        employeeMap.put("employee4",employee4);
-        employeeMap.put("employee5",employee5);
-        employeeMap.put("employee6",employee6);
-        System.out.println("my employee map is : " +employeeMap);
+        Map<String, Employee> employeeMap = new TreeMap<>();
+        employeeMap.put("employee1", employee1);
+        employeeMap.put("employee2", employee2);
+        employeeMap.put("employee3", employee3);
+        employeeMap.put("employee4", employee4);
+        employeeMap.put("employee5", employee5);
+        employeeMap.put("employee6", employee6);
+        System.out.println("my employee map is : " + employeeMap);
 
         Collection<Employee> employeelist = employeeMap.values();
-        for (Employee employee :employeelist) {
+        for (Employee employee : employeelist) {
             System.out.println("employee Map : " + employee.getEmployeeName());
         }
-         Employee employee = employeeMap.get("employee2");
+        Employee employee = employeeMap.get("employee2");
         System.out.println("employee name 2 is : " + employee.getEmployeeName());
-        System.out.println("my map is  " +mapex);
-        System.out.println("vidya value is "+mapex.get("vidya"));
+        System.out.println("my map is  " + mapex);
+        System.out.println("vidya value is " + mapex.get("vidya"));
         Set<String> myKst = mapex.keySet();
-        System.out.println("my all keys from my map " +myKst);
-      //  Set<Integer> mykst = mapex.keySet();
+        System.out.println("my all keys from my map " + myKst);
+        //  Set<Integer> mykst = mapex.keySet();
 
-        System.out.println("my all values from my map " +mapex.values());
-        for (Map.Entry<String ,Employee > emp:employeeMap.entrySet()) {
-            System.out.println("my key :   " +emp.getValue().getEmployeeId()+ " my value :" + emp.getValue().getEmployeeName());
+        System.out.println("my all values from my map " + mapex.values());
+        for (Map.Entry<String, Employee> emp : employeeMap.entrySet()) {
+            System.out.println("my key :   " + emp.getValue().getEmployeeId() + " my value :" + emp.getValue().getEmployeeName());
         }
     }
+
+    @Test
+    public void sortTestExample() {
+        SortedMap<Integer, String> sm = new TreeMap<>();
+        sm.put(9, "vidya");
+        sm.put(2, "mounika");
+        sm.put(3, "thara");
+        sm.put(7, "kavitha");
+        sm.put(8, "ravali");
+        System.out.println("the values in soring map " + sm);
     }
 
+    @Test
+    public void StudentTest() {
+
+    }
+}
