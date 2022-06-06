@@ -1,9 +1,7 @@
 package com.codexbox.springboot.app.Veeru;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class WordCountFromFile {
     public static void main(String[] args) {
@@ -37,6 +35,30 @@ public class WordCountFromFile {
     }
 
     private static void findWordCount(String[] words) {
+        Map<String, Integer> word = new HashMap<>();
+        for (String wordcount : words) {
+            if (word.containsKey(wordcount)) {
+                word.put(wordcount, word.get(wordcount) + 1);
+
+            } else {
+                word.put(wordcount, 1);
+
+            }
+//            System.out.println("counting of words is "+word);
+
+        }
+        List<Map.Entry<String,Integer>> list=new ArrayList<>(word.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+            @Override
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                return o2.getValue().compareTo(o1.getValue());
+            }
+        });
+        for (Map.Entry<String,Integer> list1:list) {
+            System.out.println("now the correct order is "+list1);
+
+        }
+
 
     }
 }
