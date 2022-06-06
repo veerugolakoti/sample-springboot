@@ -71,6 +71,6 @@ public class StudentDetails {
     System.out.println("sname :"+studentName);
     System.out.println("saddress :"+studentAddress);
     System.out.println("smark :"+studentMark);
-        System.out.println("sgrade :"+studentGrade);
+    System.out.println("sgrade :"+studentGrade);
 }
 }

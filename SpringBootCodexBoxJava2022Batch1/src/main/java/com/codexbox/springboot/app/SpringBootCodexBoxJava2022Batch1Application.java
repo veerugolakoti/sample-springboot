@@ -1,20 +1,25 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
-import com.codexbox.springboot.app.Veeru.employee.Employee;
+import feature_ranjan.enumeration.EnumExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
-		StudentGradeAssessment assessment4 = new StudentGradeAssessment();
-		assessment4.studentAndTheirGrades();
-	} /*{
+		/*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
+		assessment4.studentAndTheirGrades();*/
+
+
+		for (EnumExample enumexample : EnumExample.values()) {
+			System.out.println(enumexample.getValue());
+		}
+		System.out.println(" spring :"+EnumExample.SPRING.getValue());
+		//EnumExample.valueOf(EnumExample.RAINY.getValue());
+	}
+
+	/*{
 		//int count = 1;
 		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
