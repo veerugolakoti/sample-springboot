@@ -3,9 +3,7 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.dhivya.assisment.StudentList;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -58,31 +56,46 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter number of Students : ");
 		int studentlist=scanner.nextInt();
-		for (int i = 0; i <=studentlist; i++) {
+		for (int i = 1; i <=studentlist; i++) {
 			StudentList studList=new StudentList();
 			System.out.println("Enter Student   Details ");
-			System.out.println("Enter Student " + (i+1) + " Id : ");
+			System.out.println("Enter Student " + (i) + " Id : ");
 			studList.setStudno(scanner.nextInt());
-			System.out.println("Enter Student " + (i+1) + " Name: ");
+			System.out.println("Enter Student " + (i) + " Name: ");
 			studList.setStudName(scanner.next());
-			System.out.println("Enter Student " + (i+1) + " Address : ");
+			System.out.println("Enter Student " + (i) + " Address : ");
 			studList.setStudAddress(scanner.next());
-			System.out.println("Enter Student " + (i+1) + " Marks : ");
+			System.out.println("Enter Student " + (i) + " Marks : ");
 			studList.setStudMarks(scanner.nextInt());
 			System.out.println("averge" + " " + studList.setAverage());
 			myStudentList.add(studList);
 		}
+		Map<StudentList,String> studentgrade=new HashMap<>();
+		System.out.println("Before Sorting Sudent details");
 		for (StudentList studentList:myStudentList) {
 			studentList.details();
 		}
-		/*Map<StudentList,String>studentgrade=new HashMap<>();
-		for (StudentList student:myStudentList) {
+			Collections.sort(myStudentList, new Comparator<StudentList>() {
+				@Override
+				public int compare(StudentList o1, StudentList o2) {
+					if (o1.getStudMarks() == o2.getStudMarks()) {
+						if (o2.getStudMarks() == o1.getStudMarks()) {
+							if (o1.getStudName().equalsIgnoreCase(o2.getStudName())) {
+								return o1.getStudno().compareTo(o2.getStudno());
+							}
+							return o1.getStudName().compareTo(o2.getStudName());
+						}
+						return o2.getStudMarks().compareTo(o1.getStudMarks());
+					}
+					return o1.setAverage().compareTo(o2.setAverage());
+				}
+			});
+			System.out.println("After sorting");
+		System.out.println("______________________________________");
+			for (StudentList sortedlist : myStudentList) {
+				System.out.println(sortedlist.getStudno() + " " + sortedlist.getStudName() + " " + sortedlist.getStudMarks() + " " + sortedlist.getStudAddress() + " " + sortedlist.setAverage());
+
+			}
 
 
-
-		}*/
-
-
-
-
-	}}
+		}}

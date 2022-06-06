@@ -47,16 +47,16 @@ public class StudentList {
     public String setAverage() {
         this.average = (int)(studMarks*(100) / totalmarks);
         if (average > 90) {
-            s1 = "grade1";
+            s1 = "grade 1";
         }
         if (average >= 60 && average < 90) {
-            s1 = "grade2";
+            s1 = "grade 2";
         }
         if (average >= 35 && average < 60) {
-            s1 = "grade3";
+            s1 = "grade 3";
         }
         if (average < 35) {
-            s1 = "grade4";
+            s1 = "grade 4";
         }
         return s1;
     }
