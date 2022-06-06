@@ -1,7 +1,7 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Employee;
-import feature_ranjan.assignment2.StudentGrade;
+import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
+import com.codexbox.springboot.app.Veeru.employee.Employee;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
@@ -12,8 +12,11 @@ import java.util.Scanner;
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
+		StudentGradeAssessment assessment4 = new StudentGradeAssessment();
+		assessment4.studentAndTheirGrades();
+	} /*{
 		//int count = 1;
-		/*List<Employee> empList = new ArrayList<>();
+		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
 		for (int i = 1; i <= 29 ; i++) {
 
@@ -28,10 +31,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			Employee employee = new Employee(name, id, address);
 			empList.add(employee);
 		}
-		System.out.println("My total employees : " + empList.size());*/
-
-		StudentGrade stdGrade = new StudentGrade();
-		stdGrade.studentGrade();
-	}
+		System.out.println("My total employees : " + empList.size());
+	}*/
 
 }
