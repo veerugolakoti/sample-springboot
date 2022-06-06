@@ -1,12 +1,7 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
-import com.codexbox.springboot.app.Veeru.employee.Employee;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import com.codexbox.springboot.app.sohailspringbootproject.collections.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {

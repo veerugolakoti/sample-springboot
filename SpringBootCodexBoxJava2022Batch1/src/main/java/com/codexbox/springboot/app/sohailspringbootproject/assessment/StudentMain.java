@@ -25,25 +25,37 @@ public class StudentMain {
         }
 
         System.out.println("Before Sorting");
-        for (Student student1 : myStudentList) {
-            System.out.println(student1.getName());
-            System.out.println(student1.getId());
-            System.out.println(student1.getGrade());
-            System.out.println(student1.getMarks());
+        for (Student studentslist : myStudentList) {
+            System.out.println(studentslist.getName());
+            System.out.println(studentslist.getId());
+            System.out.println(studentslist.getMarks());
+            System.out.println(studentslist.getGrade());
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         }
         Collections.sort(myStudentList, new Comparator<Student>() {
             @Override
             public int compare(Student o1, Student o2) {
+                if(o1.getGrade()==o2.getGrade()){
+                    if(o2.getMarks()==o1.getMarks()) {
+                        if(o1.getName().equalsIgnoreCase(o2.getName())) {
+                            return o1.getId().compareTo(o2.getId());
+                        }
+                        return  o1.getName().compareTo(o2.getName());
+                    }
+                    return o2.getMarks().compareTo(o1.getMarks());
+                }
                 return o1.getGrade().compareTo(o2.getGrade());
             }
         });
 
+
         System.out.println("After Sorting");
-        for (Student student1 : myStudentList) {
-            System.out.println(student1.getName());
-            System.out.println(student1.getId());
-            System.out.println(student1.getGrade());
-            System.out.println(student1.getMarks());
+        for (Student sortedList : myStudentList) {
+            System.out.println(sortedList.getName());
+            System.out.println(sortedList.getId());
+            System.out.println(sortedList.getMarks());
+            System.out.println(sortedList.getGrade());
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         }
     }
 }

@@ -2,9 +2,9 @@ package com.codexbox.springboot.app.sohailspringbootproject.assessment;
 
 public class Student {
 
-        String name;
-        Integer id;
-    Integer marks;
+       private String name;
+        private  Integer id;
+   private Integer marks;
 
     public String getName() {
         return name;
