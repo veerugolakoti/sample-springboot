@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.dhivya.assisment.EmployeeList;
+import com.codexbox.springboot.app.dhivya.assisment.StudentList;
 import com.codexbox.springboot.app.dhivya.collections.HashsetOperation;
 import com.codexbox.springboot.app.dhivya.collections.QueueOperation;
 import com.codexbox.springboot.app.dhivya.collections.StackExample;
@@ -17,18 +18,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 
 //assisment creating employee list and adding and removing employee details
-		/*List<EmployeeList> employeeLists = new ArrayList<>();
-		Scanner scanner=new Scanner(System.in);
-		for (int i = 0; i <=2; i++) {
-			EmployeeList employeeList=new EmployeeList();
-			System.out.println("Enter Employee   Details ");
-			System.out.println("Enter Employee" + (i+1) + " Name : ");
-			employeeList.setName(scanner.next());
-			System.out.println("Enter Employee" + (i+1) + " Id : ");
-			employeeList.setId(scanner.nextInt());
-			System.out.println("Enter Employee" + (i+1) + "Address : ");
-			employeeList.setAddress(scanner.next());
-			employeeLists.add(employeeList);
+		/*
 		}
 		for (int i = 0; i < employeeLists.size(); i++) {
 			employeeLists.get(i).detils();
@@ -62,11 +52,40 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		//queueOperation.queueExample();
 
 //Hash set operations
-		HashsetOperation hashsetOperation=new HashsetOperation();
+		/*HashsetOperation hashsetOperation=new HashsetOperation();
 		hashsetOperation.hashsetExample();
+*/
+
+		List<StudentList>myStudentList  = new ArrayList<>();
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter number of Students : ");
+		int studentlist=scanner.nextInt();
+		for (int i = 0; i <=studentlist; i++) {
+			StudentList studList=new StudentList();
+			System.out.println("Enter Student   Details ");
+			System.out.println("Enter Student " + (i+1) + " Name : ");
+			studList.setStudno(scanner.nextInt());
+			System.out.println("Enter Student" + (i+1) + " Id : ");
+			studList.setStudName(scanner.next());
+			System.out.println("Enter Student " + (i+1) + "Address : ");
+			studList.setStudAddress(scanner.next());
+			System.out.println("Enter Student " + (i+1) + "Marks : ");
+			studList.setStudMarks(scanner.nextInt());
+			System.out.println("Averge");
+			studList.setAverage();
+			myStudentList.add(studList);
+
+
+
+
+
+
+
+
+
 
 
 
 
 	}
-}
+}}
