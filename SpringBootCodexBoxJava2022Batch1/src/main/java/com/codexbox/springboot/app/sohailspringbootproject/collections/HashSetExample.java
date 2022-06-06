@@ -1,6 +1,6 @@
 package com.codexbox.springboot.app.sohailspringbootproject.collections;
+
 import org.junit.Test;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.HashSet;
