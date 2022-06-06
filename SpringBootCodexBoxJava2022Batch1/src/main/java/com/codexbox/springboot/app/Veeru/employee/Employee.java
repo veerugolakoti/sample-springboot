@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.Veeru;
+package com.codexbox.springboot.app.Veeru.employee;
 
 public class Employee {
     private String name;
