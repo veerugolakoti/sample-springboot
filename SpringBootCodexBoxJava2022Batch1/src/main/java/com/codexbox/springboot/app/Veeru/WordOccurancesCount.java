@@ -1,4 +1,4 @@
-
+package com.codexbox.springboot.app.Veeru;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -73,7 +73,7 @@ public class WordOccurancesCount {
 			
 		});
 		
-		for (Map.Entry<String, Integer> entry : entryList) {
+		for (Map.Entry<String, Integer> entry  : entryList) {
 			System.out.println(entry.getKey() + " : " + entry.getValue());
 		}
 		
