@@ -1,14 +1,12 @@
 package com.codexbox.springboot.app;
-import com.codexbox.springboot.app.dhivya.assisment.EmployeeList;
+
 import com.codexbox.springboot.app.dhivya.assisment.StudentList;
-import com.codexbox.springboot.app.dhivya.collections.HashsetOperation;
-import com.codexbox.springboot.app.dhivya.collections.QueueOperation;
-import com.codexbox.springboot.app.dhivya.collections.StackExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
+
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 	public static void main(String[] args) {
@@ -63,29 +61,28 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		for (int i = 0; i <=studentlist; i++) {
 			StudentList studList=new StudentList();
 			System.out.println("Enter Student   Details ");
-			System.out.println("Enter Student " + (i+1) + " Name : ");
+			System.out.println("Enter Student " + (i+1) + " Id : ");
 			studList.setStudno(scanner.nextInt());
-			System.out.println("Enter Student" + (i+1) + " Id : ");
+			System.out.println("Enter Student " + (i+1) + " Name: ");
 			studList.setStudName(scanner.next());
-			System.out.println("Enter Student " + (i+1) + "Address : ");
+			System.out.println("Enter Student " + (i+1) + " Address : ");
 			studList.setStudAddress(scanner.next());
-			System.out.println("Enter Student " + (i+1) + "Marks : ");
+			System.out.println("Enter Student " + (i+1) + " Marks : ");
 			studList.setStudMarks(scanner.nextInt());
-			System.out.println("Averge");
-			studList.setAverage();
+			System.out.println("averge" + " " + studList.setAverage());
 			myStudentList.add(studList);
+		}
+		for (StudentList studentList:myStudentList) {
+			studentList.details();
+		}
+		/*Map<StudentList,String>studentgrade=new HashMap<>();
+		for (StudentList student:myStudentList) {
+
+
+
+		}*/
 
 
 
 
-
-
-
-
-
-
-
-
-
-	}
-}}
+	}}
