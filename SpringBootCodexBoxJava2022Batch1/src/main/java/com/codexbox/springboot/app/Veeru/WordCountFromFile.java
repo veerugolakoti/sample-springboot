@@ -1,7 +1,10 @@
 package com.codexbox.springboot.app.Veeru;
 
 import java.io.*;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.StringTokenizer;
+
 
 public class WordCountFromFile {
     public static void main(String[] args) {
@@ -21,7 +24,7 @@ public class WordCountFromFile {
         }
 
         String line = null;
-        List<String[]> array = new ArrayList<>();
+        String[] words = null;
         while (true) {
             try {
                 if (!((line = br.readLine()) != null)) break;
@@ -29,43 +32,12 @@ public class WordCountFromFile {
                 System.out.println("Got IOException while reading the content from file" + filePath);
                 e.printStackTrace();
             }
-            array.add(line.split(" "));
-
+            words = line.split(" ");
+            findWordCount(words);
         }
-        ArrayList<String> arrayList = new ArrayList<>();
-        for (int i = 0; i < array.size(); i++) {
-            for (String arr : array.get(i)) {
-                arrayList.add(arr);
-            }
-        }
-        findWordCount(arrayList);
     }
-    private static void findWordCount(ArrayList<String> arrayList) {
-        Map<String, Integer> word = new HashMap<>();
-        for (String string : arrayList) {
-            if (word.containsKey(string)) {
-                word.put(string, word.get(string)+1);
-            } else {
-                word.put(string, 1);
-            }
 
-        }
-        System.out.print(word);
-       List<Map.Entry<String, Integer>> entryList = new LinkedList<>(word.entrySet());
-        Collections.sort(entryList, new Comparator<Map.Entry<String, Integer>>() {
-            @Override
-            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                return o2.getValue().compareTo(o1.getValue());
-            }
-        });
-        for (Map.Entry<String,Integer> entrylist :entryList) {
-            System.out.println(entrylist.getKey()+ " :"+ entrylist.getValue());
-
-        }
-
+    private static void findWordCount(String[] words) {
 
     }
 }
-
-
-
