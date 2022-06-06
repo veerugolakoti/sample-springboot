@@ -1,7 +1,7 @@
 package com.codexbox.springboot.app.abhilash.enumaration;
 
 public enum EnumarationExample {
-    SUMMER,
+    SUMMER("SUMMER IS SO HOT "),
     WINTER,
     SPRING,
     FALL;

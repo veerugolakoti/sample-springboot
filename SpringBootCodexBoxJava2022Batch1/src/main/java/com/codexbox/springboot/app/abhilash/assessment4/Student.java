@@ -1,10 +1,17 @@
 package com.codexbox.springboot.app.abhilash.assessment4;
 
-public class Student {
+public abstract class Student {
     private Integer s_no;
     private String name;
     private String address;
     private Float marks;
+    public abstract void getAllstudentDetails();
+
+    public Float getGrade() {
+        Float grade = (marks/600)*100;
+        return grade;
+    }
+
     public Student(Integer s_no, String name, String address, Float marks) {
         this.s_no = s_no;
         this.name = name;
@@ -32,4 +39,13 @@ public class Student {
         return marks;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Student{" +
+//                "s_no=" + s_no +
+//                ", name='" + name + '\'' +
+//                ", address='" + address + '\'' +
+//                ", marks=" + marks +
+//                '}';
+//    }
 }
