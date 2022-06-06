@@ -1,14 +1,18 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.vidyadarna.Employee;
 import com.codexbox.springboot.app.vidyadarna.StudentAssesment;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import javax.naming.Name;
 import java.util.*;
+
+import static org.springframework.core.OrderComparator.sort;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
+
+//	private static Float studentMarks;
+//	private static java.lang.Integer Integer;
+
 
 	public static void main(String[] args) {
 
@@ -61,44 +65,98 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 //		}
 		List<StudentAssesment> studentList = new ArrayList<>();
 		Scanner sc = new Scanner(System.in);
+
+		System.out.println("enter number of students");
+		Integer TotalStudents = sc.nextInt();
 		//int count = 0,j;
 		Integer totalMarks = 600;
 
-		Float percentage;
 
+		for (int i = 0; i < TotalStudents; i++) {
 
-String Grade = null;
+				System.out.println("enter  " + (i + 1) + " studentName ");
+				String studentName = sc.next();
+				System.out.println("enter studentId ");
+				Integer studentId = sc.nextInt();
+				System.out.println("enter studentAddress");
+				String studentAddress = sc.next();
+				System.out.println("enter your studentMarks");
+				float studentMarks = sc.nextFloat();
 
-		for(int i = 0; i<3 ; i++){
+				StudentAssesment student = new StudentAssesment();
 
-			System.out.println("enter  " + (i+1) + " studentName ");
-			String studentNmae = sc.next();
-			System.out.println("enter studentId ");
-			Integer studentId = sc.nextInt();
-			System.out.println("enter studentAddress");
-			String studentAddress = sc.next();
-			System.out.println("enter your studentMarks");
-			float studentMarks = sc.nextFloat();
+				student.setStudentId(studentId);
+				student.setStudentAddress(studentAddress);
+				student.setStudentMarks(studentMarks);
+				student.setStudentName(studentName);
+				studentList.add(student);
+			}
 
-			percentage = (studentMarks / totalMarks) * 100;
-			System.out.printf("Grade : " + percentage);
+			Map<StudentAssesment, String> studentGradeMap = new HashMap<>();
+
+			System.out.println("Before sorting my Student details are : ");
+			for (StudentAssesment student : studentList) {
+				System.out.println("studentid : " + student.getStudentId());
+				studentGradeMap.put(student, percentage((student.getStudentMarks() / totalMarks) * 100));
+			}
+			//	percentage = (studentMarks / totalMarks) * 100;
+			//System.out.printf("Grade : " + percentage);
+			List<Map.Entry<StudentAssesment, String>> studentAndGrades = new ArrayList<>(studentGradeMap.entrySet());
+			sort(studentAndGrades);
+		}
+
+		public static String percentage ( float percentage){
+			String Grade;
 
 
 			if (percentage >= 90) {
-			Grade = "A";
-			} else if (percentage>=60 && percentage <90) {
+				Grade = "A";
+			} else if (percentage >= 60 && percentage < 90) {
 				Grade = "B";
-			} else if (percentage>=35 && percentage <60) {
+			} else if (percentage >= 35 && percentage < 60) {
 				Grade = "C";
 			} else if (percentage <= 35) {
-	            Grade = "D";
+				Grade = "D";
+			} else {
+				Grade = "E";
 			}
+			return Grade;
+		}
 
-			StudentAssesment student = new StudentAssesment(studentNmae,studentAddress,studentId,studentMarks,Grade);
-			studentList.add(student);
+	private static void sort(List<Map.Entry<StudentAssesment, String>> studentAndGrades) {
+		Collections.sort(studentAndGrades, new Comparator<Map.Entry<StudentAssesment, String>>() {
+			@Override
+			public int compare(Map.Entry<StudentAssesment, String> o1, Map.Entry<StudentAssesment, String> o2) {
+				int result = 0;
+
+				if (o2.getValue() != o1.getValue()) {
+
+					if (o1.getValue() != o2.getValue()) {
+						if (o2.getKey() == o1.getKey()) {
+							result = o1.getValue().compareTo(o2.getValue());
+						} else if (o2.getKey().getStudentMarks() != o1.getKey().getStudentMarks()) {
+							result = o2.getKey().getStudentMarks().compareTo(o1.getKey().getStudentMarks());
+						} else if (o1.getKey().getStudentName(" ") != o2.getKey().getStudentName(" ")) {
+							result = o1.getKey().getStudentName(" ").compareTo(o2.getKey().getStudentName(" "));
+						} else {
+							result = o2.getKey().getStudentId().compareTo(o1.getKey().getStudentId());
+						}
+
+						return result;
+					}
+
+					//return 0;
+				}
+				return result;
+			}
+		});
+
+
+		System.out.println("After sorting Employee Details are");
+		for (Map.Entry<StudentAssesment, String> entry : studentAndGrades) {
+			System.out.println("student number " + entry.getKey().getStudentId() + " : " + entry.getValue());
+
 		}
-		for (int i = 0; i<3; i++){
-			studentList .get(i).display();
-		}
+
 	}
 }

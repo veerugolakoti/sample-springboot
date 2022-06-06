@@ -5,25 +5,45 @@ public class StudentAssesment {
     private  String studentAddress;
     private Integer studentId;
     private Float studentMarks;
-   private String studentGrade;
 
-
-
-    public StudentAssesment(String studentName, String studentAddress, Integer studentId, float studentMarks,String studentGrade){
-        this.studentName = studentName;
-        this.studentAddress = studentAddress;
-        this.studentId = studentId;
-        this.studentMarks = studentMarks;
-        this.studentGrade = studentGrade;
+    public static String entrySet() {
+        return null;
     }
+    // private String studentGrade;
 
 
-    public String getStudentName() {
+
+//    public StudentAssesment(String studentName, String studentAddress, Integer studentId, float studentMarks,String studentGrade){
+//        this.studentName = studentName;
+//        this.studentAddress = studentAddress;
+//        this.studentId = studentId;
+//        this.studentMarks = studentMarks;
+//        this.studentGrade = studentGrade;
+//    }
+
+
+    public <studentName> String getStudentName(String studentName) {
         return studentName;
     }
 
-    public String getStudentAddress() {
+    public String getStudentAddress(String studentAddress) {
         return studentAddress;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public void setStudentAddress(String studentAddress) {
+        this.studentAddress = studentAddress;
+    }
+
+    public void setStudentId(Integer studentId) {
+        this.studentId = studentId;
+    }
+
+    public void setStudentMarks(Float studentMarks) {
+        this.studentMarks = studentMarks;
     }
 
     public Integer getStudentId() {
@@ -33,11 +53,14 @@ public class StudentAssesment {
     public Float getStudentMarks() {
         return studentMarks;
     }
-    public String getStudentGrade() {
+    public String getStudentGrade(String  studentGrade) {
         return studentGrade;
     }
-    public  void display(){
-        System.out.println("studentName\t " + "studentAddress\t "+ "studentId\t" + "studentMarks\t "+ "studentGrade\t");
-        System.out.println(" studentName\t : " +getStudentName()+  " studentAddress\t : " + getStudentAddress()+ " studentId \t  " + getStudentId()+ " studentMarks  "  + getStudentMarks() + "  studentGrade\t  "+getStudentGrade());
-    }
+
+
+
+//    public  void display(){
+//        System.out.println("studentName\t " + "studentAddress\t "+ "studentId\t" + "studentMarks\t "+ "studentGrade\t");
+//        System.out.println(" studentName\t : " +getStudentName()+  " studentAddress\t : " + getStudentAddress()+ " studentId \t  " + getStudentId()+ " studentMarks  "  + getStudentMarks() + "  studentGrade\t  "+getStudentGrade());
+//    }
 }
