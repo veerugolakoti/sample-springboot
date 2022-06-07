@@ -2,23 +2,34 @@ package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
 import feature_ranjan.enumeration.EnumExample;
+import feature_ranjan.fileiooperation.InputOutputExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.io.IOException;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		InputOutputExample inputOutputExample = new InputOutputExample();
+		inputOutputExample.fileInputOutput();
+
+
+
+
+
 		/*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
 		assessment4.studentAndTheirGrades();*/
 
-
-		for (EnumExample enumexample : EnumExample.values()) {
+//enum example
+	/*	for (EnumExample enumexample : EnumExample.values()) {
 			System.out.println(enumexample.getValue());
 		}
 		System.out.println(" spring :"+EnumExample.SPRING.getValue());
 		//EnumExample.valueOf(EnumExample.RAINY.getValue());
-	}
+	}*/
 
+//list of employee
 	/*{
 		//int count = 1;
 		List<Employee> empList = new ArrayList<>();
@@ -38,5 +49,5 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		}
 		System.out.println("My total employees : " + empList.size());
 	}*/
-
+	}
 }
