@@ -3,14 +3,20 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
 import com.codexbox.springboot.app.Veeru.employee.Employee;
 import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
+import ioStream.IOStreamExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.IOException;
 import java.util.*;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		IOStreamExample ios = new IOStreamExample();
+
+		ios.ioStreamEx();
+
 		/*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
 		assessment4.studentAndTheirGrades();*/
 		/*Map<String, Integer> myHashMap = new HashMap<>();
@@ -21,14 +27,14 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		System.out.println(myHashMap.get(null));
 
 		System.out.println(myHashMap);*/
-
-		List<Integer> testNumbers = new ArrayList<>();
-		testNumbers.add(1);
-		testNumbers.add(2);
-		testNumbers.add(3);
-		System.out.println(Seasons.SUMMER.name());
-		System.out.println(Seasons.SPRING.ordinal());
-		System.out.println(Seasons.SPRING.getValue());
+//
+//		List<Integer> testNumbers = new ArrayList<>();
+//		testNumbers.add(1);
+//		testNumbers.add(2);
+//		testNumbers.add(3);
+//		System.out.println(Seasons.SUMMER.name());
+//		System.out.println(Seasons.SPRING.ordinal());
+//		System.out.println(Seasons.SPRING.getValue());
 
 	/*ListIterator myIterator = testNumbers.();
 		while (myIterator.hasNext()) {

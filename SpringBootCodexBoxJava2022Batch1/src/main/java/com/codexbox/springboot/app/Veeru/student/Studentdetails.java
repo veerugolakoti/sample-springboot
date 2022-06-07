@@ -1,6 +1,6 @@
 package com.codexbox.springboot.app.Veeru.student;
 
-public class Student {
+public class Studentdetails {
 
     private Integer studentNum;
     private String studentName;

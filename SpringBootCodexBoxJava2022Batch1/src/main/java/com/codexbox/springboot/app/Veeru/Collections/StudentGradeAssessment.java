@@ -1,6 +1,6 @@
 package com.codexbox.springboot.app.Veeru.Collections;
 
-import com.codexbox.springboot.app.Veeru.student.Student;
+import com.codexbox.springboot.app.Veeru.student.Studentdetails;
 
 import java.util.*;
 
@@ -11,7 +11,7 @@ public class StudentGradeAssessment {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Total no.of student: ");
         Integer totalStudents = scanner.nextInt();
-        List<Student> students = new ArrayList<>();
+        List<Studentdetails> students = new ArrayList<>();
         for (int i = 1; i < totalStudents ; i++) {
 
             System.out.println("Enter Student" + i + " Details: ");
@@ -24,7 +24,7 @@ public class StudentGradeAssessment {
             System.out.println("Enter student total marks");
             Integer totalMarks = scanner.nextInt();
 
-            Student student = new Student();
+            Studentdetails student = new Studentdetails();
             student.setStudentNum(id);
             student.setStudentName(name);
             student.setStudentAddress(address);
@@ -32,14 +32,14 @@ public class StudentGradeAssessment {
             students.add(student);
         }
 
-        Map<Student, String> studentGradeMap = new Hashtable<>();
+        Map<Studentdetails, String> studentGradeMap = new Hashtable<>();
         System.out.println("Before sorting my Student details are : ");// to test order of insertion
-        for (Student student: students) {
+        for (Studentdetails student: students) {
             System.out.println("Student number: " + student.getStudentNum());
             studentGradeMap.put(student, calculateGrade((float) (student.getStudentMarks() / NO_OF_SUBJECTS)));
         }
 
-        List<Map.Entry<Student, String>> studentAndGrades = new ArrayList<>(studentGradeMap.entrySet());
+        List<Map.Entry<Studentdetails, String>> studentAndGrades = new ArrayList<>(studentGradeMap.entrySet());
         sortStudentsByGradeAndDisplay(studentAndGrades);
 
     }
@@ -58,10 +58,10 @@ public class StudentGradeAssessment {
         return grade;
     }
 
-    private void sortStudentsByGradeAndDisplay(List<Map.Entry<Student, String>> studentAndGrades) {
-        Collections.sort(studentAndGrades, new Comparator<Map.Entry<Student, String>>() {
+    private void sortStudentsByGradeAndDisplay(List<Map.Entry<Studentdetails, String>> studentAndGrades) {
+        Collections.sort(studentAndGrades, new Comparator<Map.Entry<Studentdetails, String>>() {
             @Override
-            public int compare(Map.Entry<Student, String> o1, Map.Entry<Student, String> o2) {
+            public int compare(Map.Entry<Studentdetails, String> o1, Map.Entry<Studentdetails, String> o2) {
                 int result = 0;
                 if (o2.getValue() != o1.getValue()) {
 
@@ -79,7 +79,7 @@ public class StudentGradeAssessment {
 
         //Display Students after sorting
         System.out.println("After sorting Employee Details are");
-        for (Map.Entry<Student, String> entry : studentAndGrades) {
+        for (Map.Entry<Studentdetails, String> entry : studentAndGrades) {
             System.out.println("student number" + entry.getKey().getStudentNum() + " : " + entry.getValue());
 
         }
