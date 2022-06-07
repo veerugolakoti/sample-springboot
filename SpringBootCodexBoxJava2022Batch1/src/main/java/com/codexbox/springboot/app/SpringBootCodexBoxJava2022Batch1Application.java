@@ -1,7 +1,7 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.employeeexample.EmployeeDetails;
-import org.springframework.boot.SpringApplication;
+import com.codexbox.springboot.app.file.InputOutputStream;
+import com.codexbox.springboot.app.studentdetails.StudentList;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
@@ -45,9 +45,34 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 //		//EmployeeDetails scanner=new EmployeeDetails();
 //
 //		for(int i=0; i< list.size();i++){
-//
 
+
+		InputOutputStream inputOutputStream=new InputOutputStream();
+		inputOutputStream.iooperation();
+
+
+
+		/*List<StudentList> myStudentList=new ArrayList<>();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number of students :  ");
+		int numberstudent =sc.nextInt();
+		for(int i=1;i<=numberstudent;i++){
+			StudentList studentList=new StudentList();
+			System.out.println("enter student details : ");
+			System.out.println("enter student" + i + " id :" );
+			studentList.setStudentId(sc.next());
+			System.out.println("enter student "+ i + " name");
+			studentList.setStudentName(sc.next());
+			System.out.println("enter student" + i + " address");
+			studentList.setStudentAddress(sc.next());
+			System.out.println("enter student" + i+ " marks");
+			studentList.setStudentMarks(sc.nextInt());
+			System.out.println("average "+ " " + studentList.setAverage());
+			studentList.add(studentList);
+		}
+*/
+	 }
 		}
 
-	}
+
 

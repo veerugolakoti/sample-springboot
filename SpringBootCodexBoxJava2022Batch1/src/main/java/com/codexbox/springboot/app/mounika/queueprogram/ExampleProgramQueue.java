@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.queueprogram;
+package com.codexbox.springboot.app.mounika.queueprogram;
 
 import org.junit.Test;
 
