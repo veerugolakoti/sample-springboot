@@ -9,7 +9,7 @@ public class Students {
     private String id;
     private  String name;
     private String address;
-    private  int marks;
+    private  Integer marks;
     private String grade;
 
     public String getGrade() {
@@ -32,7 +32,7 @@ public class Students {
         return address;
     }
 
-    public int getMarks() {
+    public Integer getMarks() {
         return marks;
     }
 
@@ -95,18 +95,18 @@ public class Students {
         list.sort(new Comparator<Students>() {
             @Override
             public int compare(Students o1, Students o2) {
-
+                if (o2.getMarks()==o1.getMarks()){
                 if (o1.getGrade().equalsIgnoreCase(o2.getGrade())) {
                     if (o2.getName().equalsIgnoreCase(o1.getName())) {
-                        if (o2.getMarks()==o1.getMarks()) {
+
                             return o1.getRollno().compareTo(o2.getRollno());
                         }
-
+                        return o1.getName().compareTo(o2.getName());
                     }
-                    return o1.getName().compareTo(o2.getName());
+                    return o1.getGrade().compareTo(o2.getGrade());
 
                 }
-                return o1.getGrade().compareTo(o2.getGrade());
+                return (o2.getMarks().compareTo(o1.getMarks()));
             }
         });
         System.out.println("after sorting the students by grade");
