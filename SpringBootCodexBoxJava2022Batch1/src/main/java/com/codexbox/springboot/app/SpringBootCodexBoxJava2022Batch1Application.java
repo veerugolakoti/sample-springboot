@@ -1,13 +1,15 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.dhivya.assisment.StudentList;
+import com.codexbox.springboot.app.dhivya.file.InputOutputStream;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.IOException;
 import java.util.*;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		//SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 		//LinkedListExample example = new LinkedListExample();
 		//System.out.println(example.loadMyList());
@@ -52,7 +54,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		hashsetOperation.hashsetExample();
 */
 
-		List<StudentList>myStudentList  = new ArrayList<>();
+		/*List<StudentList>myStudentList  = new ArrayList<>();
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter number of Students : ");
 		int studentlist=scanner.nextInt();
@@ -97,5 +99,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 			}
 
-
+*/
+		InputOutputStream inputOutputStream=new InputOutputStream();
+		inputOutputStream.ioOperations();
 		}}
