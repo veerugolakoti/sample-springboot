@@ -6,6 +6,8 @@ import com.codexbox.springboot.app.Veeru.Employee;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.*;
 
 @SpringBootTest
@@ -142,5 +144,22 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 	}
 
 
+		public static void main(String args[])
+		{
+			try{
+				FileWriter fstream = new FileWriter("log.txt",true);
+				BufferedWriter out = new BufferedWriter(fstream);
+				out.write("\n");
+				out.write("qwertyuiooplkjhgfdsazxcvbnm");
 
-}
+				out.close();
+			}catch (Exception e){
+				System.err.println("Error while writing to file: " +
+						e.getMessage());
+			}
+		}
+	}
+
+
+
+
