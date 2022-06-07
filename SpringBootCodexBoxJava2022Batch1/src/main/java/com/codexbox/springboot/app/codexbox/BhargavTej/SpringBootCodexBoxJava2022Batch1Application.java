@@ -1,13 +1,15 @@
 package com.codexbox.springboot.app.codexbox.BhargavTej;
+import com.codexbox.springboot.app.codexbox.Assesment3.filehandling.InputOutputStream;
 import org.springframework.boot.SpringApplication;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class SpringBootCodexBoxJava2022Batch1Application {
-    public static void main(String[] args) {
-//        SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
+    public static void main(String[] args) throws IOException {
+        SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
         List<CodexBoxEmployee> addEmpdetails = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         for (int i=1; i<3 ;i++){
@@ -49,5 +51,14 @@ public class SpringBootCodexBoxJava2022Batch1Application {
         }
 
         System.out.println("My total employee: " + addEmpdetails.size());
+
+
+
+
+       //InputStream Example
+        InputOutputStream inputOutputStream = new InputOutputStream();
+            inputOutputStream.fileInputOutputStream();
+
+
     }
 }
