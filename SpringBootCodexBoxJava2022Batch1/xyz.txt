@@ -1,0 +1,3 @@
+After executing the above program, you will get a single character from the file which is 87 (in byte form).
+ To see the text, you need to convert it into character.
+

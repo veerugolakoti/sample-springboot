@@ -1,9 +1,10 @@
 package com.codexbox.springboot.app.Veeru;
 
+import com.codexbox.springboot.app.Veeru.Collections.ComparativeExample;
+import com.codexbox.springboot.app.renuProjects.assessments.EmployeeDetails;
+
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class WordCountFromFile {
     public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class WordCountFromFile {
         }
 
         String line = null;
-        String[] words = null;
+        List<String> words = new ArrayList<>();
         while (true) {
             try {
                 if (!((line = br.readLine()) != null)) break;
@@ -31,12 +32,48 @@ public class WordCountFromFile {
                 System.out.println("Got IOException while reading the content from file" + filePath);
                 e.printStackTrace();
             }
-            words = line.split(" ");
-            findWordCount(words);
+            words.addAll(Arrays.asList(line.split(" ")));
+        }
+        findWordCount(words);
+    }
+
+    private static void findWordCount(List<String> words) {
+
+        Map<String, Integer> word = new HashMap<>();
+        for (String str : words) {
+            if (word.containsKey(str)) {
+                word.put(str, 1 + word.get(str));
+            } else {
+                word.put(str, 1);
+
+            }
+        }
+        System.out.println(word);
+        System.out.println(word.keySet());
+        System.out.println("before sorting");
+        for (Map.Entry<String,Integer> entry : word.entrySet()){
+            System.out.println(entry.getKey()+" " + entry.getValue());
+        }
+
+
+
+        List<Map.Entry<String, Integer>> listcount = new ArrayList<>(word.entrySet());
+        Collections.sort(listcount, new Comparator<Map.Entry<String, Integer>>() {
+            @Override
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                return o2.getValue().compareTo(o1.getValue());
+            }
+
+
+        });
+        System.out.println("after sorting");
+        for (Map.Entry<String, Integer> entry :listcount) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+
         }
     }
 
-    private static void findWordCount(String[] words) {
-
-    }
 }
+
+
+

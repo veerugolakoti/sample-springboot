@@ -1,6 +1,7 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.renuProjects.assessments.EmployeeDetails;
+import com.codexbox.springboot.app.renuProjects.assessments.StudentDetails;
 import com.codexbox.springboot.app.renuProjects.collections.ExampleOfQueue;
 import org.junit.jupiter.api.Test;
 
@@ -122,6 +123,8 @@ public class RenuTest {
       }
 
   }
+
+
 
 
 
