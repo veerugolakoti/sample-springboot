@@ -1,14 +1,16 @@
 package com.codexbox.springboot.app.HarshaDeepthi;
 
+import com.codexbox.springboot.app.HarshaDeepthi.Fileoperations.Inputoutputstreamreader;
 import org.springframework.boot.web.servlet.server.Session;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MainMethod {
     public static void main(String[] args) {
-        StudentGrade stGrade = new StudentGrade(); //studentgrade
-        stGrade.studentAndTheirGrades();
+       /* StudentGrade stGrade = new StudentGrade(); //studentgrade
+        stGrade.studentAndTheirGrades();*/
 
 
 
@@ -30,8 +32,11 @@ public class MainMethod {
         System.out.println(mymap.get(null));
         System.out.println(mymap);*/
 
-
-
-
+       /* Inputoutputstreamreader inputreader=new Inputoutputstreamreader();
+        inputreader.findInputOutputOperations();*/
+        String str="i am harshadeepthi from bhadrachalam";
+        System.out.println(str.length());
+        Inputoutputstreamreader inputs = new Inputoutputstreamreader() ;
+        inputs.findInputOutputOperations();
     }
 }
