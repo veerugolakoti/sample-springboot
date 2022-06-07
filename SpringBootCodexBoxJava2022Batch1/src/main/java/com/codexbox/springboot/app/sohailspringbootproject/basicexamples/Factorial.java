@@ -4,14 +4,16 @@ import java.util.Scanner;
 
 public class Factorial {
     public void factorialMethod(){
-        int x= 0;
+        Integer x;
+        Integer fact=1;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number of factorial you want : ");
         x=scanner.nextInt();
-        for(int i = 0 ; i<x;i++) {
-
+        for(int i = 1; i<=x;i++) {
+           fact=fact*i ;
         }
-            System.out.println();
+        System.out.println("The Factorial of a number" +x +"is");
+            System.out.println(fact);
         }
 
     }

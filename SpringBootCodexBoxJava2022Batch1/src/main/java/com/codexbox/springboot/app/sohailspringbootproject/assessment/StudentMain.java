@@ -35,8 +35,8 @@ public class StudentMain {
         Collections.sort(myStudentList, new Comparator<Student>() {
             @Override
             public int compare(Student o1, Student o2) {
-                if(o1.getGrade()==o2.getGrade()){
-                    if(o2.getMarks()==o1.getMarks()) {
+                if(o1.getGrade().equals(o2.getGrade())){
+                    if(o2.getMarks().equals(o1.getMarks())) {
                         if(o1.getName().equalsIgnoreCase(o2.getName())) {
                             return o1.getId().compareTo(o2.getId());
                         }
