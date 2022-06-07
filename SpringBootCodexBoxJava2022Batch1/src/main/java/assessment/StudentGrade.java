@@ -58,9 +58,9 @@ public class StudentGrade {
                 if (o2.getValue() != o1.getValue()) {
 
                     result = o1.getValue().compareTo(o2.getValue());
-                } else if (o1.getKey().getStdMarks() !=  o2.getKey().getStdMarks()) {
+                } else if (o1.getKey().getStdMarks() != o2.getKey().getStdMarks()) {
                     result = o2.getKey().getStdMarks().compareTo(o1.getKey().getStdMarks());
-                } else if (o2.getKey().getStdName() != o1.getKey().getStdName()){
+                } else if (o2.getKey().getStdName().equalsIgnoreCase( o1.getKey().getStdName())){
                     result = o1.getKey().getStdName().compareTo(o2.getKey().getStdName());
                 } else {
                     result = o1.getKey().getStdNo().compareTo(o2.getKey().getStdNo());

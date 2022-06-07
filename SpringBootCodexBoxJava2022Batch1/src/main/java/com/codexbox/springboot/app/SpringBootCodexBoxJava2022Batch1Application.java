@@ -1,10 +1,23 @@
 package com.codexbox.springboot.app;
 
 import assessment.StudentGrade;
+import ioStreams.IoStreamExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.io.IOException;
+
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 	public static void main(String[] args) {
+		IoStreamExample io=new IoStreamExample();
+		try {
+			io.myIostreem();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+
+	}
+}
 		//int count = 1;
 	/*	List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
@@ -22,7 +35,5 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		System.out.println("My total employees : " + empList.size());
 	}*/
 
-		StudentGrade studentGrade=new StudentGrade();
-		studentGrade.studentGrades();
-	}
-}
+	/*	StudentGrade studentGrade=new StudentGrade();
+		studentGrade.studentGrades();*/
