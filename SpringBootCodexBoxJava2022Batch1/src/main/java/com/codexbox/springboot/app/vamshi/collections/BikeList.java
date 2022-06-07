@@ -17,7 +17,7 @@ public class BikeList {
         bikes.add("BMW");
         bikes.add("SUZUKI");
         bikes.add("JAWA");
-        System.out.println("companies of bikes i like "+bikes);
+        System.out.println("Bikes company List "+bikes);
 
         List<String> testCars = new ArrayList<>();
         testCars.add("Maserati");
@@ -36,7 +36,7 @@ public class BikeList {
 
         List<String> cars = new ArrayList<>(bikes);
 
-        System.out.println("bike number 7 " + cars.get(7));
+        System.out.println("bike number 7 " + cars.get(1));
     }
 }
 

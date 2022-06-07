@@ -19,6 +19,7 @@ public class CarMap {
         cars.put("Ford",46);
          System.out.println(cars.descendingMap());
 
+
          //System.out.println(cars.get("Audi"));
          // System.out.println("testing the natural sorting order"+cars);
     }

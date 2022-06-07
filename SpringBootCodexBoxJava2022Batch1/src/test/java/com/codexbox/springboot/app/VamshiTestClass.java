@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app;
 
+import com.codexbox.springboot.app.vamshi.assessment.StudentsList;
 import com.codexbox.springboot.app.vamshi.collections.BikeList;
 import com.codexbox.springboot.app.vamshi.collections.CarMap;
 import com.codexbox.springboot.app.vamshi.collections.StackExample;
@@ -23,6 +24,13 @@ public class VamshiTestClass {
       public void orderTest(){
           CarMap carMap = new CarMap();
           carMap.orderTest();
+    }
+    @Test
+    public void countofstudents(){
+        StudentsList studentsList = new StudentsList();
+
 
     }
+
 }
+

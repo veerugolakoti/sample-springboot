@@ -2,8 +2,10 @@ package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
 import com.codexbox.springboot.app.Veeru.employee.Employee;
+import com.codexbox.springboot.app.vamshi.files.InputOutputStreamSample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,10 +13,13 @@ import java.util.Scanner;
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) {
-		StudentGradeAssessment assessment4 = new StudentGradeAssessment();
-		assessment4.studentAndTheirGrades();
-	} /*{
+	public static void main(String[] args) throws IOException {
+		InputOutputStreamSample inputOutputStreamSample = new InputOutputStreamSample();
+		inputOutputStreamSample.fileInputOutputOperations();
+	}
+		/*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
+		assessment4.studentAndTheirGrades();*/
+	 /*{
 		//int count = 1;
 		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
