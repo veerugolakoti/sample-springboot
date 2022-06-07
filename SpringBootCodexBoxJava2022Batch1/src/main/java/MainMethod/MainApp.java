@@ -1,6 +1,9 @@
 package MainMethod;
 
 import Collections.*;
+import Enumeration.EnumerationEx;
+import Enumeration.EnumerationWeekDay;
+import FilesOperations.FileIOOperations;
 
 import java.util.PriorityQueue;
 
@@ -25,8 +28,17 @@ public class MainApp {
         /*MapExample mpx = new MapExample();
         mpx.mapExample();*/
 
-        PriorityQueueExample pqueue = new PriorityQueueExample();
-        pqueue.priorityQueue();
+        /*PriorityQueueExample pqueue = new PriorityQueueExample();
+        pqueue.priorityQueue();*/
+
+        /*ArrayListEx arr = new ArrayListEx();
+        arr.arrayList();*/
+
+        /*EnumerationEx enums = new EnumerationEx();
+        enums.seasons();*/
+
+        FileIOOperations files = new FileIOOperations();
+        files.filesoperations();
 
     }
 }
