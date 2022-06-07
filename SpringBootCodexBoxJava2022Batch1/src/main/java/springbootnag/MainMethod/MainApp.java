@@ -1,7 +1,6 @@
 package springbootnag.MainMethod;
 
 import com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application;
-import org.junit.Test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import springboot.nag.AddEmployees;
