@@ -1,6 +1,7 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.rehana.collection.PriorityQueueExample;
+import com.codexbox.springboot.app.rehana.enumaration.Months;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -30,11 +31,13 @@ public class RehanaTestApplication {
    System.out.println(mySet.size());
     System.out.println(mySet.contains("arha"));
     System.out.println(mySet);
+   //System.out.println( mySet)
 
 
-
-   //System.out.println( mySet);
-
+    System.out.println(Months.JANUARY.getValue());
+    System.out.println(Months.FEBRUARY.getValue());
+    System.out.println(Months.values());
+    System.out.println(  Months.JANUARY);
 
 }
 }
