@@ -32,7 +32,7 @@ public class StudentGradeAssessment {
             students.add(student);
         }
 
-        Map<Student, String> studentGradeMap = new HashMap<>();
+        Map<Student, String> studentGradeMap = new Hashtable<>();
         System.out.println("Before sorting my Student details are : ");// to test order of insertion
         for (Student student: students) {
             System.out.println("Student number: " + student.getStudentNum());
