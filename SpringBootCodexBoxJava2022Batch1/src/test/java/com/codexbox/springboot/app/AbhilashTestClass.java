@@ -3,10 +3,12 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.abhilash.collection.SetArrayExample;
 import com.codexbox.springboot.app.abhilash.collection.SetExample;
 import com.codexbox.springboot.app.abhilash.collection.StackExample;
+import com.codexbox.springboot.app.abhilash.filehandling.FileHandlingExample;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.awt.*;
+import java.io.IOException;
 import java.util.Set;
 
 @SpringBootTest
@@ -26,5 +28,12 @@ public class AbhilashTestClass {
     public void testSetArrayExample() {
        SetArrayExample setArrayExample = new SetArrayExample();
        setArrayExample.setArray();
+
+}
+@Test
+public void testFileHandlingExample() throws IOException {
+    FileHandlingExample fileHandlingExample = new FileHandlingExample();
+    fileHandlingExample.example();
+
 }
 }

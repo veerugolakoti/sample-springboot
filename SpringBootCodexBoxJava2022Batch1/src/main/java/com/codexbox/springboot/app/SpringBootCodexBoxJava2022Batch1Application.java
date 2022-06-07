@@ -4,6 +4,7 @@ import com.codexbox.springboot.app.abhilash.Employee;
 import com.codexbox.springboot.app.abhilash.assessment4.Student;
 import com.codexbox.springboot.app.abhilash.assessment4.StudentDetails;
 import com.codexbox.springboot.app.abhilash.enumaration.EnumarationExample;
+import com.codexbox.springboot.app.abhilash.filehandling.FileHandlingExample;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -55,24 +56,26 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 //
 //			}
 
-		System.out.println(EnumarationExample.SUMMER.getValues());
-		System.out.println(EnumarationExample.SPRING.name());
-		System.out.println(EnumarationExample.FALL.ordinal());
-
+//		System.out.println(EnumarationExample.SUMMER.getValues());
+//		System.out.println(EnumarationExample.SPRING.name());
+//		System.out.println(EnumarationExample.FALL.ordinal());
+//
 		List<Student> list = new ArrayList<>();
-		Student student = new StudentDetails();
-		StudentDetails studentDetails1 = new StudentDetails();
-		//for(int i = 0; i<2 ;i++) {
-			//System.out.println("Enter student " + (i+1) + " details");
-			studentDetails1.studentDetails();
-		for ( Student s:list) {
+		for (int i = 0; i < 2; i++) {
+			Student student = new Student();
+			System.out.println("Enter student " + (i + 1) + " details");
+			student.studentDetails();
+			student.gradeCalculation(i);
+			list.add(student);
+
+		}
+		for (Student s : list) {
 			s.getAllstudentDetails();
+			System.out.println(s.getName() + ":" + s.gradeCalculation(s.getMarks()));
 		}
-			}
+	}
+}
 
-
-		}
-		//studentDetails1.getAllstudentDetails();
 
 
 
