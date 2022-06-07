@@ -1,10 +1,11 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.collections.ExampleStack;
+import com.codexbox.springboot.app.vidyadarna.InputOutputStreamExample;
+import com.codexbox.springboot.app.vidyadarna.collections.ExampleStack;
 import com.codexbox.springboot.app.vidyadarna.Employee;
-import com.codexbox.springboot.app.vidyadarna.StudentAssesment;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.util.*;
 
 public class VidyaTest {
@@ -172,7 +173,11 @@ public class VidyaTest {
     }
 
     @Test
-    public void StudentTest() {
+  public  void TestIO() throws IOException {
+        InputOutputStreamExample example = new InputOutputStreamExample();
+        example.inputOutputStreamExample();
 
     }
+
+
 }

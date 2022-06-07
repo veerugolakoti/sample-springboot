@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.collections;
+package com.codexbox.springboot.app.vidyadarna.collections;
 
 import java.util.Stack;
 

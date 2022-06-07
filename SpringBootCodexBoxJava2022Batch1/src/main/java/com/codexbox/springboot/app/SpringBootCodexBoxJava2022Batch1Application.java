@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app;
 
+//Test;
 import com.codexbox.springboot.app.vidyadarna.StudentAssesment;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -15,9 +16,11 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 
 	public static void main(String[] args) {
+//		Test1 test = new Test1(EnumExample.MEDIUM);
+//		test.orderPizza();
 
 
-//		//SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
+		//SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 //		List<Employee> employeeList = new ArrayList<>();
 //
 //		Scanner s = new Scanner(System.in);
@@ -61,8 +64,9 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 //		for (int i = 0; i < 3; i++) {
 //			employeeList.get(i).PrintDisplay();
 //     System.out.println("&&&&&&&&&&&&&&&&&&&");
+//
+//		}3
 
-//		}
 		List<StudentAssesment> studentList = new ArrayList<>();
 		Scanner sc = new Scanner(System.in);
 
@@ -96,7 +100,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 			System.out.println("Before sorting my Student details are : ");
 			for (StudentAssesment student : studentList) {
-				System.out.println("studentid : " + student.getStudentId());
+				System.out.println("studentId : " + student.getStudentId());
 				studentGradeMap.put(student, percentage((student.getStudentMarks() / totalMarks) * 100));
 			}
 			//	percentage = (studentMarks / totalMarks) * 100;
@@ -129,20 +133,20 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			public int compare(Map.Entry<StudentAssesment, String> o1, Map.Entry<StudentAssesment, String> o2) {
 				int result = 0;
 
-				if (o2.getValue() != o1.getValue()) {
+				if (o2.getValue() == o1.getValue()) {
 
-					if (o1.getValue() != o2.getValue()) {
-						if (o2.getKey() == o1.getKey()) {
+					if (o1.getValue().equalsIgnoreCase( o2.getValue()) ){
+						if (o2.getKey() ==( o1.getKey())) {
 							result = o1.getValue().compareTo(o2.getValue());
 						} else if (o2.getKey().getStudentMarks() != o1.getKey().getStudentMarks()) {
 							result = o2.getKey().getStudentMarks().compareTo(o1.getKey().getStudentMarks());
-						} else if (o1.getKey().getStudentName(" ") != o2.getKey().getStudentName(" ")) {
-							result = o1.getKey().getStudentName(" ").compareTo(o2.getKey().getStudentName(" "));
+						} else if (o1.getKey().getStudentName(" ") .equalsIgnoreCase( o2.getKey().getStudentName(" "))) {
+							result = o2.getKey().getStudentName(" ").compareTo(o1.getKey().getStudentName(" "));
 						} else {
-							result = o2.getKey().getStudentId().compareTo(o1.getKey().getStudentId());
+							result = o1.getKey().getStudentId().compareTo(o2.getKey().getStudentId());
 						}
 
-						return result;
+
 					}
 
 					//return 0;
