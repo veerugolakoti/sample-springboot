@@ -14,8 +14,6 @@ public class InputOutputStreamOperations {
             while(ascii!=-1){
                 ascii =inputStream.read();
                 outputStream.write(ascii);
-
-
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
