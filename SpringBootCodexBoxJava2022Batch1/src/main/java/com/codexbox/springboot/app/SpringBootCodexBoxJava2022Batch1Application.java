@@ -1,36 +1,46 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
-import feature_ranjan.enumeration.EnumExample;
-import feature_ranjan.fileiooperation.InputOutputExample;
+import com.codexbox.springboot.app.Veeru.employee.Employee;
+import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.IOException;
+import java.util.*;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) throws IOException {
-		InputOutputExample inputOutputExample = new InputOutputExample();
-		inputOutputExample.fileInputOutput();
-
-
-
-
-
+	public static void main(String[] args) {
 		/*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
 		assessment4.studentAndTheirGrades();*/
+		/*Map<String, Integer> myHashMap = new HashMap<>();
+		myHashMap.put("Name1", 1);
+		myHashMap.put("Name1", 2);
+		myHashMap.put(null, 3);
+		myHashMap.put(null, 4);
+		System.out.println(myHashMap.get(null));
 
-//enum example
-	/*	for (EnumExample enumexample : EnumExample.values()) {
-			System.out.println(enumexample.getValue());
+		System.out.println(myHashMap);*/
+
+		List<Integer> testNumbers = new ArrayList<>();
+		testNumbers.add(1);
+		testNumbers.add(2);
+		testNumbers.add(3);
+		System.out.println(Seasons.SUMMER.name());
+		System.out.println(Seasons.SPRING.ordinal());
+		System.out.println(Seasons.SPRING.getValue());
+
+	/*ListIterator myIterator = testNumbers.();
+		while (myIterator.hasNext()) {
+			System.out.println(myIterator.next());
+			myIterator.previous()
 		}
-		System.out.println(" spring :"+EnumExample.SPRING.getValue());
-		//EnumExample.valueOf(EnumExample.RAINY.getValue());
-	}*/
 
-//list of employee
-	/*{
+		for
+		}*/
+
+
+	} /*{
 		//int count = 1;
 		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
@@ -49,5 +59,5 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		}
 		System.out.println("My total employees : " + empList.size());
 	}*/
-	}
 }
+
