@@ -9,7 +9,7 @@ import java.util.*;
 
 public class MainApplication {
     public static void main(String[] args) {
-      /* Scanner sc = new Scanner(System.in);
+       /* Scanner sc = new Scanner(System.in);
         System.out.println("enter number of students: ");
         int numberofstudents = sc.nextInt();
         List<Student> list = new ArrayList<>();
@@ -17,7 +17,7 @@ public class MainApplication {
 
             Student student = new Student();
             System.out.println("enter student id: ");
-            student.setStudentid( sc.nextInt());
+            student.setStudentid(sc.nextInt());
             System.out.println("enter student name: ");
             student.setStudentname(sc.next());
             System.out.println("enter student address:");
@@ -28,19 +28,21 @@ public class MainApplication {
 
 
         }
-        int count =1;
-        System.out.println("before sorting of student details:");
-        for (Student s:list) {
+        int count = 1;
+        System.out.println("before sorting  student details:");
+        for (Student s : list) {
             s.getGrade();
-            System.out.println("details of student"+ count++);
+            System.out.println("details of student " + count++);
             s.details();
             s.caluclate();
+            ;
         }
-        System.out.println();*/
-   /*     Map<String,Student> map = new HashMap<>();
+        Student.sortedlist(list);*/
+        /*System.out.println();
+        Map<String, Student> map = new HashMap<>();
         System.out.println("before sorting student details");
-        for (Student std :list) {
-         std.details();*/
+        for (Student std : list) {
+            std.details();*/
 
 
         FileInputoutputExample fileInputoutputExample = new FileInputoutputExample();
@@ -51,6 +53,7 @@ public class MainApplication {
         }
 
 
+        }
     }
-}
+
 
