@@ -1,1 +1,2 @@
-abcdefghijklmnoprstuvwxyzÿ
+This abstract class is the superclass of all classes representing an output stream of bytes. An output stream accepts output bytes and sends them to some sink.
+Applications that need to define a subclass of OutputStream must always provide at least a method that writes one byte of output.

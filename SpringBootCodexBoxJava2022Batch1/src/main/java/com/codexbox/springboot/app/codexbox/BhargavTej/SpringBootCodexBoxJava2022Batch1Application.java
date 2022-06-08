@@ -1,16 +1,18 @@
 package com.codexbox.springboot.app.codexbox.BhargavTej;
 import com.codexbox.springboot.app.codexbox.Assesment3.filehandling.InputOutputStream;
+import com.codexbox.springboot.app.codexbox.Assesment3.filehandling.InputOutputStreamExample2;
 import org.springframework.boot.SpringApplication;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class SpringBootCodexBoxJava2022Batch1Application {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
-        List<CodexBoxEmployee> addEmpdetails = new ArrayList<>();
+       /* List<CodexBoxEmployee> addEmpdetails = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         for (int i=1; i<3 ;i++){
             System.out.println("Enter Employee" + i + " Details");
@@ -58,7 +60,15 @@ public class SpringBootCodexBoxJava2022Batch1Application {
        //InputStream Example
         InputOutputStream inputOutputStream = new InputOutputStream();
             inputOutputStream.fileInputOutputStream();
+            */
 
+            //InputStream Example 2
+        InputOutputStreamExample2 inputOutputStreamExample2 = new InputOutputStreamExample2();
+        try {
+            inputOutputStreamExample2.transferFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
