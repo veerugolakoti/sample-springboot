@@ -74,7 +74,7 @@ public class Student {
         this.marks = sc.nextInt();
     }
     public String gradeCalculation(Integer marks) {
-        marks = (marks/600)*100;
+        marks = (this.marks/600)*100;
         if (marks >= 90) {
             this.grade= "g1";
             return "Grade g1";
