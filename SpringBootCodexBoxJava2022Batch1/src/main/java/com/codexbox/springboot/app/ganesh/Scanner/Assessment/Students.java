@@ -1,9 +1,5 @@
 package com.codexbox.springboot.app.ganesh.Scanner.Assessment;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
-
 public class Students {
     private int Studentnumber;
     private String Studentname,Studentaddress;

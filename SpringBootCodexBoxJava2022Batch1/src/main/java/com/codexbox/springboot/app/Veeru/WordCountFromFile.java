@@ -45,7 +45,7 @@ public class WordCountFromFile {
                 wordCountMap.put(word, 1);// veeru 1
             }
         }
-        List<Map.Entry<String, Integer>> wordCountList = new ArrayList<>(wordCountMap.entrySet());
+        List<Map.Entry<String, Integer>>  wordCountList = new ArrayList<>(wordCountMap.entrySet());
         System.out.println("Before Sorting my values are : ");
         for (Map.Entry<String, Integer> entry : wordCountList) {
             System.out.println(entry.getKey() + " : " +  entry.getValue());

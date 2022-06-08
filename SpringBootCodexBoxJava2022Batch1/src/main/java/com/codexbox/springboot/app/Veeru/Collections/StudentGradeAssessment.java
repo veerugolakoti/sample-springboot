@@ -12,7 +12,7 @@ public class StudentGradeAssessment {
         System.out.println("Enter Total no.of student: ");
         Integer totalStudents = scanner.nextInt();
         List<Student> students = new ArrayList<>();
-        for (int i = 1; i < totalStudents ; i++) {
+        for (int i = 1; i <=totalStudents ; i++) {
 
             System.out.println("Enter Student" + i + " Details: ");
             System.out.println("Enter student name: ");
