@@ -2,9 +2,10 @@ package com.codexbox.springboot.app;
 
 import Enumeration.Size;
 import Enumeration.Week;
-import FileOperations.InputOutputStream;
+import FileOperations.*;
 import org.junit.jupiter.api.Test;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class TestNagarjuna {
@@ -28,9 +29,23 @@ public class TestNagarjuna {
         System.out.println(Size.EXTRALARGE.toString());
 
 */
-    public void inputOoutputOperations() throws IOException {
+    /*public void inputOutputOperations() throws IOException {
         InputOutputStream inputexample=new InputOutputStream();
-        inputexample.inputOutputOperations();
+        inputexample.inputOutputOperations();*/
+    public void inputOutputOperations() throws IOException {
+//        Date on 9-06-22
+        /*FileSingleCharacter fsc=new FileSingleCharacter();
+        fsc.inputOutputOperations();*/
+       /* FileOutput fo=new FileOutput();
+        fo.inputOutputOperations();*/
+        /*FileReaderExample fre=new FileReaderExample();
+        fre.inputOutputOperations();*/
+       /* SequenceStream ss=new SequenceStream();
+        ss.inputOutputOperations();*/
+        /*SequenceStream1 ss1=new SequenceStream1();
+        ss1.inputOutputOperations();*/
+        CharReader cr=new CharReader();
+        cr.inputOutputOperations();
 
 
     }
