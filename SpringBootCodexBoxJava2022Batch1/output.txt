@@ -1,3 +1,7 @@
 The InputStream class of the java.io package is an abstract superclass that represents an input stream of bytes.
-
-Since InputStream is an abstract class, it is not useful by itself. However, its subclasses can be used to read data.ÿ
+Since InputStream is an abstract class, it is not useful by itself. However, its subclasses can be used to read data.
+Spring Boot is built on the top of the spring and contains all the features of spring.
+And is becoming a favorite of developers these days because of its rapid production-ready environment which enables the developers to directly focus on the logic instead of struggling with the configuration and setup.
+Spring Boot is a microservice-based framework and making a production-ready application in it takes very little time. In this article, we will discuss what is REST controller is in the spring boot.
+There are mainly two controllers are used in the spring, controller and the second one is RestController with the help of @controller and @restcontroller annotations.
+The main difference between the @restcontroller and the @controller is that the @restcontroller combination of the @controller and @ResponseBody annotation.ÿ

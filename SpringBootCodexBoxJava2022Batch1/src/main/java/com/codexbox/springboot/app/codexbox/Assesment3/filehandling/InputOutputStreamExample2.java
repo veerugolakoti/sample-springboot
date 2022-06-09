@@ -17,13 +17,16 @@ public class InputOutputStreamExample2 {
                fileData1 = inpFile1.read();
                destinationFile.write(fileData1);
            }while (fileData1 != -1);
-
-           while(fileData2 != -1);{
+           destinationFile.write(13);
+           do {
                fileData2 = inpFile2.read();
                destinationFile.write(fileData2);
-           }
+           }while (fileData2 != -1);
 
-
+          /* while(fileData2 != -1);{
+               fileData2 = inpFile2.read();
+               destinationFile.write(fileData2);
+           }*/
        } catch (FileNotFoundException e) {
            throw new RuntimeException(e);
        } catch (IOException e) {
@@ -34,6 +37,5 @@ public class InputOutputStreamExample2 {
            inpFile2.close();
            destinationFile.close();
        }
-
    }
    }
