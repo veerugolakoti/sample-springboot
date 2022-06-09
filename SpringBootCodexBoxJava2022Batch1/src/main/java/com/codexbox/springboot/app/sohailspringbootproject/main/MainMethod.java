@@ -5,6 +5,7 @@ import com.codexbox.springboot.app.sohailspringbootproject.basicexamples.Average
 import com.codexbox.springboot.app.sohailspringbootproject.basicexamples.Factorial;
 import com.codexbox.springboot.app.sohailspringbootproject.fileoperations.Combine2Files;
 import com.codexbox.springboot.app.sohailspringbootproject.fileoperations.InputOutputStreamOperations;
+import com.codexbox.springboot.app.sohailspringbootproject.interfaceconcept.CarDetails;
 
 public class MainMethod {
     public static void main(String [] args ){
@@ -18,5 +19,11 @@ public class MainMethod {
         average.averageMethod();*/
      /*   AverageExample averageExample = new AverageExample();
         averageExample.averageMethod();*/
+        CarDetails carDetails = new CarDetails();
+        carDetails.ford();
+        carDetails.tata();
+
+
+
        }
 }
