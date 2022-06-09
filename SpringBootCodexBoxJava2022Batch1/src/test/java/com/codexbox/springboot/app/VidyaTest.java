@@ -1,6 +1,8 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.vidyadarna.InputOutputStreamExample;
+import com.codexbox.springboot.app.vidyadarna.fileInputOutput.BufferedInputOutputExample;
+import com.codexbox.springboot.app.vidyadarna.fileInputOutput.CharArrayExample;
+import com.codexbox.springboot.app.vidyadarna.fileInputOutput.InputOutputStreamExample;
 import com.codexbox.springboot.app.vidyadarna.collections.ExampleStack;
 import com.codexbox.springboot.app.vidyadarna.Employee;
 import org.junit.jupiter.api.Test;
@@ -174,10 +176,21 @@ public class VidyaTest {
 
     @Test
   public  void TestIO() throws IOException {
-        InputOutputStreamExample example = new InputOutputStreamExample();
+      InputOutputStreamExample example = new InputOutputStreamExample();
         example.inputOutputStreamExample();
-
+//        for(int i = 0; i < 5; i++) {
+//            System.out.println(i +" ");
+//        }
     }
+@Test
+    public void TestBuferedInputOutput(){
+    BufferedInputOutputExample buffered = new BufferedInputOutputExample();
+    buffered.bufferedInputStream();
+}
+@Test
+    public void TestCharArray() throws IOException {
+    CharArrayExample charRW = new CharArrayExample();
+    charRW.charArrayExample();
 
-
+}
 }
