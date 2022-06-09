@@ -3,16 +3,18 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.Veeru.Employee;
 import com.codexbox.springboot.app.renuProjects.assessments.StudentDetails;
 import com.codexbox.springboot.app.renuProjects.collections.enumerationExample.Weeks;
+import com.codexbox.springboot.app.renuProjects.inputOutputStreams.BufferedInputStreamExample;
 import com.codexbox.springboot.app.renuProjects.inputOutputStreams.InputStreamExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) {/*{
+	public static void main(String[] args) throws IOException {/*{
 		//int count = 1;
 		*//*List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
@@ -102,8 +104,13 @@ StudentDetails  studentDetails=null;
 */
 
 
-		InputStreamExample inputStreamExample=new InputStreamExample();
+		/*InputStreamExample inputStreamExample=new InputStreamExample();
 		inputStreamExample.fileInputStreamMethod();
+*/
+
+
+		BufferedInputStreamExample bufferinput=new BufferedInputStreamExample();
+		bufferinput.buffermethod();
 
 
 

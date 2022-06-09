@@ -3,6 +3,7 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.renuProjects.assessments.EmployeeDetails;
 import com.codexbox.springboot.app.renuProjects.assessments.StudentDetails;
 import com.codexbox.springboot.app.renuProjects.collections.ExampleOfQueue;
+import com.codexbox.springboot.app.renuProjects.inputOutputStreams.InputStreamExample;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -124,7 +125,11 @@ public class RenuTest {
 
   }
 
-
+@Test
+    void testOfInputOutputStreams(){
+    InputStreamExample inputStreamExample=new InputStreamExample();
+    inputStreamExample.fileInputStreamMethod();
+}
 
 
 
