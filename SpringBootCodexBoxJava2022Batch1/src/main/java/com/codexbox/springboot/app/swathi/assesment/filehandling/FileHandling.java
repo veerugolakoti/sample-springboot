@@ -10,7 +10,7 @@ public class FileHandling {
   public void filemethod(){
 
       try {
-         FileReader freader = new FileReader("myfile.txt");
+          FileReader freader = new FileReader("myfile.txt");
          InputStream Files =new FileInputStream("myfile.txt");
          BufferedReader file1=new BufferedReader(freader);
          System.out.println(file1.read());

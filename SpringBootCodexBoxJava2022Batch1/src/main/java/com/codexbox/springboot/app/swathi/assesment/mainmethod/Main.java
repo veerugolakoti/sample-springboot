@@ -4,6 +4,7 @@ import com.codexbox.springboot.app.swathi.assesment.Assessment3.Student;
 import com.codexbox.springboot.app.swathi.assesment.EmployeeDetails;
 import com.codexbox.springboot.app.swathi.assesment.enumeration.Day;
 import com.codexbox.springboot.app.swathi.assesment.enumeration.EnumerationWeekday;
+import com.codexbox.springboot.app.swathi.assesment.filehandling.BufferExample;
 import com.codexbox.springboot.app.swathi.assesment.filehandling.FileHandling;
 import com.codexbox.springboot.app.swathi.assesment.filehandling.Inputoutputstream;
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
@@ -13,7 +14,6 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-
 
         public static void main(String[] args) throws IOException {
             // SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
@@ -92,15 +92,23 @@ public class Main {
 
         } }*/
 
-/*EnumerationWeekday day =new EnumerationWeekday(EnumerationWeekday.Weekday.valueOf("thursday"));*/
+        /*  EnumerationWeekday day =new EnumerationWeekday(EnumerationWeekday.Weekday.valueOf("THURSDAY"));
 
+          day.method();
+*/
           /*     FileHandling fileHandling=new FileHandling();
                 fileHandling.filemethod();
 */
 
+/*
+
               Inputoutputstream inputoutputstream =new Inputoutputstream();
                 inputoutputstream.fileinputoutputoperations();
 
+*/
+
+            BufferExample example=new BufferExample();
+            example.buffer();
 
 }}
 
