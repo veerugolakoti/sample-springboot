@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app.assesment4;
 
+import com.codexbox.springboot.app.rehana.files.BufferedoutputStreamExample;
 import com.codexbox.springboot.app.rehana.files.FileInputoutputExample;
 
 import java.io.FileInputStream;
@@ -9,7 +10,7 @@ import java.util.*;
 
 public class MainApplication {
     public static void main(String[] args) {
-       /* Scanner sc = new Scanner(System.in);
+       /*Scanner sc = new Scanner(System.in);
         System.out.println("enter number of students: ");
         int numberofstudents = sc.nextInt();
         List<Student> list = new ArrayList<>();
@@ -50,10 +51,18 @@ public class MainApplication {
             fileInputoutputExample.fileoperations();
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
 
-
+//BUFFEREXAMPLE
+        /*BufferedoutputStreamExample bufferedoutputStreamExample = new BufferedoutputStreamExample();
+        try {
+            bufferedoutputStreamExample.operations();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }*/
         }
     }
+}
+
+
 
 
