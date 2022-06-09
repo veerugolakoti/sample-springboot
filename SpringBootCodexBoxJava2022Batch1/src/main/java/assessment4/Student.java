@@ -1,4 +1,4 @@
-package assessment;
+package assessment4;
 public class Student {
     private Integer stdNo;
     private String stdName;
