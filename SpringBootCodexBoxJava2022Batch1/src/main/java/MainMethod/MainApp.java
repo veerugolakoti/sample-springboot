@@ -3,8 +3,9 @@ package MainMethod;
 import Collections.*;
 import Enumeration.EnumerationEx;
 import Enumeration.EnumerationWeekDay;
-import FilesOperations.FileIOOperations;
+import FilesOperations.*;
 
+import java.nio.file.Files;
 import java.util.PriorityQueue;
 
 public class MainApp {
@@ -37,8 +38,38 @@ public class MainApp {
         /*EnumerationEx enums = new EnumerationEx();
         enums.seasons();*/
 
-        FileIOOperations files = new FileIOOperations();
-        files.filesoperations();
+        /*FileIOOperations files = new FileIOOperations();
+        files.filesoperations();*/
+
+        /*ReadAfile rfile = new ReadAfile();
+        rfile.readaFile();*/
+
+        /*WriteaFile write = new WriteaFile();
+        write.writeFile();*/
+
+        /*WriteArrayToFiles writeArray = new WriteArrayToFiles();
+        writeArray.writearray();*/
+
+        /*CreateFile files = new CreateFile();
+        files.createFile();*/
+
+        /*FilesInfo filesIn = new FilesInfo();
+        filesIn.filesInfo();*/
+
+        /*FilesList filelist = new FilesList();
+        filelist.filesList();*/
+
+        /*FileReaderAndWriter readwrite = new FileReaderAndWriter();
+        readwrite.fileRandW();*/
+
+        /*WriterAndReader readWrite = new WriterAndReader();
+        readWrite.writerReader();*/
+
+        /*Fileread reader = new Fileread();
+        reader.fileread();*/
+
+        BufferInfiles buffers = new BufferInfiles();
+        buffers.buffersfiles();
 
     }
 }
