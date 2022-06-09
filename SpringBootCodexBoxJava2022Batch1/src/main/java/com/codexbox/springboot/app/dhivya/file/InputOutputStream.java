@@ -10,9 +10,7 @@ public class InputOutputStream {
         OutputStream outputStream = null;
         try {
             inputStream = new FileInputStream("samplefile.txt");
-            outputStream = new FileOutputStream("sample2.txt");
-
-            int asci = 0;
+            outputStream = new FileOutputStream("sample2.txt");int asci = 0;
             while (asci !=-1) {
                 asci = inputStream.read();
                 outputStream.write(asci);
@@ -25,7 +23,6 @@ public class InputOutputStream {
             try {
                 inputStream.close();
                 outputStream.close();
-
             }
              catch (IOException e) {
               throw new RuntimeException(e);
