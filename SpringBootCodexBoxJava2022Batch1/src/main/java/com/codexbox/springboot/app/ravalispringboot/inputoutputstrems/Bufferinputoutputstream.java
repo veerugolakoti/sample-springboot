@@ -9,18 +9,23 @@ public class Bufferinputoutputstream {
 
   public    void bufferMethod() {
       FileInputStream fileinput = null;
-      FileOutputStream fileOutput = null;
-      BufferedInputStream bis = null;
+     FileOutputStream fileOutput = null;
+     BufferedInputStream bis = null;
 
-        try {
+     try {
             fileinput= new FileInputStream("RAVALI.txt");
-            fileOutput= new FileOutputStream("ABC.txt");
+            fileOutput= new FileOutputStream("zyx.txt");
             bis= new BufferedInputStream(fileinput);
+
+
 
             int asci=0;
             while (asci != -1) {
-                asci=fileinput.read();
-                fileOutput.write(asci);
+                asci=bis.read();
+              //  System.out.println("u0000");
+               fileOutput.write(asci);
+               // System.out.println("u0000");
+
             }
         } catch (FileNotFoundException e) {
             System.out.println(" file is not there ");

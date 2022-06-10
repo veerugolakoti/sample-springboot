@@ -1,29 +1,30 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.ravalispringboot.assesment3.Student;
-import com.codexbox.springboot.app.ravalispringboot.collections.Months;
-import com.codexbox.springboot.app.ravalispringboot.inputoutputstrems.Bufferinputoutputstream;
-import com.codexbox.springboot.app.ravalispringboot.inputoutputstrems.InputOutputStreamExample;
-import jdk.internal.org.objectweb.asm.tree.analysis.Value;
+import com.codexbox.springboot.app.ravalispringboot.inputoutputstrems.SequnceinputoutputstreamExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
-		Bufferinputoutputstream bufferinputoutputstream= new Bufferinputoutputstream();
-		bufferinputoutputstream.bufferMethod();
+
+		SequnceinputoutputstreamExample sequnceinputstreamExample = new SequnceinputoutputstreamExample();
+		sequnceinputstreamExample.sequncemethod();
+	}
+}		/*Bufferinputoutputstream bufferinputoutputstream= new Bufferinputoutputstream();
+		bufferinputoutputstream.bufferMethod();*/
 		/*InputOutputStreamExample inputOutputStreamExample= new InputOutputStreamExample();
 		inputOutputStreamExample.Inputoutputmethod();*/
 
-		}
 
 
-	}
+
+
 //	SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 
 		//System.out.println("Enter  std name: ");
