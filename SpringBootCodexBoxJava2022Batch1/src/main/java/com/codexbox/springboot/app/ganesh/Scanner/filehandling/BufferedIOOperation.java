@@ -5,14 +5,19 @@ import java.io.*;
 public class BufferedIOOperation {
     public void bios() throws IOException
     {
-        InputStream fis = new FileInputStream("C:\\mafia.txt");
-        OutputStream fos = new FileOutputStream("D:\\combination.txt");
+         FileInputStream  fis = new FileInputStream("C:\\mafia.txt");
+      FileInputStream fis1 = new FileInputStream("D:\\inputfile.txt");
+        FileOutputStream fos = new FileOutputStream("D:\\combination.txt");
 
         BufferedInputStream bis = new BufferedInputStream(fis);
+        BufferedInputStream bis1 = new BufferedInputStream(fis1);
         BufferedOutputStream bos = new BufferedOutputStream(fos);
-        int i;
+        int i,l;
         while ((i = bis.read()) != -1) {
-             bos.write(i);
+            bos.write(i);
+            while ((l=bis1.read())!=-1){
+                bos.write(l);
+            }
 
         }
         System.out.println("File copied successfully");
@@ -21,5 +26,7 @@ public class BufferedIOOperation {
         bos.close();
         fis.close();
         fos.close();
+        fis1.close();
+        bis1.close();
     }
 }
