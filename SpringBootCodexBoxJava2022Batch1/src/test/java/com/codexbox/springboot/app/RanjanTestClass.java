@@ -2,47 +2,54 @@ package com.codexbox.springboot.app;
 
 import feature_ranjan.assignment2.StudentGrade;
 import feature_ranjan.collection.*;
+import feature_ranjan.fileiooperation.InputOutputExample;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 
 
 public class RanjanTestClass {
- @Test
+    @Test
     void duplicate(){
-     DuplicateInList duplicateInList = new DuplicateInList();
-     duplicateInList.duplicateList();
+        DuplicateInList duplicateInList = new DuplicateInList();
+        duplicateInList.duplicateList();
     }
-@Test
+    @Test
     void stackm1(){
-    StackEx se = new StackEx();
-    se.stackMethod();
-}
-@Test
+        StackEx se = new StackEx();
+        se.stackMethod();
+    }
+    @Test
     void queueM2(){
-    Queue que = new Queue();
-    que.queue();
+        Queue que = new Queue();
+        que.queue();
 
-}
-@Test
+    }
+    @Test
     void setTestm3(){
-    SetEx setex0 = new SetEx();
-    setex0.setex();
-}
+        SetEx setex0 = new SetEx();
+        setex0.setex();
+    }
 
-@Test
+    @Test
     void sortedm4(){
-    ShortedSetEx se = new ShortedSetEx();
-    se.sortedex();
-}
-@Test
+        ShortedSetEx se = new ShortedSetEx();
+        se.sortedex();
+    }
+    @Test
     void mapex(){
-     MapExample me = new MapExample();
-     me.map();
-}
+        MapExample me = new MapExample();
+        me.map();
+    }
 
-/*@Test
-    void studentAssignment(){
-    StudentGrade sg = new StudentGrade();
-    sg.studentGrade();
-}*/
-}
+    /*@Test
+        void studentAssignment(){
+        StudentGrade sg = new StudentGrade();
+        sg.studentGrade();
+    }*/
+   /* @Test
+    public void ioExample() throws IOException {
+        InputOutputExample inputOutputExample = new InputOutputExample();
+        inputOutputExample.fileInputOutput();
+    }*/
+    }
