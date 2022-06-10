@@ -9,7 +9,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class TestNagarjuna {
-    @Test
+
+@Test
 //public void getValue() {
 //    public void operations() {
        /* HashSetOperations hashSetOperations=new HashSetOperations();
@@ -32,7 +33,7 @@ public class TestNagarjuna {
     /*public void inputOutputOperations() throws IOException {
         InputOutputStream inputexample=new InputOutputStream();
         inputexample.inputOutputOperations();*/
-    public void inputOutputOperations() throws IOException {
+  public void inputOutputOperations() throws IOException {
 //        Date on 9-06-22
         /*FileSingleCharacter fsc=new FileSingleCharacter();
         fsc.inputOutputOperations();*/
@@ -44,10 +45,16 @@ public class TestNagarjuna {
         ss.inputOutputOperations();*/
         /*SequenceStream1 ss1=new SequenceStream1();
         ss1.inputOutputOperations();*/
-        CharReader cr=new CharReader();
-        cr.inputOutputOperations();
-
-
+        /*CharReader cr=new CharReader();
+        cr.inputOutputOperations();*/
+       /* CharWriter cw=new CharWriter();
+        cw.inputOutputOperations();*/
+       /* StrReader sr=new StrReader();
+        sr.inputOutputOperations();*/
+       /* ByteArray ba=new ByteArray();
+        ba.inputOutputOperations();*/
+        ByteArrayOutStream bao=new ByteArrayOutStream();
+        bao.inputOutputOperations();
     }
 }
 
