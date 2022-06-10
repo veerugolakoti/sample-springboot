@@ -1,15 +1,20 @@
 package com.codexbox.springboot.app.assesment4;
 
-import com.codexbox.springboot.app.rehana.files.BufferedoutputStreamExample;
-import com.codexbox.springboot.app.rehana.files.FileInputoutputExample;
+import com.codexbox.springboot.app.rehana.filehandling.BufferedoutputStreamExample;
+import com.codexbox.springboot.app.rehana.filehandling.FileReaderExample;
 
-import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.*;
 
 public class MainApplication {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        FileReaderExample fileReaderExample = new FileReaderExample();
+        fileReaderExample.reader();
+    }
+    }
+
        /*Scanner sc = new Scanner(System.in);
         System.out.println("enter number of students: ");
         int numberofstudents = sc.nextInt();
@@ -46,22 +51,46 @@ public class MainApplication {
             std.details();*/
 
 
-        FileInputoutputExample fileInputoutputExample = new FileInputoutputExample();
+       /* FileInputoutputExample fileInputoutputExample = new FileInputoutputExample();
         try {
             fileInputoutputExample.fileoperations();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e);*/
 
 //BUFFEREXAMPLE
-        /*BufferedoutputStreamExample bufferedoutputStreamExample = new BufferedoutputStreamExample();
+
+       /* BufferedoutputStreamExample bufferedoutputStreamExample = new BufferedoutputStreamExample();
         try {
             bufferedoutputStreamExample.operations();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }*/
-        }
-    }
-}
+
+        // SequenceInputStream Example
+       /* SequenceIpStreamEx sequenceIpStreamEx = new SequenceIpStreamEx();
+        try {
+            sequenceIpStreamEx.sequence();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }*/
+  //  }
+        //FileReaderExample
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
