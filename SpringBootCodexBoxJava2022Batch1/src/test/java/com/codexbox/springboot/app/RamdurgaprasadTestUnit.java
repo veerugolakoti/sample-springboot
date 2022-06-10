@@ -1,10 +1,8 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.ramdurgaprasad.assessment.Students;
+import com.codexbox.springboot.app.ramdurgaprasad.assessment5.FileStream;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.Scanner;
 
 @SpringBootTest
  class RamdurgaprasadTestUnit {
@@ -12,7 +10,7 @@ import java.util.Scanner;
 
     @ Test
     public void method(){
-        Students students=new Students();
+      /*  Students students=new Students();
         Scanner scanner=new Scanner(System.in);
         int Student =scanner.nextInt();
         try {
@@ -21,7 +19,9 @@ import java.util.Scanner;
             }}catch(Exception ex){
             System.out.println("you have entered the above max limit so there is an exception");
 
-            }
+            }*/
+        FileStream.LexicogrphicalOrder lexicogrphicalOrder = new FileStream.LexicogrphicalOrder();
+        lexicogrphicalOrder.dictionary();
         }
 
 
