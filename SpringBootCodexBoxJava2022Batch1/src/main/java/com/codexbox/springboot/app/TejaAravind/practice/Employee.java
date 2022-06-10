@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.TejaAravind;
+package com.codexbox.springboot.app.TejaAravind.practice;
 
 import java.util.Scanner;
 

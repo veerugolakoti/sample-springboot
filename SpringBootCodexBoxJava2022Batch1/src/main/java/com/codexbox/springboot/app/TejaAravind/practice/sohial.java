@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.TejaAravind;
+package com.codexbox.springboot.app.TejaAravind.practice;
 
 public interface sohial {
     String name = "raju";

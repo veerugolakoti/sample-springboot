@@ -1,6 +1,7 @@
 package com.codexbox.springboot.app.TejaAravind.Streams;
 
 import java.io.*;
+import java.util.Arrays;
 
 
 public class ReadWriteData {
@@ -13,12 +14,12 @@ public class ReadWriteData {
             inputStream = new FileInputStream("xyz.txt");
             inpStream =new FileInputStream("qwe.txt");
             outputStream = new FileOutputStream("abc.txt");
-            System.out.println(inpStream.available());
-
             int[] arr = new int[inpStream.available()];
             for (int i = 0; i < arr.length; i++) {
                 arr[i] = inpStream.read();
             }
+            System.out.println(Arrays.toString(arr));
+
 
 
 
@@ -29,16 +30,16 @@ public class ReadWriteData {
                 }
                 outputStream.write(data);
             }
+
             // for new line ascii value is 13.
             outputStream.write(13);
+
             for (int i : arr) {
                 outputStream.write((char)i);
-
             }
 
 
-            /*int ascii =0, bascii = 0;
-
+           /* int ascii = 1, bascii = 1;
             while (bascii != -1 ){
                 ascii = inputStream.read();
                 outputStream.write(ascii);
