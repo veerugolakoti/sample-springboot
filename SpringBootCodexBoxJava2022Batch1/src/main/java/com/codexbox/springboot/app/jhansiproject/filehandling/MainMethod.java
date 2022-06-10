@@ -6,7 +6,11 @@ public class MainMethod {
         sout.method();*/
 
 
-        BufferStreamExample buffer=new BufferStreamExample();
-        buffer.method();
+       /* BufferStreamExample buffer=new BufferStreamExample();
+        buffer.method();*/
+
+
+        SequenceInputStreamExample stream=new SequenceInputStreamExample();
+        stream.methods();
     }
 }
