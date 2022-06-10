@@ -5,6 +5,7 @@ import com.codexbox.springboot.app.renuProjects.assessments.StudentDetails;
 import com.codexbox.springboot.app.renuProjects.collections.enumerationExample.Weeks;
 import com.codexbox.springboot.app.renuProjects.inputOutputStreams.BufferedInputStreamExample;
 import com.codexbox.springboot.app.renuProjects.inputOutputStreams.InputStreamExample;
+import com.codexbox.springboot.app.renuProjects.inputOutputStreams.SequenceStreamExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
@@ -109,10 +110,13 @@ StudentDetails  studentDetails=null;
 */
 
 
-		BufferedInputStreamExample bufferinput=new BufferedInputStreamExample();
+		/*BufferedInputStreamExample bufferinput=new BufferedInputStreamExample();
 		bufferinput.buffermethod();
+*/
 
 
+		SequenceStreamExample example=new SequenceStreamExample();
+		example.sequMethod();
 
 	}
 }

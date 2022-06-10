@@ -7,11 +7,13 @@ public class BufferedInputStreamExample {
     BufferedInputStream bufferinput;
     FileOutputStream fileoutput;
 
+
     public void buffermethod(){
         try {
             fileinput=new FileInputStream("vsr.txt");
             bufferinput=new BufferedInputStream(fileinput);
             fileoutput=new FileOutputStream("ccc.txt");
+
 
             //System.out.println(bufferinput.read());
             System.out.println(bufferinput.available());
@@ -33,6 +35,7 @@ public class BufferedInputStreamExample {
                 fileinput.close();
                 fileoutput.close();
                 bufferinput.close();
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
