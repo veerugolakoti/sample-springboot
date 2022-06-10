@@ -8,5 +8,7 @@ public class AddTwoArrays {
         int a2=arr2.length;
         int sum = a1+a2;
         System.out.println(sum);
+        for (int i=0;i<sum;i++);
+        System.out.println();
     }
 }
