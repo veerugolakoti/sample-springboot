@@ -1,6 +1,7 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.dhivya.assisment.StudentList;
+import com.codexbox.springboot.app.dhivya.collections.DuplicateElements;
 import com.codexbox.springboot.app.dhivya.file.InputOutputStream;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -100,6 +101,8 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			}
 
 */
-		InputOutputStream inputOutputStream=new InputOutputStream();
-		inputOutputStream.ioOperations();
-		}}
+		//InputOutputStream inputOutputStream=new InputOutputStream();
+		//inputOutputStream.ioOperations();
+		DuplicateElements duplicateList=new DuplicateElements();
+		duplicateList.testlist();
+	}}
