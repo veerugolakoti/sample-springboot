@@ -15,6 +15,8 @@ public class SbiLoginpage {
 
         if(a==1)
         {
+            SignIn signIn = new SignIn();
+            signIn.signInMethod();
 
         } else if (a==2) {
             SignUp signUp = new SignUp();
