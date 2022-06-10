@@ -9,5 +9,8 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 	@Test
 	void contextLoads() {
 	}
+    @Test
+    void mystacks(){
 
+    }
 }
