@@ -20,6 +20,10 @@ public class FileHandlingExample {
 
             FileWriter new_fw = new FileWriter("second.txt");
            //new_fw.write("hi welcome to file handling utilities ");
+            new_fw.write("name: Abhilash");
+            new_fw.write("id: 22082");
+            new_fw.write("hyd");
+
             int number = 0;
             while(number != -1) {
                  number = sc.nextInt();

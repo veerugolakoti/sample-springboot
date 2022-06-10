@@ -3,7 +3,9 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.abhilash.collection.SetArrayExample;
 import com.codexbox.springboot.app.abhilash.collection.SetExample;
 import com.codexbox.springboot.app.abhilash.collection.StackExample;
+import com.codexbox.springboot.app.abhilash.filehandling.FileExample;
 import com.codexbox.springboot.app.abhilash.filehandling.FileHandlingExample;
+import com.codexbox.springboot.app.abhilash.filehandling.Sample;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -36,4 +38,17 @@ public void testFileHandlingExample() throws IOException {
     fileHandlingExample.example();
 
 }
+
+@Test
+public void testSampleByteOutput() {
+        Sample testSampleByte = new Sample();
+        testSampleByte.baos();
+
+    }
+    @Test
+     public void testFileExample() throws IOException {
+        FileExample obj = new FileExample();
+        obj.example();
+
+    }
 }

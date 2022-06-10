@@ -1,2 +1,1 @@
-java is platform independent.
-1 2 238 23864 94857 168r1a0470
+A
