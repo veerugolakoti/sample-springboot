@@ -1,12 +1,12 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.vidyadarna.fileInputOutput.BufferedInputOutputExample;
-import com.codexbox.springboot.app.vidyadarna.fileInputOutput.CharArrayExample;
-import com.codexbox.springboot.app.vidyadarna.fileInputOutput.InputOutputStreamExample;
+import com.codexbox.springboot.app.vidyadarna.fileInputOutput.*;
 import com.codexbox.springboot.app.vidyadarna.collections.ExampleStack;
 import com.codexbox.springboot.app.vidyadarna.Employee;
 import org.junit.jupiter.api.Test;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 
@@ -192,5 +192,20 @@ public class VidyaTest {
     CharArrayExample charRW = new CharArrayExample();
     charRW.charArrayExample();
 
+}
+@Test
+    public  void TestSequence() throws IOException {
+    SequenceExample sequenceExample = new SequenceExample();
+sequenceExample.sequenceInputStream();
+}
+@Test
+    public  void  TestByteArray() throws IOException {
+    ByteArrayExample byteArrayExample = new ByteArrayExample();
+    byteArrayExample.byteArray();
+}
+@Test
+    public void TestDataStreamExample() throws IOException {
+        DataStreamExample dataStreamExample = new DataStreamExample();
+        dataStreamExample.dataStream();
 }
 }

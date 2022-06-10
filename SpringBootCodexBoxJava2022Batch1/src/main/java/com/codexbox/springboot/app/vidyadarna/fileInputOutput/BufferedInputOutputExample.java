@@ -9,8 +9,8 @@ public class BufferedInputOutputExample{
     BufferedInputStream bufferedInputStream = null;
     BufferedOutputStream bufferedOutputStream = null;
 
-    BufferedReader br = null;
-    BufferedWriter br2 = null;
+    BufferedReader br ;
+    BufferedWriter br2;
     FileInputStream fileInputStream;
     FileOutputStream fileOutputStream;
 
@@ -24,7 +24,7 @@ public class BufferedInputOutputExample{
             int data = 0;
             while (data != -1){
             data = bufferedInputStream.read();
-            bufferedOutputStream.write(data);
+           // bufferedOutputStream.write(data);
 
             }
         } catch (FileNotFoundException ex) {
@@ -36,7 +36,7 @@ public class BufferedInputOutputExample{
             assert bufferedInputStream != null;
             try {
                 bufferedInputStream.close();
-                bufferedOutputStream.close();
+              //  bufferedOutputStream.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
 
