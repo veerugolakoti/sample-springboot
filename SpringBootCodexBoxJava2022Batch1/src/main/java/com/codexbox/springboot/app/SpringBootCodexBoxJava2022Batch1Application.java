@@ -3,6 +3,7 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
 import com.codexbox.springboot.app.Veeru.employee.Employee;
 import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
+import com.codexbox.springboot.app.rajat.multithreading.MyThreadOne;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.*;
@@ -11,9 +12,10 @@ import java.util.*;
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
-		/*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
-		assessment4.studentAndTheirGrades();*/
-		/*Map<String, Integer> myHashMap = new HashMap<>();
+
+		/*	*//*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
+		assessment4.studentAndTheirGrades();*//*
+		 *//*Map<String, Integer> myHashMap = new HashMap<>();
 		myHashMap.put("Name1", 1);
 		myHashMap.put("Name1", 2);
 		myHashMap.put(null, 3);
@@ -37,10 +39,10 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		}
 
 		for
-		}*/
+		}*//*
 
 
-	} /*{
+	} *//*{
 		//int count = 1;
 		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
@@ -59,5 +61,6 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		}
 		System.out.println("My total employees : " + empList.size());
 	}*/
+	}
 }
 
