@@ -6,6 +6,7 @@ import com.codexbox.springboot.app.renuProjects.collections.enumerationExample.W
 import com.codexbox.springboot.app.renuProjects.inputOutputStreams.BufferedInputStreamExample;
 import com.codexbox.springboot.app.renuProjects.inputOutputStreams.InputStreamExample;
 import com.codexbox.springboot.app.renuProjects.inputOutputStreams.SequenceStreamExample;
+import com.codexbox.springboot.app.renuProjects.multithreading.Mythread;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
@@ -115,8 +116,26 @@ StudentDetails  studentDetails=null;
 */
 
 
-		SequenceStreamExample example=new SequenceStreamExample();
+		/*SequenceStreamExample example=new SequenceStreamExample();
 		example.sequMethod();
+*/
 
+		Mythread thread=new Mythread();
+		thread.threading();
+		thread.run();
+		System.out.println(Thread.currentThread().getId());
+		System.out.println(Thread.currentThread().getName());
+		System.out.println(thread.getId());
+		System.out.println(thread.getName());
+		Mythread thread1=new Mythread();
+		thread.threading();
+		thread1.run();
+		System.out.println(thread1.getId());
+		System.out.println(thread1.getName());
+		Thread thread3=new Thread();
+		System.out.println(thread3.getId());
+		System.out.println(thread3.getName());
+		thread3.run();
+		thread1.start();
 	}
 }
