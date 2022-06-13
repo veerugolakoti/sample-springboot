@@ -1,12 +1,8 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.file.InputOutputStream;
-import com.codexbox.springboot.app.studentdetails.StudentList;
+import com.codexbox.springboot.app.mounika.file.InputOutputStream;
+import com.codexbox.springboot.app.mounika.multithreading.Threading;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -47,9 +43,9 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 //		for(int i=0; i< list.size();i++){
 
 
-		InputOutputStream inputOutputStream=new InputOutputStream();
+		/*InputOutputStream inputOutputStream=new InputOutputStream();
 		inputOutputStream.iooperation();
-
+*/
 
 
 		/*List<StudentList> myStudentList=new ArrayList<>();
@@ -69,8 +65,39 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			studentList.setStudentMarks(sc.nextInt());
 			System.out.println("average "+ " " + studentList.setAverage());
 			studentList.add(studentList);
+
 		}
 */
+
+         Threading threading = new Threading();
+         threading.run();
+		System.out.println(threading.currentThread().getId());
+		System.out.println(threading.currentThread().getName());
+
+		Threading threading1 =new Threading();
+		System.out.println(threading1.getId());
+		System.out.println(threading1.getName());
+
+		Thread thread =new Thread();
+		System.out.println(thread.getId());
+		System.out.println(thread.getName());
+
+
+
+		Threading threading3 = new Threading();
+		threading3.start();
+		System.out.println(threading3.currentThread().getId());
+		System.out.println(threading3.currentThread().getName());
+
+		Threading threading4 =new Threading();
+		System.out.println(threading4.getId());
+		System.out.println(threading4.getName());
+
+		Thread thread1 =new Thread();
+		System.out.println(thread1.getId());
+		System.out.println(thread1.getName());
+
+
 	 }
 		}
 

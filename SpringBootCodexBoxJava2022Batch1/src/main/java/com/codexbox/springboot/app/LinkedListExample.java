@@ -10,6 +10,8 @@ public class LinkedListExample {
        list.add("Name1");
        list.add("Name2");
        return list;
+
+
     }
 
 }
