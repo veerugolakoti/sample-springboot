@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.ganesh.Scanner.filehandling;
+package com.codexbox.springboot.app.ganesh.filehandling;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
