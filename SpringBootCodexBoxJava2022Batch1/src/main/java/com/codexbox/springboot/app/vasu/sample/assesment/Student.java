@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.assesment;
+package com.codexbox.springboot.app.vasu.sample.assesment;
 
 public class Student {
     Integer id;

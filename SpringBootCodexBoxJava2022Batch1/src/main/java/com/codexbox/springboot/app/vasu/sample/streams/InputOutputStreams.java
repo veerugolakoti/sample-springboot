@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app;
+package com.codexbox.springboot.app.vasu.sample.streams;
 
 import java.io.*;
 

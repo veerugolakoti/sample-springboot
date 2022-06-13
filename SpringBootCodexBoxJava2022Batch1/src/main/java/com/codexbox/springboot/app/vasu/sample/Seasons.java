@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app;
+package com.codexbox.springboot.app.vasu.sample;
 
 import java.util.ArrayList;
 import java.util.List;
