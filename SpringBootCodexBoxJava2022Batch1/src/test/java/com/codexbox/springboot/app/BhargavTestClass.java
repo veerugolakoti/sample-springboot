@@ -1,12 +1,9 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.codexbox.Collections.MapExamples;
-import com.codexbox.springboot.app.codexbox.Collections.SetExamples;
-import com.codexbox.springboot.app.codexbox.Collections.StackExamples;
+import com.codexbox.springboot.app.codexbox.BhargavTej.collections.MapExamples;
+import com.codexbox.springboot.app.codexbox.BhargavTej.collections.SetExamples;
+import com.codexbox.springboot.app.codexbox.BhargavTej.collections.StackExamples;
 import org.junit.jupiter.api.Test;
-
-import java.util.HashSet;
-import java.util.TreeSet;
 
 public class BhargavTestClass {
 

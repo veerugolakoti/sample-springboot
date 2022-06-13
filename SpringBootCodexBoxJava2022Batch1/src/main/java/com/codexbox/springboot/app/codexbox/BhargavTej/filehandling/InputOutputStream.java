@@ -1,9 +1,9 @@
-package com.codexbox.springboot.app.codexbox.Assesment3.filehandling;
+package com.codexbox.springboot.app.codexbox.BhargavTej.filehandling;
 
 import java.io.*;
 
 public class InputOutputStream {
-    public void fileInputOutputStream() throws IOException {
+    public static void fileInputOutputStream() throws IOException {
         InputStream inpustream = null;
         OutputStream outputStream = null;
         try {

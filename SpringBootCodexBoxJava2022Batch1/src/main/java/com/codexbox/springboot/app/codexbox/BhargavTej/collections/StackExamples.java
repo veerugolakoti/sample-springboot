@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.codexbox.Collections;
+package com.codexbox.springboot.app.codexbox.BhargavTej.collections;
 
 import java.util.Stack;
 

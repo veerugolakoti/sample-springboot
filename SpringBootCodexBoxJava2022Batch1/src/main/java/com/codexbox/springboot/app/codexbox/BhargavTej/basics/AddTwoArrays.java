@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.codexbox.BhargavTej;
+package com.codexbox.springboot.app.codexbox.BhargavTej.basics;
 
 public class AddTwoArrays {
     public static void main(String[] args) {

@@ -1,1 +1,2 @@
-Hello World I am Chitti.The Robot, Speed 1 terahertz, memory 1 zeta byte.
+The InputStream class of the java.io package is an abstract superclass that represents an input stream of bytes.
+ÿabcdefghijklmnoprstuvwxyzÿÿ

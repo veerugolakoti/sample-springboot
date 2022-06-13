@@ -1,6 +1,4 @@
-package com.codexbox.springboot.app.codexbox.ConstructorExamples;
-
-import jdk.nashorn.internal.runtime.regexp.joni.constants.Arguments;
+package com.codexbox.springboot.app.codexbox.BhargavTej.constructorexamples;
 
 public class NoArgumentedConstructor {
 //    int num;

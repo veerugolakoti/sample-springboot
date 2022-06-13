@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.codexbox.BhargavTej.Enumeration;
+package com.codexbox.springboot.app.codexbox.BhargavTej.enumeration;
 
 public enum EnumExample {
     MERCURY,

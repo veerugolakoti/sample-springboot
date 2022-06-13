@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.codexbox.Assesment3;
+package com.codexbox.springboot.app.codexbox.BhargavTej.assesment3;
 
 public class Student {
     private String studentName;

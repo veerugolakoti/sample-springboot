@@ -1,18 +1,29 @@
-package com.codexbox.springboot.app.codexbox.BhargavTej;
-import com.codexbox.springboot.app.codexbox.Assesment3.filehandling.InputOutputStream;
-import com.codexbox.springboot.app.codexbox.Assesment3.filehandling.InputOutputStreamExample2;
+package com.codexbox.springboot.app.codexbox.BhargavTej.mainpackage;
+import com.codexbox.springboot.app.codexbox.BhargavTej.assesment3.CodexBoxEmployee;
+import com.codexbox.springboot.app.codexbox.BhargavTej.filehandling.InputOutputStream;
+import com.codexbox.springboot.app.codexbox.BhargavTej.filehandling.InputOutputStreamExample2;
+import com.codexbox.springboot.app.codexbox.BhargavTej.filehandling.SequenceStreams;
+import com.codexbox.springboot.app.codexbox.BhargavTej.mutlithreading.MultiThreadExamples;
 import org.springframework.boot.SpringApplication;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class SpringBootCodexBoxJava2022Batch1Application {
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws IOException {
         SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
-       /* List<CodexBoxEmployee> addEmpdetails = new ArrayList<>();
+        SequenceStreams sequenceStreams = new SequenceStreams();
+        System.out.println(sequenceStreams.sequenceMethod());
+
+        MultiThreadExamples multiThreadExamples = new MultiThreadExamples();
+        multiThreadExamples.mythread();
+        multiThreadExamples.run();
+
+
+        //CodexBoxEmployee mian method
+       List<CodexBoxEmployee> addEmpdetails = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         for (int i=1; i<3 ;i++){
             System.out.println("Enter Employee" + i + " Details");
@@ -59,16 +70,17 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
        //InputStream Example
         InputOutputStream inputOutputStream = new InputOutputStream();
-            inputOutputStream.fileInputOutputStream();
-            */
+        inputOutputStream.fileInputOutputStream();
 
-            //InputStream Example 2
+
+        //InputStream Example 2
         InputOutputStreamExample2 inputOutputStreamExample2 = new InputOutputStreamExample2();
         try {
             inputOutputStreamExample2.transferFile();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
 
     }
 }
