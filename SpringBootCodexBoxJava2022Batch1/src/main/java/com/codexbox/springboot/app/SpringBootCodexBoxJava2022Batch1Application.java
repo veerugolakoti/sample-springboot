@@ -1,6 +1,6 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.ganesh.Scanner.filehandling.BufferedIOOperation;
+import com.codexbox.springboot.app.ganesh.Scanner.filehandling.SequenceIOStreamsexample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
@@ -45,8 +45,19 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 /////////////**********
 
-		BufferedIOOperation bufferedIOOperation = new BufferedIOOperation();
+		/*BufferedIOOperation bufferedIOOperation = new BufferedIOOperation();
 		bufferedIOOperation.bios();
+*/
+
+
+
+		/////*****
+
+
+		SequenceIOStreamsexample ss =new SequenceIOStreamsexample();
+		ss.sios();
+
+
 
 
 ///////
