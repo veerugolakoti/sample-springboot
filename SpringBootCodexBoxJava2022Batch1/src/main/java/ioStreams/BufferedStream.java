@@ -14,7 +14,7 @@ public class BufferedStream {
              byte b[]=str.getBytes();
              bi.close();
              fi.close();
-             System.out.println("vamshi going to chennai");
+//             System.out.println("vamshi going to chennai");
 
 
          /*    int i;

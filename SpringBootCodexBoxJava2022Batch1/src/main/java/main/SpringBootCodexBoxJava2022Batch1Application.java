@@ -1,17 +1,28 @@
-package com.codexbox.springboot.app;
+package main;
 
 import ioStreams.ArrayStream;
 import ioStreams.BufferedStream;
-import ioStreams.IoStreamExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import threads.ThreadExample;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 	public static void main(String[] args) {
+		ThreadExample threadExample=new ThreadExample();
+		threadExample.run();
+
+		ThreadExample threadExample1=new ThreadExample();
+		System.out.println(threadExample1.getName());
+		System.out.println(threadExample1.getId());
+
+		ThreadExample threadExample2=new ThreadExample();
+		System.out.println(threadExample2.getName());
+		System.out.println(threadExample2.getId());
 	}
-	}
+}
 		/*ArrayStream as=new ArrayStream();
 		try {
 			as.myArrayStream();
@@ -20,13 +31,14 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		}
 	}
 	}*/
-		/*BufferedStream bs=new BufferedStream();
+	/*	BufferedStream bs = new BufferedStream();
 		try {
 			bs.myBuffered();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-	}*/
+	}
+}*/
 /*		IoStreamExample io = new IoStreamExample();
 		try {
 			io.myIostreem();

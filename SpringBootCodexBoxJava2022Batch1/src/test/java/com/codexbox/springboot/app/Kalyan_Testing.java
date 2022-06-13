@@ -4,8 +4,8 @@ import collections.MapsExamples;
 import collections.TreeSetExample;
 import duplicateNames.DuplicateExample;
 import enumerate.Directions;
+import enumerate.java8features.LambdaExample;
 import org.junit.jupiter.api.Test;
-import rateofInterest.InterestExample;
 
 public class Kalyan_Testing {
 
@@ -22,11 +22,16 @@ public class Kalyan_Testing {
         MapsExamples.setMap();
     }
     @Test
-    public void testDirections(){
-      Directions arr[]=Directions.values();
-        for (Directions d:arr) {
-            System.out.println(d+" at position : "+d.ordinal());
+    public void testDirections() {
+        Directions arr[] = Directions.values();
+        for (Directions d : arr) {
+            System.out.println(d + " at position : " + d.ordinal());
         }
+    }
+    @Test
+    public void testLambda(){
+        LambdaExample.lambda();
     }
 
 }
+
