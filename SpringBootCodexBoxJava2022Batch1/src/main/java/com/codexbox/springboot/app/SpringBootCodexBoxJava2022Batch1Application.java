@@ -3,6 +3,7 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
 import com.codexbox.springboot.app.Veeru.employee.Employee;
 import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
+import com.codexbox.springboot.app.thread.ThreadExample;
 import ioStream.IOStreamExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,10 +13,47 @@ import java.util.*;
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) throws IOException {
-		IOStreamExample ios = new IOStreamExample();
+	public static void main(String[] args) {
+		ThreadExample threadExample = new ThreadExample();
+		threadExample.run();
 
-		ios.ioStreamEx();
+		ThreadExample threadExample1 = new ThreadExample();
+		System.out.println(threadExample1.getName());
+		System.out.println(threadExample1.getId());
+		System.out.println(threadExample1.getPriority());
+		System.out.println(threadExample1.getState());
+
+		ThreadExample threadExample2 = new ThreadExample();
+		System.out.println(threadExample2.getName());
+		System.out.println(threadExample2.getId());
+		System.out.println(threadExample2.getPriority());
+		// System.out.println(threadExample2.getState());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/*IOStreamExample ios = new IOStreamExample();
+		try {
+			ios.ioStreamEx();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+
+		*/
 
 		/*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
 		assessment4.studentAndTheirGrades();*/
@@ -46,7 +84,8 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		}*/
 
 
-	} /*{
+	}
+	/*{
 		//int count = 1;
 		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
