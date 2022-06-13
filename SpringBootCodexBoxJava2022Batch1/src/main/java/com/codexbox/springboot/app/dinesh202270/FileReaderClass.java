@@ -10,7 +10,7 @@ public class FileReaderClass {
        InputStream inputStream = null;
        OutputStream outputStream = null;
         try {
-         inputStream=new FileInputStream("hgyt");
+         inputStream=new FileInputStream("abc.txt");
 
            outputStream = new FileOutputStream("xyz.txt");
 

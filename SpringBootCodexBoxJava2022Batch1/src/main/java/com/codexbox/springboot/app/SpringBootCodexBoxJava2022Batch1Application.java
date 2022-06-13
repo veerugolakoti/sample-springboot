@@ -1,21 +1,15 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.dinesh202270.Employee;
 import com.codexbox.springboot.app.dinesh202270.FileReaderClass;
-import com.codexbox.springboot.app.dinesh202270.MyComparator;
-import com.codexbox.springboot.app.dinesh202270.Student;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.*;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-    public static void main(String[] args) throws IOException {
-        SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
+    public static void main(String[] args) {
+            SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
+
 //		LinkedListExample example = new LinkedListExample();
 //		System.out.println(example.loadMyList());
        /* Scanner sc = new Scanner(System.in);
@@ -143,21 +137,22 @@ if(o1.getGrade().equals(o2.getGrade()))
 
         for (Student student:stdlist) {
             student.studentDetails();
-
         }
-
-
 */
+
+
+
 
         FileReaderClass file = new FileReaderClass();
         try {
 
             file.inputOutputStream();
+
         }catch (Exception e){
-            System.out.println("exception occured ");
+
+            System.out.println("exception occurred ");
+
         }
-
-
     }
     }
 
