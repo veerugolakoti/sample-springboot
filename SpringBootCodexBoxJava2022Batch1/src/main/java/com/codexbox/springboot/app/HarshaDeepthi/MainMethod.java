@@ -61,8 +61,34 @@ public class MainMethod {
 */
 
 
-        Fileoutputstreamexample fs=new Fileoutputstreamexample();
+       /* Fileoutputstreamexample fs=new Fileoutputstreamexample();
         fs.fileoutputex();
+*/
+        Mythread mythread1=new Mythread();
+        mythread1.mythread();
+
+        Mythread mythread2=new Mythread();
+        System.out.println(Thread.currentThread().getId());
+        System.out.println(Thread.currentThread().getName());
+        System.out.println(mythread2.getId());
+        System.out.println(mythread2.getName());
+        Mythread mythread3=new Mythread();
+        System.out.println(Thread.currentThread().getId());
+        System.out.println(Thread.currentThread().getName());
+        System.out.println(mythread3.getId());
+        System.out.println(mythread3.getName());
+        mythread1.run();
+        Thread thread=new Thread();
+        System.out.println(thread.getId());
+        System.out.println(thread.getName());
+        thread.run();
+        Mythread mythread4=new Mythread();
+        System.out.println(mythread4.getId());
+        System.out.println(mythread4.getName());
+
+/*Setnameexample se=new Setnameexample();
+se.run();*/
+
 
     }
 }
