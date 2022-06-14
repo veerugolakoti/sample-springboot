@@ -78,7 +78,20 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 
 	@Test
 	public void testTreeSet() {
-		ArrayDeque queue = new ArrayDeque<>();
+
+		for(int i=5;i>0;i--)
+		{
+			for(int j=1;j<5;j=+2)
+			{
+				System.out.print(" ");
+			}
+			for(int k=1;k<5;k++)
+			{
+				System.out.println("*");
+			}
+		}
+
+		/*ArrayDeque queue = new ArrayDeque<>();
 		queue.add("Mounika");//0
 		//queue.add(1);
 		queue.add("Name2");//1
@@ -99,6 +112,8 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 		namesSet.add("Bhargav");
 		System.out.println("After sorting : " + namesSet);
 		System.out.println("Split iterator:" + namesSet.spliterator().characteristics());
+*/
+
 
 
 	}
