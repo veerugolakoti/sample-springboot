@@ -6,6 +6,7 @@ import com.codexbox.springboot.app.abhilash.collection.StackExample;
 import com.codexbox.springboot.app.abhilash.filehandling.FileExample;
 import com.codexbox.springboot.app.abhilash.filehandling.FileHandlingExample;
 import com.codexbox.springboot.app.abhilash.filehandling.Sample;
+import com.codexbox.springboot.app.abhilash.filehandling.SequenceinputExample;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -36,6 +37,7 @@ public class AbhilashTestClass {
 public void testFileHandlingExample() throws IOException {
     FileHandlingExample fileHandlingExample = new FileHandlingExample();
     fileHandlingExample.example();
+    fileHandlingExample.second();
 
 }
 
@@ -50,5 +52,10 @@ public void testSampleByteOutput() {
         FileExample obj = new FileExample();
         obj.example();
 
+    }
+    @Test
+    public void testSequenceinputExample() {
+        SequenceinputExample si = new SequenceinputExample();
+        si.sequenceEx();
     }
 }
