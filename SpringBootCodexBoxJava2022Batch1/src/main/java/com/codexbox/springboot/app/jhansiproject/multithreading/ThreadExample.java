@@ -7,7 +7,7 @@ public class ThreadExample extends Thread{
 
     @Override
     public void run() {
-        super.run();
+
         System.out.println("thread is:"+currentThread().getId());
     }
 

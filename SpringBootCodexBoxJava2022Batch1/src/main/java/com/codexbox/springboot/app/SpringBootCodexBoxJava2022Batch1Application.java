@@ -1,29 +1,44 @@
 package com.codexbox.springboot.app;
 
 
-import com.codexbox.springboot.app.assesment3.CalculateGrade;
-import com.codexbox.springboot.app.assesment3.StudentClass;
-import com.codexbox.springboot.app.jhansiproject.collections.StackExample;
-import com.codexbox.springboot.app.jhansiproject.enumeration.EnumerationWeekday;
-import com.codexbox.springboot.app.jhansiproject.enumeration.Month;
+import com.codexbox.springboot.app.jhansiproject.multithreading.MyRunnable;
 import com.codexbox.springboot.app.jhansiproject.multithreading.ThreadExample;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
+		System.out.println(Thread.currentThread().getPriority());
 		ThreadExample thread=new ThreadExample();
 		thread.multithreading();
 		thread.run();
-		thread.run();
+		thread.start();
+		System.out.println(thread.getState());
 		ThreadExample thread1=new ThreadExample();
-		thread.run();
-		thread.run();
+		System.out.println(thread.getId());
+		System.out.println(thread.getName());
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println(thread1.getState());
+		ThreadExample threads = new ThreadExample();
+		threads.multithreading();
+		threads.getName();
+		System.out.println("Sleep method");
+		MyRunnable run=new MyRunnable();
+		run.hashCode();
+		System.out.println("this is my thread");
+		thread.getState();
+		try {
+			Thread.sleep(10000l);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println(thread.getState());
+
 
 
 		/*SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
