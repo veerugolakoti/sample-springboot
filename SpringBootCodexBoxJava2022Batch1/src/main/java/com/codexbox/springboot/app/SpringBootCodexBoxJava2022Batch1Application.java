@@ -6,6 +6,7 @@ import com.codexbox.springboot.app.renuProjects.collections.enumerationExample.W
 import com.codexbox.springboot.app.renuProjects.inputOutputStreams.BufferedInputStreamExample;
 import com.codexbox.springboot.app.renuProjects.inputOutputStreams.InputStreamExample;
 import com.codexbox.springboot.app.renuProjects.inputOutputStreams.SequenceStreamExample;
+import com.codexbox.springboot.app.renuProjects.multithreading.MyThread2;
 import com.codexbox.springboot.app.renuProjects.multithreading.Mythread;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -121,21 +122,30 @@ StudentDetails  studentDetails=null;
 */
 
 		Mythread thread=new Mythread();
-		thread.threading();
-		thread.run();
-		System.out.println(Thread.currentThread().getId());
-		System.out.println(Thread.currentThread().getName());
+		thread.start();
+		System.out.println(thread.getState());
 		System.out.println(thread.getId());
 		System.out.println(thread.getName());
-		Mythread thread1=new Mythread();
-		thread.threading();
-		thread1.run();
-		System.out.println(thread1.getId());
-		System.out.println(thread1.getName());
-		Thread thread3=new Thread();
-		System.out.println(thread3.getId());
-		System.out.println(thread3.getName());
-		thread3.run();
-		thread1.start();
+		/*System.out.println(thread.getPriority());
+		try {
+			thread.wait();
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println("waiting");
+*/
+
+
+		/*try {
+			Thread.sleep(10000);
+			System.out.println("timeup");
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}*/
+
+
+
+
+
 	}
 }

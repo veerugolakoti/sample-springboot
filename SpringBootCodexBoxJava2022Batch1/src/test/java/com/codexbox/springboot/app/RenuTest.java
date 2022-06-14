@@ -128,7 +128,7 @@ public class RenuTest {
 @Test
     void testOfInputOutputStreams(){
     InputStreamExample inputStreamExample=new InputStreamExample();
-    inputStreamExample.fileInputStreamMethod();
+   // inputStreamExample.fileInputStreamMethod();
 }
 
 

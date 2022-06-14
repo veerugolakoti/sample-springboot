@@ -142,5 +142,4 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 	}
 
 
-
 }
