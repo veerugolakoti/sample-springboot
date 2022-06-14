@@ -4,7 +4,8 @@ import com.codexbox.springboot.app.Veeru.Collections.StackExample;
 import com.codexbox.springboot.app.Veeru.Employee;
 import com.codexbox.springboot.app.vidyadarna.collections.ExampleStack;
 import com.codexbox.springboot.app.vidyadarna.fileInputOutput.*;
-import com.codexbox.springboot.app.vidyadarna.threadconcepts.ThreadExample;
+import com.codexbox.springboot.app.vidyadarna.threadconcepts.ThreadExample1;
+import com.codexbox.springboot.app.vidyadarna.threadconcepts.ThreadExample2;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -344,19 +345,35 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 			dataStreamExample.dataStream();
 		}
 		@Test
-		public void TestThread(){
-			ThreadExample threadExample = new ThreadExample();
-			System.out.println(threadExample.getId());
-			System.out.println(threadExample.getName());
-
-			System.out.println(	Thread.currentThread().getId());
-			System.out.println(	Thread.currentThread().getName());
-
+		public void Thread() throws InterruptedException {
 			Thread thread = new Thread();
-			System.out.println(thread.getId());
-			System.out.println(threadExample.getName());
+			System.out.println("my thread state now : "+thread.getState());
+			System.out.println("Thread name : "+thread.getName());
+			System.out.println("Thread id : " +thread.getId());
+//			ThreadExample1 threadExample = new ThreadExample1();
+//			threadExample.run();
+//		System.out.println(threadExample.getId());
+//			System.out.println(threadExample.getName
+			ThreadExample2 threadExample2 = new ThreadExample2();
+			threadExample2.start();
+			//threadExample2.run();
+		//	System.out.println("my sum value : " +threadExample2.setName(););
+			System.out.println("my thread name is "+threadExample2.getName());
+			System.out.println("my thread id is " +threadExample2.getId());
+
+			System.out.println("my state is :   " + threadExample2.getState());
+			System.out.println("my programe line number1");
+			//System.out.println("my progarmme terminated or not  : " + Thread.currentThread().getState());
+			//Thread.sleep(10000l);
+
+//			System.out.println("my thread terminated or not  :" + threadExample2.getState());
+			Thread.sleep(10000l);
+			System.out.println(threadExample2.getState());
+//			System.out.println(	Thread.currentThread().getId());
+//			System.out.println(	Thread.currentThread().getName());
 
 		}
 	}
-
 }
+
+
