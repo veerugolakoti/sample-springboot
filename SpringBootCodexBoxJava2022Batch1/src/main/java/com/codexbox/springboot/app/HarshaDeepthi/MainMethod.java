@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainMethod {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
        /* StudentGrade stGrade = new StudentGrade(); //studentgrade
         stGrade.studentAndTheirGrades();*/
 
@@ -64,15 +64,13 @@ public class MainMethod {
        /* Fileoutputstreamexample fs=new Fileoutputstreamexample();
         fs.fileoutputex();
 */
-        Mythread mythread1=new Mythread();
-        mythread1.mythread();
 
-        Mythread mythread2=new Mythread();
+       /* Mythread mythread2=new Mythread();
         System.out.println(Thread.currentThread().getId());
         System.out.println(Thread.currentThread().getName());
         System.out.println(mythread2.getId());
-        System.out.println(mythread2.getName());
-        Mythread mythread3=new Mythread();
+        System.out.println(mythread2.getName());*/
+        /*Mythread mythread3=new Mythread();
         System.out.println(Thread.currentThread().getId());
         System.out.println(Thread.currentThread().getName());
         System.out.println(mythread3.getId());
@@ -84,11 +82,77 @@ public class MainMethod {
         thread.run();
         Mythread mythread4=new Mythread();
         System.out.println(mythread4.getId());
-        System.out.println(mythread4.getName());
-
-/*Setnameexample se=new Setnameexample();
-se.run();*/
+        System.out.println(mythread4.getName());*/
 
 
-    }
+      //  mythread1.wait();
+       //mythread1.start();
+
+
+
+
+//        try {
+//            Thread.sleep(1000l);
+//            mythread1.wait();
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        mythread1.wait();
+//        System.out.println("this is my method");
+
+
+
+      /*  Mythread mythread1=new Mythread();
+        mythread1.mythread();
+
+        System.out.println(mythread1.getState());
+        mythread1.run();
+        System.out.println(mythread1.getState());
+        mythread1.start();
+        System.out.println(mythread1.getState());
+*/
+
+//
+
+       System.out.println("i am in main method");
+        Mythread2 mythread=new Mythread2();
+        mythread.run();
+        System.out.println(mythread.getState());
+        mythread.start();
+        System.out.println(mythread.getState());
+        try {
+            Thread.sleep(1000l);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println("main method compleated");
+        System.out.println("line is testing");
+        System.out.println("line two is testing");
+        mythread.setPriority(2);
+        System.out.println("my thread priority " +mythread.getPriority());
+
+
+
+
+        Mythread2 mythread2=new Mythread2();
+        Mythread2 mythread6=new Mythread2();
+        mythread2.setName("Harsha");
+        mythread6.setName("Saikeerthi");
+        System.out.println("After changing "  +mythread2.getName());
+        System.out.println("After changing "  +mythread6.getName());
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
 }
