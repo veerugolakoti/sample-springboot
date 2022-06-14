@@ -1,8 +1,9 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
 import com.codexbox.springboot.app.sohailspringbootproject.collections.SpringBootApplication;
 import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread;
+import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread1;
+import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread2;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -29,7 +30,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		}
 		System.out.println("My total employees : " + empList.size());
 	}*/
-		MyThread myThread = new MyThread();
+		/*MyThread myThread = new MyThread();
 		myThread.start();
 		//        Here the current thread initially refers to the main thread always
 		System.out.println(myThread.currentThread().getId());
@@ -40,13 +41,20 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 		MyThread myThread1 = new MyThread();
 		System.out.println(myThread1.getId());
-		System.out.println(myThread1.getName());
+		System.out.println(myThread1.getName());*/
 
-		Thread thread = new Thread();
-		System.out.println(thread.getId());
-		System.out.println(thread.getName());
+		/*Thread thread = new Thread();
+		*//*System.out.println(thread.getId());
+		System.out.println(thread.getName());*//*
+		thread.run();
+		System.out.println(thread.getState());
+		thread.start();
+		System.out.println(thread.getState());
 
-		MyThread myThread5 = new MyThread();
+		System.out.println("I will execute after 10000 milisecond");
+		System.out.println(thread.getState());
+*/
+		/*MyThread myThread5 = new MyThread();
 		myThread.run();
 		//        Here the current thread initially refers to the main thread always
 		System.out.println(myThread5.currentThread().getId());
@@ -61,6 +69,63 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 		Thread thread3 = new Thread();
 		System.out.println(thread3.getId());
-		System.out.println(thread3.getName());
+		System.out.println(thread3.getName());*/
+
+		/*MyThread2 myThread2 = new MyThread2();
+		myThread2.run();*/
+
+		MyThread myThread = new MyThread();
+		myThread.setPriority(4);
+		myThread.start();
+
+
+		/*System.out.println(myThread.getState());
+		System.out.println(myThread.getName());*/
+
+
+		MyThread1 myThread1 = new MyThread1();
+		Thread thread = new Thread(myThread1);
+		thread.setPriority(9);
+		thread.start();
+	/*	System.out.println(thread.getState());
+		System.out.println(thread.getName());*/
+
+
+
+		MyThread2 myThread2 = new MyThread2();
+		myThread2.setPriority(10);
+		myThread2.start();
+		/*System.out.println(myThread2.getState());
+		System.out.println(myThread2.getName());*/
+
+
+	/*	try{
+			Thread.sleep(10000l);
+			myThread2.sleep(10000l);
+		}
+		catch(InterruptedException ex){
+			System.out.println("InterruptedException ");
+		}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 }
+
+
