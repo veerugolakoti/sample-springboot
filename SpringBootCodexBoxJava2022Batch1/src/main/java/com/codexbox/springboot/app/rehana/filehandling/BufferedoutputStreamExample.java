@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.rehana.files;
+package com.codexbox.springboot.app.rehana.filehandling;
 
 import java.io.*;
 
@@ -7,14 +7,15 @@ public class BufferedoutputStreamExample {
         InputStream inputStream = null;
         OutputStream outputStream = null;
         BufferedInputStream bufferedInputStream = null;
+       // BufferedOutputStream bufferedOutputStream = null;
         try {
              inputStream = new FileInputStream("rehana.txt");
              inputStream = new FileInputStream("arha.txt");
              outputStream = new FileOutputStream("abcoutt.txt");
 
            // OutputStream outputStream = new FilterOutputStream("arha.txt");
-            bufferedInputStream = new BufferedInputStream(inputStream);
-
+           // bufferedInputStream = new BufferedInputStream(inputStream);
+           //  bufferedOutputStream = new BufferedOutputStream(outputStream);
             System.out.println(bufferedInputStream.read());
             int asci = 0;
             int f2 = 0;
@@ -34,6 +35,7 @@ public class BufferedoutputStreamExample {
             inputStream.close();
             outputStream.close();
             bufferedInputStream.close();
+           // bufferedOutputStream.close();
         }
     }
 

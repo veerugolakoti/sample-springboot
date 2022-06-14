@@ -1,6 +1,4 @@
-package com.codexbox.springboot.app.rehana.files;
-
-import org.apache.logging.log4j.util.Strings;
+package com.codexbox.springboot.app.rehana.filehandling;
 
 import java.io.*;
 

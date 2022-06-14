@@ -1,17 +1,54 @@
 package com.codexbox.springboot.app.assesment4;
 
+import com.codexbox.springboot.app.rehana.filehandling.BufferedWriterExample;
 import com.codexbox.springboot.app.rehana.filehandling.BufferedoutputStreamExample;
 import com.codexbox.springboot.app.rehana.filehandling.FileReaderExample;
+import com.codexbox.springboot.app.rehana.multithreading.MyThread;
+import com.codexbox.springboot.app.rehana.multithreading.MyThread2;
 
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class MainApplication {
     public static void main(String[] args) throws IOException {
+       /*MyThread myThread= new MyThread();
+       myThread.start();*/
+        MyThread2 myThread2 = new MyThread2();
+        System.out.println(myThread2.getState());
+        myThread2.start();
+        myThread2.getState();
+       // System.out.println(Thread.activeCount());
 
-        FileReaderExample fileReaderExample = new FileReaderExample();
-        fileReaderExample.reader();
+        try {
+            myThread2.join();
+            System.out.println("iam joining my thread");
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(Thread.currentThread().getState());
+        try {
+            Thread.sleep(1000l);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+      //  System.out.println(Thread.currentThread().getState());
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(myThread2.getState());
+
+
+
+
+       /* BufferedWriterExample bufferedWriterExample = new BufferedWriterExample();
+        bufferedWriterExample.write();
+*/
+       /* FileReaderExample fileReaderExample = new FileReaderExample();
+        fileReaderExample.reader();*/
     }
     }
 
