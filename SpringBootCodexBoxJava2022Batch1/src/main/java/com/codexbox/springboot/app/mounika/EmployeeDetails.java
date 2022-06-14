@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.employeeexample;
+package com.codexbox.springboot.app.mounika;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +19,13 @@ public class EmployeeDetails {
       return address;
    }
 
-   public String getAbsent() {
-      return absent;
-   }
+   //public String getAbsent() {
+      //return absent;
+  // }
 
    public int id;
    public String address;
-   private String absent;
+  // private String absent;
 
    public void setName(String name) {
       this.name = name;

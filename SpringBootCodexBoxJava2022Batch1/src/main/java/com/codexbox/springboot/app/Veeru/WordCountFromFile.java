@@ -1,9 +1,9 @@
 package com.codexbox.springboot.app.Veeru;
 
+import org.apache.logging.log4j.util.PropertySource;
+
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class WordCountFromFile {
     public static void main(String[] args) {
@@ -37,6 +37,28 @@ public class WordCountFromFile {
     }
 
     private static void findWordCount(String[] words) {
+     Map<String,Integer>wordcount=new HashMap<>();
+        for (String str:words) {
+            if (wordcount.containsKey(str)) {
+                wordcount.put(str, wordcount.get(str) + 1);
 
+            } else {
+                wordcount.put(str, 1);
+            }
+
+        }
+        List<Map.Entry<String,Integer>>wordlist=new ArrayList<>(wordcount.entrySet());
+        Collections.sort(wordlist, new Comparator<Map.Entry<String, Integer>>() {
+            @Override
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                return o2.getValue().compareTo(o1.getValue());
+            }
+        });
+
+        for (Map.Entry<String,Integer> entry:wordlist) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+
+        }
     }
-}
+    }
+
