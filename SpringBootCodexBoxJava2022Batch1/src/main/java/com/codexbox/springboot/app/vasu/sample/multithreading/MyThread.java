@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.vasu.sample.threads;
+package com.codexbox.springboot.app.vasu.sample.multithreading;
 
 public class MyThread extends Thread{
     @Override

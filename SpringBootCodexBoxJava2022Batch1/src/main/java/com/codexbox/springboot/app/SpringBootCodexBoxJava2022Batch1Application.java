@@ -1,13 +1,52 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.vasu.sample.threads.MyThread;
+import com.codexbox.springboot.app.vasu.sample.multithreading.MyThread;
+import com.codexbox.springboot.app.vasu.sample.multithreading.Thread1;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import static java.lang.Integer.sum;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
-		// Thread concept..
+		System.out.println("Iam inside main method");
+		int x=50;
+		int y=40;
+		int sum=sum(x,y);
+		System.out.println(sum);
+		MyThread myThread=new MyThread();
+		System.out.println(myThread.getState());
+		System.out.println(myThread.getPriority());
+		myThread.start();
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+			System.out.println("sleep method");
+
+
+
+		/*Thread1 thread1=new Thread1();
+		thread1.run();
+
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println("time up");*/
+
+		/*MyThread Thread=new MyThread();
+		Thread.start();
+		try {
+			Thread.join(10000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println("its lunch time");*/
+		/*// Thread concept..
 
 		System.out.println(Thread.currentThread().getId());
 		System.out.println(Thread.currentThread().getName());
@@ -24,7 +63,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		System.out.println(myThread3.getState());
 		System.out.println(myThread3.getContextClassLoader());
 
-
+*/
 		/*//int count = 1;
 		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
@@ -42,6 +81,9 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			empList.add(employee);
 		}
 		System.out.println("My total employees : " + empList.size());*/
+		sum(20,30);
+		sum=x+y;
+		System.out.println("sum of two numbers");
 	}
 
 }
