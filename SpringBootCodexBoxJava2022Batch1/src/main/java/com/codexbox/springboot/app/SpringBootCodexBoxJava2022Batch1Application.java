@@ -1,13 +1,14 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.mounika.file.InputOutputStream;
+import com.codexbox.springboot.app.mounika.multithreading.MyRunnable;
 import com.codexbox.springboot.app.mounika.multithreading.Threading;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 //		SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 //		LinkedListExample example = new LinkedListExample();
 //		System.out.println(example.loadMyList());
@@ -69,7 +70,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		}
 */
 
-         Threading threading = new Threading();
+         /*Threading threading = new Threading();
          threading.run();
 		System.out.println(threading.currentThread().getId());
 		System.out.println(threading.currentThread().getName());
@@ -97,8 +98,45 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		System.out.println(thread1.getId());
 		System.out.println(thread1.getName());
 
+		*/
 
-	 }
+		System.out.println(Thread.currentThread().getPriority());
+          Threading threading=new Threading();
+		System.out.println(threading.getState());
+		threading.start();
+		threading.getState();
+		Thread.sleep(100l);
+
+		try {
+			threading.sleep(1000l);
+			System.out.println("inside try ");
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+		/*threading.sum();
+		threading.setPriority();
+		System.out.println("This is my thread");*/
+
+     Threading threading5 =new Threading();
+       threading5.start();
+	   threading5.hashCode();
+		System.out.println(threading5.getState());
+
+		Thread thread =new Thread();
+
+		System.out.println(thread.getId());
+		System.out.println(thread.getName());
+
+		MyRunnable runnable=new MyRunnable();
+	     runnable.hashCode();
+		System.out.println("mouni");
+		System.out.println(threading.getState());
+
+
+
+
+
+	}
 		}
 
 
