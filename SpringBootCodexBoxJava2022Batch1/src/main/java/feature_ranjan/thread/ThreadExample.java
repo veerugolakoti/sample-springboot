@@ -4,11 +4,11 @@ public class ThreadExample extends Thread {
     @Override
     public void run(){
 
-        ThreadExample threadExample = new ThreadExample();
+
        // threadExample.start();
-        System.out.println("get priority :"+threadExample.getPriority());
-        System.out.println("current Thread id inside run() :" + threadExample.currentThread().getId());
-        System.out.println("current Thread Name inside run() :" + threadExample.currentThread().getName()+"\n");
+
+        System.out.println("current Thread id inside run() :" + Thread.currentThread().getId());
+        System.out.println("current Thread Name inside run() 5 :" + Thread.currentThread().getName()+"\n");
     }
    public void myThreadExample(){
        System.out.println("My own thread Id :"+currentThread().getId());
