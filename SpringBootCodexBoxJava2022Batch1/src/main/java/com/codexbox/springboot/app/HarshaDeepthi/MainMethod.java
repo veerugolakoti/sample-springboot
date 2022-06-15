@@ -11,8 +11,12 @@ import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MainMethod {
+    private static  final int MAX_T = 3;
+
     public static void main(String[] args)  {
        /* StudentGrade stGrade = new StudentGrade(); //studentgrade
         stGrade.studentAndTheirGrades();*/
@@ -114,45 +118,52 @@ public class MainMethod {
 
 //
 
-       System.out.println("i am in main method");
-        Mythread2 mythread=new Mythread2();
-        mythread.run();
-        System.out.println(mythread.getState());
-        mythread.start();
-        System.out.println(mythread.getState());
-        try {
-            Thread.sleep(1000l);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+  /*   Threadpool threadpool=new Threadpool();
+     threadpool.threadpoolexample();*/
+
+/*avaSuspend javaSuspend1=new JavaSuspend();
+JavaSuspend javaSuspend2=new JavaSuspend();
+JavaSuspend javaSuspend3=new JavaSuspend();
+javaSuspend1.start();
+javaSuspend2.start();
+
+javaSuspend3.start();
+*/
+                                           //Inturuptthread t1=new Inturuptthread();  //task implimented Runnable
+/*
+t1.start();
+       try
+        {
+            t1.interrupt();
+        }catch(Exception e){
+            System.out.println("Exception handled "+e);
         }
+*/
+/*
+t1.start();
+t1.interrupt();
+/**/
 
-        System.out.println("main method compleated");
-        System.out.println("line is testing");
-        System.out.println("line two is testing");
-        mythread.setPriority(2);
-        System.out.println("my thread priority " +mythread.getPriority());
+       Runnable r1 = new Task("task 1");     //task implimented Runnable
+        Runnable r2 = new Task("task 2");
+        Runnable r3 = new Task("task 3");
+        Runnable r4 = new Task("task 4");
+        Runnable r5 = new Task("task 5");
+        
+        ExecutorService pool = Executors.newFixedThreadPool(MAX_T);
 
-
-
-
-        Mythread2 mythread2=new Mythread2();
-        Mythread2 mythread6=new Mythread2();
-        mythread2.setName("Harsha");
-        mythread6.setName("Saikeerthi");
-        System.out.println("After changing "  +mythread2.getName());
-        System.out.println("After changing "  +mythread6.getName());
-
-
-
-
-
+        pool.execute(r1);
+        pool.execute(r2);
+        pool.execute(r3);
+        pool.execute(r4);
+        pool.execute(r5);
 
 
 
 
-        }
 
 
 
 
+    }
 }
