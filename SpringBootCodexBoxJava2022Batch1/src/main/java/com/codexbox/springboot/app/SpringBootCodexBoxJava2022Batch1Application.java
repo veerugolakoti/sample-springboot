@@ -5,13 +5,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import thread.Thread1;
 import thread.ThreadExamples;
+import thread.ThreadPool;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
+
+
 
 	public static void main(String[] args) {
 //		//int count = 1;
@@ -31,16 +36,29 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 //			empList.add(employee);
 //		}
 //		System.out.println("My total employees : " + empList.size());
-		Thread1 thread1 = new Thread1();
-		thread1.start();
-		System.out.println("inside main method "+thread1.getState());
-		System.out.println("inside main method "+thread1.getId());
+//		Thread1 thread1 = new Thread1();
+//
+//		thread1.start();
+//		System.out.println("inside main method state : "+thread1.getState());
+//		System.out.println("inside main method id : "+thread1.getId());
+//		int a = 20;
+//			int b = 60;
+//			int sub = a-b;
+//			System.out.println("inside main sub value :"+sub);
+//		try {
+//			thread1.wait(10000);
+//			int multiplication = a*b;
+//			System.out.println("the multiplication of two values is :"+multiplication);
+//		} catch (InterruptedException e) {
+//			throw new RuntimeException(e);
+//		}hreadPool
+		ThreadPool tl = new ThreadPool();
+		ExecutorService executorService = Executors.newFixedThreadPool(6);
+		executorService.execute(tl);
+		executorService.shutdown();
 
 
-			int a = 20;
-			int b = 60;
-			int sub = a-b;
-			System.out.println("inside main sub value :"+sub);
+
 
 
 
