@@ -1,18 +1,30 @@
 package main;
 
+import com.sun.xml.internal.ws.api.addressing.OneWayFeature;
 import ioStreams.ArrayStream;
 import ioStreams.BufferedStream;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import selfAssessment.GenerateOtp;
+import threads.ExecutionFrameworkExample;
 import threads.RunableExample;
 import threads.ThreadExample;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 	public static void main(String[] args) {
-		ThreadExample thread=new ThreadExample();
+		ExecutorService executorService = Executors.newFixedThreadPool(5);
+	}}
+	/*	GenerateOtp otp=new GenerateOtp();
+		otp.generateOTP();
+	}}*/
+/*		ThreadExample thread=new ThreadExample();
 		System.out.println(thread.getState());
 		thread.start();
 		try {
@@ -28,8 +40,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			throw new RuntimeException(e);
 		}
    		System.out.println(thread.getState());
-	}
-	}
+	}}*/
 	/*	RunableExample runableExample =new RunableExample();
 		Thread thread=new Thread(runableExample);
 		System.out.println(thread.getState());
