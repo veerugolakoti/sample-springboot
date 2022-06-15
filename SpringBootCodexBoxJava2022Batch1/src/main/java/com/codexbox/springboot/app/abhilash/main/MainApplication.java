@@ -88,7 +88,11 @@ public class MainApplication {
 //		System.out.println("started");
 
 		MultitreadingExample mi1 = new MultitreadingExample();
+		System.out.println("MultitreadingExample .run()");
+		mi1.start();
+		mi1.run();
 		mi1.mythread();
+		System.out.println(mi1.getState());
 		System.out.println(mi1.getId());
 		System.out.println(mi1.getName());
 		MultithreadingExample2 mi =new MultithreadingExample2();
@@ -97,16 +101,25 @@ public class MainApplication {
 		System.out.println(mi.getState());
 		mi1.setPriority(3);
 		mi.setPriority(10);
+		System.out.println("MultitreadingExample priority is: " + mi1.getPriority());
+		System.out.println("MultithreadingExample2 priority is: " + mi.getPriority());
+
 		Diamond d = new Diamond();
 		d.start();
 		d.star();
 		d.setPriority(1);
-		System.out.println(d.getState());
-		System.out.println(mi.getState());
+		System.out.println("diamond thread state is: " + d.getState());
+		System.out.println("MultitreadingExample priority is: " + mi.getState());
+		try {
+			d.join();
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println("diamond thread state is: " + d.getState());
 
 
 	}
-    }
+}
 
 
 
