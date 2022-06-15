@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app.sohailspringbootproject.main;
 
+import com.codexbox.springboot.app.sohailspringbootproject.basicexamples.Test;
 import com.codexbox.springboot.app.sohailspringbootproject.fileoperations.CountFIle;
 import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread;
 
@@ -23,11 +24,16 @@ public class MainMethod {
         /*CreateFile createFile = new CreateFile();
         createFile.createFileMethod();*/
 
-        MyThread myThread = new MyThread();
+       /* MyThread myThread = new MyThread();
         myThread.run();
-
+*/
        /* CountFIle countFIle = new CountFIle();
         countFIle.countMethod();*/
+
+
+        Test test = new Test();
+        test.Test();
+        test.myMethod();
 
     }
 }

@@ -4,6 +4,7 @@ import com.codexbox.springboot.app.sohailspringbootproject.collections.SpringBoo
 import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread;
 import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread1;
 import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread2;
+import com.codexbox.springboot.app.sohailspringbootproject.multithreading.Task;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -74,27 +75,27 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		/*MyThread2 myThread2 = new MyThread2();
 		myThread2.run();*/
 
-		MyThread myThread = new MyThread();
+		/*MyThread myThread = new MyThread();
 		myThread.setPriority(4);
 		myThread.start();
-
+*/
 
 		/*System.out.println(myThread.getState());
 		System.out.println(myThread.getName());*/
 
 
-		MyThread1 myThread1 = new MyThread1();
+	/*	MyThread1 myThread1 = new MyThread1();
 		Thread thread = new Thread(myThread1);
 		thread.setPriority(9);
 		thread.start();
-	/*	System.out.println(thread.getState());
-		System.out.println(thread.getName());*/
+	*//*	System.out.println(thread.getState());
+		System.out.println(thread.getName());*//*
 
 
 
 		MyThread2 myThread2 = new MyThread2();
 		myThread2.setPriority(10);
-		myThread2.start();
+		myThread2.start();*/
 		/*System.out.println(myThread2.getState());
 		System.out.println(myThread2.getName());*/
 
@@ -107,10 +108,23 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			System.out.println("InterruptedException ");
 		}*/
 
+//		Task task = new Task();
+
+	MyThread1 thread1 = new MyThread1();
+	Thread thread = new Thread(thread1);
 
 
-
-
+	MyThread2 myThread2 = new MyThread2();
+	MyThread myThread = new MyThread();
+	myThread2.start();
+	try {
+		myThread2.join(10000);
+	}
+	catch (InterruptedException e){
+		System.out.println("Catch ");
+	}
+	myThread.start();
+		thread.start();
 
 
 
