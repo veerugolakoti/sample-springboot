@@ -1,7 +1,9 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.ganesh.multithreading.RunnableExample;
-import com.codexbox.springboot.app.ganesh.multithreading.ThreadExample;
+import com.codexbox.springboot.app.ganesh.multithreading.ExecuteFrameworkExample;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class GaneshMainClass {
     public static void main(String[] args) {
@@ -75,11 +77,8 @@ d1.run();*/
 */
 
 
-
-
-
 //////****
-
+/*
         RunnableExample runnableExample = new RunnableExample();
         Thread t1= new Thread(runnableExample);
         t1.start();
@@ -125,7 +124,20 @@ ThreadExample t5 = new ThreadExample();
             Thread.sleep(4000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
-        }
-    }
+        }*/
+
+        ////*****
+
+
+        ExecuteFrameworkExample efe = new ExecuteFrameworkExample();
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        executorService.execute(efe);
+        executorService.execute(efe);
+        executorService.shutdown();
+
 
     }
+
+}
+
+
