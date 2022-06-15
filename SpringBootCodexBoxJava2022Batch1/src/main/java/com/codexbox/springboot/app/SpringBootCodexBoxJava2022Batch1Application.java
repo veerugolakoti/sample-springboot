@@ -3,6 +3,9 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.dhivya.assisment.StudentList;
 import com.codexbox.springboot.app.dhivya.collections.DuplicateElements;
 import com.codexbox.springboot.app.dhivya.file.InputOutputStream;
+import com.codexbox.springboot.app.dhivya.threads.ThreadExample1;
+import com.codexbox.springboot.app.dhivya.threads.ThreadExample2;
+import com.codexbox.springboot.app.dhivya.threads.ThreadExamples;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
@@ -103,6 +106,31 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 */
 		//InputOutputStream inputOutputStream=new InputOutputStream();
 		//inputOutputStream.ioOperations();
-		DuplicateElements duplicateList=new DuplicateElements();
-		duplicateList.testlist();
+		/*DuplicateElements duplicateList=new DuplicateElements();
+		duplicateList.testlist();*/
+
+//Thread Examples
+		ThreadExamples threadExamples=new ThreadExamples();
+		threadExamples.start();
+
+		ThreadExample1 threadExample1=new ThreadExample1();
+		System.out.println(threadExample1.getState());
+		System.out.println(threadExamples.getPriority());
+
+
+//		Runnable runnable=new ThreadExample2();
+//		Thread thread=new Thread(runnable,"My New Thread");
+//		thread.start();
+//		String str=thread.getName();
+//		System.out.println("Example : " + str);
+
+
+		/*ThreadExample1 threadExample1=new ThreadExample1();
+		ThreadExample1 threadExample2=new ThreadExample1();
+		ThreadExample1 threadExample3=new ThreadExample1();
+		threadExample1.start();
+		threadExample2.start();
+		threadExample3.start();*/
+
+
 	}}
