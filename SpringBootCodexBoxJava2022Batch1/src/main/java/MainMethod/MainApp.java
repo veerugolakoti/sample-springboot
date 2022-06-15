@@ -166,7 +166,7 @@ public class MainApp {
         tpriority1.start();
         System.out.println(tpriority1.getState());*/
 
-        ThreadPriorityEx2 tpriority22 = new ThreadPriorityEx2();
+        /*ThreadPriorityEx2 tpriority22 = new ThreadPriorityEx2();
         ThreadPriorityEx2 tpriority33 = new ThreadPriorityEx2();
         ThreadPriorityEx2 tpriority44 = new ThreadPriorityEx2();
         tpriority22.setPriority(3);
@@ -175,10 +175,46 @@ public class MainApp {
 
         System.out.println(tpriority22.getPriority());
         System.out.println(tpriority33.getPriority());
-        System.out.println(tpriority44.getPriority());
+        System.out.println(tpriority44.getPriority());*/
 
+        /*ThreadIsalive talive = new ThreadIsalive();
+        talive.start();
+        System.out.println(talive.isAlive());
+        System.out.println(talive.getState());
+        ThreadIsalive.count2++;
+        System.out.println(talive.isAlive());*/
 
+        /*ThreadIsInterrupt interruptThread = new ThreadIsInterrupt();
+        interruptThread.run();
+        interruptThread.start();
+        System.out.println(interruptThread.getState());
+        interruptThread.interrupt();
+        System.out.println(interruptThread.getState());*/
 
+        /*ThreadJoin tjoins1 = new ThreadJoin();
+        ThreadJoin tjoins2 = new ThreadJoin();
+        ThreadJoin tjoins3 = new ThreadJoin();
 
+        tjoins1.start();
+        try {
+            tjoins1.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        tjoins2.start();
+        tjoins3.start();*/
+
+        ThreadJoinEx2 tjoin1 = new ThreadJoinEx2();
+        ThreadJoinEx2 tjoin2 = new ThreadJoinEx2();
+        ThreadJoinEx2 tjoin3 = new ThreadJoinEx2();
+
+        tjoin1.start();
+        try {
+            tjoin1.join(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        tjoin2.start();
+        tjoin3.start();
     }
 }
