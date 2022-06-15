@@ -5,6 +5,8 @@ import com.codexbox.springboot.app.mounika.multithreading.MyRunnable;
 import com.codexbox.springboot.app.mounika.multithreading.Threading;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.concurrent.Callable;
+
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
@@ -101,11 +103,11 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		*/
 
 		System.out.println(Thread.currentThread().getPriority());
-          Threading threading=new Threading();
+		Threading threading = new Threading();
 		System.out.println(threading.getState());
 		threading.start();
 		threading.getState();
-		Thread.sleep(100l);
+		//Thread.sleep(100l);
 
 		try {
 			threading.sleep(1000l);
@@ -119,7 +121,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
      Threading threading5 =new Threading();
        threading5.start();
-	   threading5.hashCode();
+	   //threading5.hashCode();
 		System.out.println(threading5.getState());
 
 		Thread thread =new Thread();
@@ -134,10 +136,10 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 
 
-
+		};
 
 	}
-		}
+
 
 
 
