@@ -1,33 +1,70 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Employee;
+
+import com.codexbox.springboot.threading.MyThread1;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
+		public static void main(String[] args) throws InterruptedException {
+			MyThread1 myThread1 = new MyThread1();
+			myThread1.start();
+			//myThread1.run();
+			System.out.println("after start method : ");//1
+			myThread1.getState();
+			System.out.println("my thread is in main method :" + myThread1.getState());//5
 
-	public static void main(String[] args) {
-		//int count = 1;
-		List<Employee> empList = new ArrayList<>();
-		Scanner scanner = new Scanner(System.in);
-		for (int i = 1; i <= 29 ; i++) {
+			try {
+				Thread.sleep(3265l);
+				System.out.println("in main method thread is sleep :");//6
+			} catch (InterruptedException e) {
+				throw new RuntimeException(e);
+			}
+			synchronized (myThread1){
+				myThread1.wait(3265l);
+				System.out.println("using wait method :");
 
-			System.out.println("Enter Employee" + i + " Details: ");
-			System.out.println("Enter emp name: ");
-			String name = scanner.next();
-			System.out.println("Enter emp id: ");
-			Integer id = scanner.nextInt();
-			System.out.println("Enter emp address: ");
-			String address = scanner.next();
+			}
 
-			Employee employee = new Employee(name, id, address);
-			empList.add(employee);
-		}
-		System.out.println("My total employees : " + empList.size());
+
+
+
+			// myThread1.start();
+			//System.out.println("the main method :");//2
+
+//			Threading threading= new Threading();
+//			Thread thread = new Thread();
+//			//threading.mythreadtesting();
+//			//thread.sleep(10000l);
+//			threading.run();
+//			System.out.println(threading.getState());
+//			threading.start();
+//			System.out.println(threading.getState());
+			//System.out.println();
+			//System.out.println("my thread is slepping when is :");
+
+//			//threading.run();
+//			threading.mythreadtesting();
+//			Thread thread = new Thread();
+//			System.out.println(thread.getState());
+//			System.out.println("the thread is running :");
+
+//			ThreadExample te1 = new ThreadExample();
+//			Thread thread = new Thread();
+//			te1.run();
+//			System.out.println("the state of thread is :" + te1.getPriority());
+//			System.out.println("the state of thread group is :" + te1.getThreadGroup());
+//			//System.out.println("the state of thread group is :" + te1.getThreadGroup());
+//
+//
+//
+//			System.out.println("the thread example name is :" + te1.getName());
+//			System.out.println("the thread example id is :" + te1.getId());
+//			System.out.println("the thread  name is :" + thread.getName());
+//			System.out.println("the thread id is :" +thread.getId());
+//
+//			ThreadExample te2 = new ThreadExample();
+//			System.out.println("the te2 id is :" + te2.getId());
+//			System.out.println("the te2 name is :" + te2.getName());
+
 	}
-
-}
+	}
