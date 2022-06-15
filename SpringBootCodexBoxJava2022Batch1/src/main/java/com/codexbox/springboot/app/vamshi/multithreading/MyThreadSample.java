@@ -1,6 +1,8 @@
 package com.codexbox.springboot.app.vamshi.multithreading;
 
-public class MyThreadSample extends Thread implements Runnable{
+public class MyThreadSample extends Thread{
+   //
+
     @Override
     public void run() {
         for (int i=1;i<=5;i++){

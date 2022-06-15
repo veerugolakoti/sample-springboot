@@ -7,8 +7,39 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class MainSpringBootApi {
-    public static void main(String[] args) {
-        MyThreadSample myThreadSample = new MyThreadSample();
+        public static void main(String[] args) {
+                MyRunnableSample myRunnableSample = new MyRunnableSample();
+                MyThreadSample m1 = new MyThreadSample();
+                m1.isAlive();
+                Thread t1 = new Thread(myRunnableSample);
+                t1.setPriority(2);
+                t1.start();
+                Thread t2 = new Thread(myRunnableSample);
+                t2.setPriority(4);
+                t2.start();
+                Thread t3 = new Thread(myRunnableSample);
+                t3.setPriority(1);
+                t3.start();
+                Thread t4 = new Thread(myRunnableSample);
+                try {
+                        t4.join(1000l);
+                        System.out.println("joining t4 test  "+t4);
+
+                } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                }
+                t4.start();
+                Thread t5 = new Thread(myRunnableSample);
+                t5.start();
+                Thread t6 = new Thread(myRunnableSample);
+                t6.isDaemon();
+                t6.start();
+
+       /* MyThreadSample myThreadSample = new MyThreadSample();
+        MyRunnableSample myRunnableSample1 = new MyRunnableSample(myThreadSample);
+        myRunnableSample1.run();*/
+
+      /*  MyThreadSample myThreadSample = new MyThreadSample();
         System.out.println(myThreadSample.getState());
         myThreadSample.start();
        // System.out.println(myThreadSample.getState());
@@ -26,7 +57,7 @@ public class MainSpringBootApi {
             throw new RuntimeException(e);
         }
         System.out.println(Thread.currentThread().getPriority());
-        System.out.println(myThreadSample.getState());
+        System.out.println(myThreadSample.getState());*/
 
 
 
@@ -68,5 +99,5 @@ public class MainSpringBootApi {
 
 
 
-    }
+        }
 }
