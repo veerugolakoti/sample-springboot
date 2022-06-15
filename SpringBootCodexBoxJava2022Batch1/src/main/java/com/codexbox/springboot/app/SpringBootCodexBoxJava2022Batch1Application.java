@@ -1,6 +1,8 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.ravalispringboot.inputoutputstrems.SequnceinputoutputstreamExample;
+import com.codexbox.springboot.app.ravalispringboot.multithreadingprgm.Mythread;
+import com.codexbox.springboot.app.ravalispringboot.multithreadingprgm.Mythread1;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
@@ -12,11 +14,54 @@ import java.nio.file.Paths;
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
+		/*Mythread mythread = new Mythread();
+		System.out.println(mythread.getState());
+		//System.out.println(mythread.getId());
+		System.out.println(mythread.getName());
+		mythread.start();
+		try {
+			mythread.join(2000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println(" ");
+		System.out.println(mythread.getPriority());*/
 
-		SequnceinputoutputstreamExample sequnceinputstreamExample = new SequnceinputoutputstreamExample();
-		sequnceinputstreamExample.sequncemethod();
+		Mythread1 mythread1 = new Mythread1(10);
+		mythread1.run();
+		mythread1.start();
+		Runnable r1 = new Mythread1(10) ;
+
+
+        /*Mythread1 mythread2= new Mythread1();
+		mythread2.start();
+		Thread thread= new Thread();
+		thread.start();
+		Thread thread1= new Thread(mythread1);
+		thread1.getState();*/
+
+		/*mythread1.notify();
+		try {
+			mythread1.wait(10, 3);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}*/
 	}
-}		/*Bufferinputoutputstream bufferinputoutputstream= new Bufferinputoutputstream();
+
+
+
+
+	}
+
+
+
+
+
+
+
+	/*	SequnceinputoutputstreamExample sequnceinputstreamExample = new SequnceinputoutputstreamExample();
+		sequnceinputstreamExample.sequncemethod();*/
+    /*Bufferinputoutputstream bufferinputoutputstream= new Bufferinputoutputstream();
 		bufferinputoutputstream.bufferMethod();*/
 		/*InputOutputStreamExample inputOutputStreamExample= new InputOutputStreamExample();
 		inputOutputStreamExample.Inputoutputmethod();*/
