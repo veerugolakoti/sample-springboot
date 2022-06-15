@@ -1,23 +1,15 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Employee;
-import com.codexbox.springboot.app.renuProjects.assessments.StudentDetails;
-import com.codexbox.springboot.app.renuProjects.collections.enumerationExample.Weeks;
-import com.codexbox.springboot.app.renuProjects.inputOutputStreams.BufferedInputStreamExample;
-import com.codexbox.springboot.app.renuProjects.inputOutputStreams.InputStreamExample;
-import com.codexbox.springboot.app.renuProjects.inputOutputStreams.SequenceStreamExample;
-import com.codexbox.springboot.app.renuProjects.multithreading.MyThread2;
-import com.codexbox.springboot.app.renuProjects.multithreading.Mythread;
+import com.codexbox.springboot.app.renuProjects.multithreading.JoinThreadEx;
+import com.codexbox.springboot.app.renuProjects.multithreading.JoinThreadEx;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.*;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) throws IOException {/*{
+	public static void main(String[] args) throws IOException, InterruptedException {/*{
 		//int count = 1;
 		*//*List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
@@ -120,12 +112,55 @@ StudentDetails  studentDetails=null;
 		/*SequenceStreamExample example=new SequenceStreamExample();
 		example.sequMethod();
 */
-
+/*
 		Mythread thread=new Mythread();
 		thread.start();
 		System.out.println(thread.getState());
-		System.out.println(thread.getId());
-		System.out.println(thread.getName());
+		System.out.println("id is "+ thread.getId());
+		System.out.println("name is " +thread.getName());
+		try {
+			thread.join(10000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println(thread.getState());
+		MyThread2 thread2=new MyThread2();
+		thread2.start();
+		System.out.println(thread2.getState());*/
+
+
+		JoinThreadEx  j1=new JoinThreadEx();
+		JoinThreadEx j2=new JoinThreadEx();
+		JoinThreadEx j3=new JoinThreadEx();
+		j1.start();
+
+
+
+
+
+
+
+
+
+/*
+
+		MyRunnable runnable=new MyRunnable();
+		//runnable.run();
+		Thread t1=new Thread(runnable);
+		t1.start();
+		Thread t2=new Thread(runnable);
+		t2.start();
+		Thread t3=new Thread(runnable);
+		t3.start();
+		System.out.println(t1.getState());
+		System.out.println(t1.getId());
+		System.out.println(t2.getId());
+		System.out.println(t3.getId());
+
+*/
+
+
+
 		/*System.out.println(thread.getPriority());
 		try {
 			thread.wait();

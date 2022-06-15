@@ -1,12 +1,13 @@
 package com.codexbox.springboot.app.renuProjects.multithreading;
 
-public class MyThread2 implements Runnable {
-    @Override
-    public void run() {
-        int n = 8; // Number of threads
-        for (int i = 0; i < n; i++) {
-            System.out.println("thread " +i);
-        }
+
+    public class MyThread2 extends Thread {
+        public void run() {
+            int s = 10, v = 2;
+            int mul = s * v;
+            System.out.println("my second thread");
+            System.out.println("mul is: "+ mul);
+
 
     }
 }

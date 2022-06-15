@@ -1,6 +1,6 @@
 package com.codexbox.springboot.app.renuProjects.multithreading;
 
-public class MyThread extends Thread {
+public class JoinThreadEx extends Thread {
     public void run() {
         System.out.println("inside my thread");
         int a = 10, b = 5;
