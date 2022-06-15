@@ -16,9 +16,16 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		int sum=sum(x,y);
 		System.out.println(sum);
 		MyThread myThread=new MyThread();
+		Thread1 thread1=new Thread1();
+		System.out.println(thread1.isAlive());
+		System.out.println(myThread.isAlive());
+		myThread.setPriority(10);
+		thread1.setPriority(1);
+		System.out.println(thread1.getPriority());
+		thread1.start();
+		myThread.start();
 		System.out.println(myThread.getState());
 		System.out.println(myThread.getPriority());
-		myThread.start();
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
@@ -36,17 +43,17 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}
-		System.out.println("time up");*/
+		System.out.println("time up");
 
-		/*MyThread Thread=new MyThread();
+		MyThread Thread=new MyThread();
 		Thread.start();
 		try {
 			Thread.join(10000);
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}
-		System.out.println("its lunch time");*/
-		/*// Thread concept..
+		System.out.println("its lunch time");
+		// Thread concept..
 
 		System.out.println(Thread.currentThread().getId());
 		System.out.println(Thread.currentThread().getName());
@@ -62,7 +69,6 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		myThread3.checkAccess();
 		System.out.println(myThread3.getState());
 		System.out.println(myThread3.getContextClassLoader());
-
 */
 		/*//int count = 1;
 		List<Employee> empList = new ArrayList<>();
@@ -84,6 +90,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		sum(20,30);
 		sum=x+y;
 		System.out.println("sum of two numbers");
+		System.out.println(thread1.getState());
 	}
 
 }
