@@ -1,14 +1,18 @@
 package feature_ranjan.mainmethod;
 
 import feature_ranjan.fileiooperation.*;
-import feature_ranjan.thread.ThreadExample;
-import feature_ranjan.thread.ThreadExample2;
+import feature_ranjan.thread.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.io.IOException;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 @SpringBootApplication
 public class MainMethod {
+    static final int MAXNO = 5;
     @Bean
     public static void main(String[] args) throws IOException, InterruptedException {
        /* InputOutputExample inputOutputExample = new InputOutputExample();
@@ -72,7 +76,7 @@ public class MainMethod {
 
         }System.out.println("sleeping after 5000 milisecond :");*/
 // Thread  Example 2
-        ThreadExample2 threadExample1 = new ThreadExample2();
+     /*   ThreadExample2 threadExample1 = new ThreadExample2();
         System.out.println(threadExample1.getState());
        // threadExample1.start();
         System.out.println("First Thread -:"+threadExample1.getId() +"  "+ threadExample1.getName() + "\n");
@@ -91,7 +95,7 @@ public class MainMethod {
         //threadExample3.start();
 
         Thread.sleep(1502l);
-        System.out.println("State of thread at Last :" + threadExample3.getState());
+        System.out.println("State of thread at Last :" + threadExample3.getState());*/
         //threadExample3.setPriority(3);
 
 
@@ -100,8 +104,46 @@ public class MainMethod {
         //threadExample3.start();
        /* threadExample3.wait();
         threadExample3.notify();*/
+   /*     ThreadExample2 threadExample2 = new ThreadExample2();
+        new Thread(){
+            public void run(){
+                threadExample2.threadEx2(50);
+            }
+        }.start();
+        new Thread(){
+            public void run(){
+                threadExample2.notifyExample();
+            }
+        }.start();*/
+// ThreadImplementationExample
+       /* Runnable runnable1 = new ThreadImplementationExample("Task 1");
+        Runnable runnable2 = new ThreadImplementationExample("Task 2");
+        Runnable runnable3 = new ThreadImplementationExample("Task 3");
+        Runnable runnable4 = new ThreadImplementationExample("Task 4");
+        Runnable runnable5 = new ThreadImplementationExample("Task 5");
 
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
 
+        executorService.execute(runnable1);
+        executorService.execute(runnable2);
+        executorService.execute(runnable3);
+        executorService.execute(runnable4);
+        executorService.execute(runnable5);
+        executorService.*/
 
+        //executorService.shutdown();
+
+        //SynchronizedExample
+        SynchronizedExample synchExample = new SynchronizedExample();
+        SynchExample2 synchExample2 = new SynchExample2("hi", synchExample);
+        SynchExample2 synchExample3 = new SynchExample2("by", synchExample);
+        synchExample2.start();
+        synchExample3.start();
+        try{
+            synchExample2.join();
+            synchExample3.join();
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 }
