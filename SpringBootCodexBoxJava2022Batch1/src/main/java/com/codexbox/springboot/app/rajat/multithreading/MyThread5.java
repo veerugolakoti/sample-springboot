@@ -4,4 +4,7 @@ public class MyThread5 extends Thread {
     public void run(){
         System.out.println("MyThread5 priority :"+Thread.currentThread().getPriority());
     }
+    public  void m1(){
+        System.out.println("ganesh");
+    }
 }
