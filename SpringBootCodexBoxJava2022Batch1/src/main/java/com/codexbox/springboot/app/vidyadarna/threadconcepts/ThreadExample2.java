@@ -25,7 +25,7 @@ public class ThreadExample2 extends Thread {
         } catch (InterruptedException e) {
             System.out.println("waiting some time");
         }
-        System.out.println(" my two programmes is completed");
+        System.out.println(" my ThreadExample2 programmes is completed");
         }
     }
 

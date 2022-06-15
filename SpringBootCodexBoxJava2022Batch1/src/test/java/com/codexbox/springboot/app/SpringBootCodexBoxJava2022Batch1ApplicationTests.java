@@ -4,8 +4,8 @@ import com.codexbox.springboot.app.Veeru.Collections.StackExample;
 import com.codexbox.springboot.app.Veeru.Employee;
 import com.codexbox.springboot.app.vidyadarna.collections.ExampleStack;
 import com.codexbox.springboot.app.vidyadarna.fileInputOutput.*;
-import com.codexbox.springboot.app.vidyadarna.threadconcepts.ThreadExample1;
-import com.codexbox.springboot.app.vidyadarna.threadconcepts.ThreadExample2;
+import com.codexbox.springboot.app.vidyadarna.threadconcepts.*;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -357,12 +357,27 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 			ThreadExample2 threadExample2 = new ThreadExample2();
 			threadExample2.start();
 			//threadExample2.run();
-		//	System.out.println("my sum value : " +threadExample2.setName(););
+			//	System.out.println("my sum value : " +threadExample2.setName(););
 			System.out.println("my thread name is "+threadExample2.getName());
 			System.out.println("my thread id is " +threadExample2.getId());
-
 			System.out.println("my state is :   " + threadExample2.getState());
 			System.out.println("my programe line number1");
+
+			PriorityExample1  priortyExample1= new PriorityExample1();
+			priortyExample1.start();
+			System.out.println("my priority1Example state " +priortyExample1.getState());
+			PriorityExample2 priority2Example = new PriorityExample2();
+			priority2Example.start();
+
+			thread.setPriority(5);
+			threadExample2.setPriority(3);
+			priortyExample1.setPriority(1);
+			priority2Example.setPriority(7);
+
+			System.out.println("my Priority2Example priority is : " +priority2Example.getPriority());
+			System.out.println(" my ThreadExample2 priority : "+threadExample2.getPriority());
+			System.out.println("my Thread priority : " + thread.getPriority());
+			System.out.println("my priority1Example priority :  " +priortyExample1.getPriority());
 			//System.out.println("my progarmme terminated or not  : " + Thread.currentThread().getState());
 			//Thread.sleep(10000l);
 
@@ -372,6 +387,14 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 //			System.out.println(	Thread.currentThread().getId());
 //			System.out.println(	Thread.currentThread().getName());
 
+		}
+		@Test
+		public  void TestSynchronizationExample(){
+			SynchronizExample syn = new SynchronizExample();
+			SynchronizationExample2 syn2 = new SynchronizationExample2();
+			SynchronizationExample3 syn3 = new SynchronizationExample3();
+              syn2.start();
+			  syn3.start();
 		}
 	}
 }
