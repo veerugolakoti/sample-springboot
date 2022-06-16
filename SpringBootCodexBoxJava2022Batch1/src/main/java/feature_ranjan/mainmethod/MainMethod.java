@@ -134,9 +134,13 @@ public class MainMethod {
         //executorService.shutdown();
 
         //SynchronizedExample
+        SynchronizeEx syExample = new SynchronizeEx();
+        syExample.synchExamJT(5);
+
         SynchronizedExample synchExample = new SynchronizedExample();
-        SynchExample2 synchExample2 = new SynchExample2("hi", synchExample);
-        SynchExample2 synchExample3 = new SynchExample2("by", synchExample);
+        synchExample.synchronizedExam("1");
+        SynchExample2 synchExample2 = new SynchExample2("2", synchExample);
+        SynchExample2 synchExample3 = new SynchExample2("3", synchExample);
         synchExample2.start();
         synchExample3.start();
         try{
