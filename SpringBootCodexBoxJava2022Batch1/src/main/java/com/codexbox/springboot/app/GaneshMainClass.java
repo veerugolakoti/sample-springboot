@@ -131,8 +131,12 @@ ThreadExample t5 = new ThreadExample();
 
         ExecuteFrameworkExample efe = new ExecuteFrameworkExample();
         ExecutorService executorService = Executors.newFixedThreadPool(3);
-        executorService.execute(efe);
-        executorService.execute(efe);
+        for (int i = 1; i <10 ; i++)
+        {
+            executorService.execute(efe);
+        }
+
+
         executorService.shutdown();
 
 
