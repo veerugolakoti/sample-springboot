@@ -7,10 +7,9 @@ public class Table {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the Table Number : ");
         int number =scanner.nextInt() ;
-        for (int i = 1; i < number; i++) {
-            i *=1;
-            i++;
-
+        for (int i = 1; i <=number; i++) {
+            int a =i*number;
+            System.out.println(a);
         }
     }
 }
