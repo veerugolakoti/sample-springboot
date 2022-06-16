@@ -1,4 +1,4 @@
-package SBI_APPLICATION;
+package sbiApp;
 
 public class UserData {
 

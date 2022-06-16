@@ -1,12 +1,5 @@
 package com.codexbox.springboot.app.TejaAravind.MultiThreading;
 
-import com.codexbox.springboot.app.sohailspringbootproject.interfaceconcept.Car;
-
-import java.awt.*;
-import java.util.StringTokenizer;
-
-import static java.lang.Thread.sleep;
-
 public class MyThread implements Runnable{
 
     @Override

@@ -1,4 +1,4 @@
-package SBI_APPLICATION;
+package sbiApp;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -6,8 +6,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class SignUp {
-    FileReader fileInput = null;
-    FileWriter fileOutput = null;
+
     Scanner sc = new Scanner(System.in);
     public void signUpMethod()  {
 

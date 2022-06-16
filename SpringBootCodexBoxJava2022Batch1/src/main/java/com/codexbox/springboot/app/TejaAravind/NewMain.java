@@ -4,6 +4,8 @@ package com.codexbox.springboot.app.TejaAravind;
 import com.codexbox.springboot.app.TejaAravind.MultiThreading.*;
 import com.codexbox.springboot.app.TejaAravind.Streams.ReadWriteData;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -58,46 +60,37 @@ public class NewMain {
 
 
     }*/
-    /*public static void main(String[] args) {
-        ThreadPoolExample tpe1 = new ThreadPoolExample("teja");
-        ThreadPoolExample tpe2 = new ThreadPoolExample("sangam");
-        ThreadPoolExample tpe3 = new ThreadPoolExample("Ram");
-        ThreadPoolExample tpe4 = new ThreadPoolExample("dinesh");
+   /*public static void main(String[] args) {
 
 
-        ExecutorService espool = Executors.newFixedThreadPool(3);
 
-        espool.execute(tpe1);
-        espool.execute(tpe2);
-        espool.execute(tpe3);
-        espool.execute(tpe4);
+        List<String> list = new ArrayList<>();
+        ExecutorService espool = Executors.newFixedThreadPool(2);
+        list.add("teja");
+        list.add("sangam");
+        list.add("Ram");
+        list.add("dinesh");
+        for (String item : list) {
+            ThreadPoolExample tpe = new ThreadPoolExample(item);
+            espool.execute(tpe);
+        }
         espool.shutdown();
 
     }*/
 
  public static void main(String[] args) {
-    SynchronuousExample se1 = new SynchronuousExample("Hi");
-    SynchronuousExample se2 = new SynchronuousExample("Bye");
-     se1.setPriority(1);
-     se2.setPriority(10);
-     Thread thread1 = new Thread(se1) {
-         @Override
-         public void run() {
-             synchronized (se1) {
-                 se1.send();
-             }
-         }
-     };
-     Thread thread2 = new Thread(se2) {
-         @Override
-         public void run() {
-             synchronized (se2) {
-                 se2.send();
-             }
-         }
-     };
-     thread1.start();
-     thread2.start();
+    SynchronuousExample se1 = new SynchronuousExample();
+
+    Demo1 demo1 = new Demo1(se1);
+    Demo2 demo2 =new Demo2(se1);
+    Demo1 demo3 = new Demo1(se1);
+     demo1.setPriority(1);
+     demo2.setPriority(10);
+
+
+     demo1.start();
+     demo2.start();
+     demo3.start();
 
      for (int i = 1; i <= 10; i++) {
          System.out.print(i + "  ");
@@ -107,7 +100,7 @@ public class NewMain {
 
 
 
-   /* public static void main(String[] args) {
+   /*public static void main(String[] args) {
        final SyncExample se = new SyncExample();
         Thread thread1 = new Thread(){
             @Override

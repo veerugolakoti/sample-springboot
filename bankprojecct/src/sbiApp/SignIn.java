@@ -1,4 +1,4 @@
-package SBI_APPLICATION;
+package sbiApp;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -22,7 +22,6 @@ public class SignIn {
             Boolean checkUser = false;
             String data = bufferedReader.readLine();
             while (data != null) {
-
                 if (username.concat(userpassword).equals(data)) {
                   checkUser =true;
                 }

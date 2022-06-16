@@ -15,13 +15,13 @@ public class ThreadPoolExample implements Runnable {
     public void run() {
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
-        System.out.println(this.name + " is started working " + sdf.format(date));
+        System.out.println(name + " is started working " + sdf.format(date));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
            e.printStackTrace();
         }
-        System.out.println(this.name + " is done working "+ sdf.format(date));
+        System.out.println(name + " is done working "+ sdf.format(date));
 
     }
 }

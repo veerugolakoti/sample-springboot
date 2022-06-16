@@ -1,24 +1,18 @@
 package com.codexbox.springboot.app.TejaAravind.MultiThreading;
 
-public class SynchronuousExample extends Thread {
-
-    public String  msg;
-
-    public SynchronuousExample(String msg) {
-        this.msg = msg;
-    }
-
-    public synchronized void send() {
-
-        System.out.println("Sending " + msg);
+public class SynchronuousExample {
+    public void send() {
+        System.out.println("Sending " + Thread.currentThread().getName() );
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
 
             System.out.println("error occured");
             e.printStackTrace();
         }
-        System.out.println(msg +" is send");
+        System.out.println( Thread.currentThread().getName() +" is send");
     }
 
 }
+
+
