@@ -1,7 +1,9 @@
 package com.codexbox.springboot.app;
 
+
 import com.codexbox.springboot.app.Veeru.mutlitthreading.MyRunnable;
 import com.codexbox.springboot.app.Veeru.mutlitthreading.MyThread2;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
@@ -9,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import static java.lang.Integer.sum;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -80,6 +84,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 	}*/ /*{
 		//int count = 1;
+
 		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
 		for (int i = 1; i <= 29 ; i++) {
@@ -96,7 +101,9 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			empList.add(employee);
 		}
 		System.out.println("My total employees : " + empList.size());
+
 	}*/
+
 
 	private static int sum(int a, int b) {
 		System.out.println(" inside sum method");
