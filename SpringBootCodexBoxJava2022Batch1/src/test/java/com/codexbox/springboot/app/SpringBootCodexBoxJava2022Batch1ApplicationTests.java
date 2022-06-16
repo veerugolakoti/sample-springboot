@@ -4,13 +4,12 @@ import com.codexbox.springboot.app.mounika.EmployeeDetails;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.*;
 
 @SpringBootTest
 class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 
 
-	@Test
+	/*@Test
 
 	public void setprogram() {
 		ArrayDeque<String> queue = new ArrayDeque<>();
@@ -78,7 +77,7 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 			System.out.println("employee1 name is : "+emp.getName());
 
 
-
+*/
 
 
 
@@ -86,7 +85,7 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 
 			}
 
-			}
+
 
 
 
