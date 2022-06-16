@@ -6,6 +6,12 @@ import com.codexbox.springboot.app.rajat.synchronization.ThreadClass1;
 import com.codexbox.springboot.app.rajat.synchronization.ThreadClass2;
 import org.junit.jupiter.api.Test;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import static java.util.concurrent.Executor.*;
+
 public class TestRajatProgram {
     @Test
     public void testMyThread() {
@@ -105,7 +111,7 @@ public class TestRajatProgram {
     }
 
     @Test
-    public void testWithOutExtendingThreadClass() {
+    public void testThreadClassPriority() {
         MyThreadOne myThreadOne = new MyThreadOne();
         MyThread2 myThread2 = new MyThread2();
         myThread4 myThread3 = new myThread4();
@@ -170,5 +176,14 @@ public class TestRajatProgram {
         ThreadClass2 threadClass2 = new ThreadClass2(synchronizedMethodClass);
         threadClass1.start();
         threadClass2.start();
+    }
+    @Test
+    public void testExecutors(){
+        ExecutorsClass executorsClass = new ExecutorsClass();
+       ExecutorsClass executorsClass1 = new ExecutorsClass();
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        executorService.execute(executorsClass);
+       executorService.execute(executorsClass1);
+        executorService.shutdown();
     }
 }
