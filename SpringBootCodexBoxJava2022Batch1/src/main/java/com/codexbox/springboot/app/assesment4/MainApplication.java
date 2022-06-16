@@ -1,21 +1,41 @@
 package com.codexbox.springboot.app.assesment4;
 
-import com.codexbox.springboot.app.rehana.filehandling.BufferedWriterExample;
-import com.codexbox.springboot.app.rehana.filehandling.BufferedoutputStreamExample;
-import com.codexbox.springboot.app.rehana.filehandling.FileReaderExample;
-import com.codexbox.springboot.app.rehana.multithreading.MyThread;
-import com.codexbox.springboot.app.rehana.multithreading.MyThread2;
+import com.codexbox.springboot.app.rehana.multithreading.MyRunnable;
+import com.codexbox.springboot.app.rehana.multithreading.MyThreadExample3;
+import com.codexbox.springboot.app.rehana.multithreading.ThreadpriorityEx;
 
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MainApplication {
     public static void main(String[] args) throws IOException {
-       /*MyThread myThread= new MyThread();
+        MyRunnable myRunnable = new MyRunnable();
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
+
+        for (int i = 1; i < 15; i++) {
+            executorService.execute(myRunnable);
+
+        }
+        executorService.shutdown();
+
+
+       /* MyThreadExample3 myThreadEx3 = new MyThreadExample3();
+        Thread thread = new Thread(myThreadEx3);
+        thread.start();
+       ThreadpriorityEx threadpriorityEx  = new ThreadpriorityEx();
+        ThreadpriorityEx threadpriorityEx1 = new ThreadpriorityEx();
+        threadpriorityEx.setPriority(10);
+        threadpriorityEx1.setPriority(6);
+        System.out.println("priority of thread Ex is " + threadpriorityEx.getPriority());
+        System.out.println("priority of thread Ex1 is " + threadpriorityEx1.getPriority());*/
+        /*threadpriorityEx.setPriority(Thread.NORM_PRIORITY);
+        threadpriorityEx.start();*/
+
+       /*MyThrea myThread= new MyThread();
        myThread.start();*/
-        MyThread2 myThread2 = new MyThread2();
+       /* MyThread2 myThread2 = new MyThread2();
         System.out.println(myThread2.getState());
         myThread2.start();
         myThread2.getState();
@@ -41,7 +61,7 @@ public class MainApplication {
         }
         System.out.println(myThread2.getState());
 
-
+*/
 
 
        /* BufferedWriterExample bufferedWriterExample = new BufferedWriterExample();
@@ -50,7 +70,7 @@ public class MainApplication {
        /* FileReaderExample fileReaderExample = new FileReaderExample();
         fileReaderExample.reader();*/
     }
-    }
+}
 
        /*Scanner sc = new Scanner(System.in);
         System.out.println("enter number of students: ");
@@ -103,15 +123,15 @@ public class MainApplication {
             throw new RuntimeException(e);
         }*/
 
-        // SequenceInputStream Example
+// SequenceInputStream Example
        /* SequenceIpStreamEx sequenceIpStreamEx = new SequenceIpStreamEx();
         try {
             sequenceIpStreamEx.sequence();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }*/
-  //  }
-        //FileReaderExample
+//  }
+//FileReaderExample
 
 
 
