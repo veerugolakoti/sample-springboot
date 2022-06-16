@@ -23,6 +23,11 @@ public class WaitMethodExample {
         System.out.println("Reloading the magazine and resuming " + "The thread using notify();");
         bullets +=20;
         notify();
+
+
+        //Main Method is in RunnableExample class & line number is 16.
+
     }
+
 
 }
