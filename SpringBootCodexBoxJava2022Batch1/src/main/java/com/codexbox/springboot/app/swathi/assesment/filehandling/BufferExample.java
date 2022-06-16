@@ -22,6 +22,9 @@ public class BufferExample {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }finally {
+
+
+
             try {
                 fileinput.close();
             } catch (IOException e) {

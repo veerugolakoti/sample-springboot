@@ -11,8 +11,8 @@ import java.util.*;
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
-        //SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
-        //
+            //SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
+            //
 /*
         List<EmployeeDetails> employees = new ArrayList<>();
         //for ( EmployeeDetails var:employees)
@@ -58,7 +58,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
         System.out.println(stack2.pop());
       //  for (int i=0;i<4;i++){*/ //stack
 
-        PriorityQueue<Integer> variable = new PriorityQueue<Integer>();
+   /*     PriorityQueue<Integer> variable = new PriorityQueue<Integer>();
 
 variable.add(10);
 variable.add(20);
@@ -69,4 +69,6 @@ variable.add(30);
         System.out.println(variable.peek());
     }}
 
+*/
 
+    }}

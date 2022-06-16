@@ -2,6 +2,8 @@ package com.codexbox.springboot.app.swathi.assesment.mainmethod;
 
 import com.codexbox.springboot.app.swathi.assesment.Assessment3.Student;
 import com.codexbox.springboot.app.swathi.assesment.EmployeeDetails;
+import com.codexbox.springboot.app.swathi.assesment.MultiThreading.MyThread;
+import com.codexbox.springboot.app.swathi.assesment.MultiThreading.ThreadExample;
 import com.codexbox.springboot.app.swathi.assesment.enumeration.Day;
 import com.codexbox.springboot.app.swathi.assesment.enumeration.EnumerationWeekday;
 import com.codexbox.springboot.app.swathi.assesment.filehandling.BufferExample;
@@ -14,9 +16,10 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-
-        public static void main(String[] args) throws IOException {
-            // SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
+    public static void main(String[] args) throws IOException {
+    }
+    }
+        // SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 
       /*  List<EmployeeDetails> employees = new ArrayList<>();
         //for ( EmployeeDetails var:employees)
@@ -107,8 +110,61 @@ public class Main {
 
 */
 
-            BufferExample example=new BufferExample();
+          /*  BufferExample example=new BufferExample();
             example.buffer();
+*/
 
-}}
+            /*ThreadExample example = new ThreadExample();
+            example.run();
+            System.out.println(example.getId());
+            System.out.println(example.getName());
+            ThreadExample example1=new ThreadExample();
+            example1.run();
+            System.out.println(example1.getName());
+            System.out.println(example1.getId());
+            ThreadExample example2=new ThreadExample();
+            example2.run();
+            System.out.println(example2.getName());
+            System.out.println(example2.getId());*/
+            // ...............................
+          /* System.out.println(Thread.currentThread().getPriority());
+            MyThread mythread = new MyThread();
+            System.out.println(mythread.getState());
+            mythread.start();
+            System.out.println(mythread.getState());
 
+            try {
+                Thread.sleep(7000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                mythread.wait(8000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            mythread.m1();
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                mythread.wait(5000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            mythread.m2();
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+
+            mythread.m3();
+            MyThread examples = new MyThread();
+            System.out.println("this is my thread " + examples.hashCode());
+            System.out.println(mythread.getState());
+
+        }}*/
