@@ -1,9 +1,16 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Employee;
+import com.codexbox.springboot.app.abhilash.Employee;
+import com.codexbox.springboot.app.abhilash.assessment4.Student;
+import com.codexbox.springboot.app.abhilash.assessment4.StudentDetails;
+import com.codexbox.springboot.app.abhilash.enumaration.EnumarationExample;
+import com.codexbox.springboot.app.abhilash.filehandling.FileHandlingExample;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,23 +18,64 @@ import java.util.Scanner;
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
-		//int count = 1;
-		List<Employee> empList = new ArrayList<>();
-		Scanner scanner = new Scanner(System.in);
-		for (int i = 1; i <= 29 ; i++) {
+		SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
+		//LinkedListExample example = new LinkedListExample();
+		//System.out.println(example.loadMyList());
+//		Scanner sc = new Scanner(System.in);
+//		List<Employee> list = new LinkedList<>();
+//
+//		for (int i = 0; i < 2; i++) {
+//			Employee emp = new Employee();
+//			System.out.println("Enter employee " + (i+1) + " details:");
+//			emp.setDetails();
+//			list.add(emp);
+//		}
+//		for (Employee e : list) {
+//			e.showDetails();
+//		}
+//		System.out.println("enter how many employees absent");
+//		Integer number = sc.nextInt();
+//		if (number > 0) {
+//			System.out.println("enter name of employee/employees is/are absent");
+//			for (int i = 0; i < list.size(); i++) {
+//				Employee employee = new Employee();
+//				String absent = sc.next();
+//				if (list.get(i).getEmployee_name().equalsIgnoreCase(absent)) {
+//					System.out.println("enter new employee details:");
+//					employee.setDetails();
+//					System.out.println("index of old employee is");
+//					Integer index = list.indexOf(list.get(i).getEmployee_name());
+//					System.out.println(index);
+//					list.set(i, employee);
+//				}
+//				break;
+//			}
+//				for (Employee e : list) {
+//					e.showDetails();
+//				}
+//
+//			}
 
-			System.out.println("Enter Employee" + i + " Details: ");
-			System.out.println("Enter emp name: ");
-			String name = scanner.next();
-			System.out.println("Enter emp id: ");
-			Integer id = scanner.nextInt();
-			System.out.println("Enter emp address: ");
-			String address = scanner.next();
+//		System.out.println(EnumarationExample.SUMMER.getValues());
+//		System.out.println(EnumarationExample.SPRING.name());
+//		System.out.println(EnumarationExample.FALL.ordinal());
+//
+		List<Student> list = new ArrayList<>();
+		for (int i = 0; i < 2; i++) {
+			Student student = new Student();
+			System.out.println("Enter student " + (i + 1) + " details");
+			student.studentDetails();
+			student.gradeCalculation(i);
+			list.add(student);
 
-			Employee employee = new Employee(name, id, address);
-			empList.add(employee);
 		}
-		System.out.println("My total employees : " + empList.size());
+		for (Student s : list) {
+			s.getAllstudentDetails();
+			System.out.println(s.getName() + ":" + s.gradeCalculation(s.getMarks()));
+		}
 	}
-
 }
+
+
+
+
