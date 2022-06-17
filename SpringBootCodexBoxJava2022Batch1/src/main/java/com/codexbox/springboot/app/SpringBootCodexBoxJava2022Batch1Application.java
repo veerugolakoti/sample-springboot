@@ -1,33 +1,69 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
-import com.codexbox.springboot.app.Veeru.employee.Employee;
-import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
-import com.codexbox.springboot.app.thread.ThreadExample;
-import ioStream.IOStreamExample;
+import com.codexbox.springboot.app.jdbc.JdbcExample;
+import com.codexbox.springboot.app.thread.RunnableImpl;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.IOException;
-import java.util.*;
+import java.sql.SQLException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) {
-		ThreadExample threadExample = new ThreadExample();
+	public static void main(String[] args) throws SQLException {
+		/*RunnableImpl runnable = new RunnableImpl();
+		ExecutorService executors = Executors.newFixedThreadPool(2);
+		for(int i =0; i<=3; i++) {
+
+			executors.execute(runnable);
+		}
+		executors.shutdown();
+
+*/
+		JdbcExample jdbcExample = new JdbcExample();
+		jdbcExample.employeeDetails();
+
+
+
+
+	}
+/*Thread.currentThread().setPriority(9);
+		System.out.println("main thread priority " + Thread.currentThread().getPriority());
+		DemoThread demoThread = new DemoThread(); //creating object to main thread
+		System.out.println("priority of demo thread " + demoThread.getPriority());
+	}*/
+	/*	RunnableExample runnableExample = new RunnableExample();
+		Thread thread = new Thread(runnableExample);
+		thread.start();
+		try {
+			thread.sleep(100);
+
+
+			System.out.println(thread.getState());
+
+			//System.out.println(thread.getStackTrace());
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}}
+*/
+
+		/*ThreadExample threadExample = new ThreadExample();
 		threadExample.run();
 
 		ThreadExample threadExample1 = new ThreadExample();
 		System.out.println(threadExample1.getName());
 		System.out.println(threadExample1.getId());
-		System.out.println(threadExample1.getPriority());
+		//System.out.println(threadExample1.getPriority());
 		System.out.println(threadExample1.getState());
 
 		ThreadExample threadExample2 = new ThreadExample();
 		System.out.println(threadExample2.getName());
 		System.out.println(threadExample2.getId());
-		System.out.println(threadExample2.getPriority());
+		//System.out.println(threadExample2.getPriority(threadExample1));
+	}}*/
 		// System.out.println(threadExample2.getState());
+
 
 
 
@@ -83,9 +119,10 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		for
 		}*/
 
+/*
 
 	}
-	/*{
+	{
 		//int count = 1;
 		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
@@ -103,6 +140,8 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			empList.add(employee);
 		}
 		System.out.println("My total employees : " + empList.size());
-	}*/
+	}
 }
 
+*/
+	}
