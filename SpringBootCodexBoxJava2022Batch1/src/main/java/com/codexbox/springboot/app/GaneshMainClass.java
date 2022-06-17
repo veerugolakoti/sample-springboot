@@ -1,12 +1,33 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.ganesh.multithreading.ExecuteFrameworkExample;
+import com.codexbox.springboot.app.ganesh.jdbc.PreparedStatementExample;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.sql.SQLException;
 
 public class GaneshMainClass {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+
+       /* StatementExample se = new StatementExample();
+        try {
+            se.m1();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }*/
+
+
+
+        //prepare statement
+
+        PreparedStatementExample pse = new PreparedStatementExample();
+        pse.m2();
+
+    }
+
+}
+
+
+
+
 
       /*  ThreadExample example = new ThreadExample();
 
@@ -127,7 +148,7 @@ ThreadExample t5 = new ThreadExample();
         }*/
 
         ////*****
-
+/*
 
         ExecuteFrameworkExample efe = new ExecuteFrameworkExample();
         ExecutorService executorService = Executors.newFixedThreadPool(3);
@@ -142,6 +163,29 @@ ThreadExample t5 = new ThreadExample();
 
     }
 
-}
+}*//*
+
+        public class ExecuteFrameworkExample implements Callable {
+            @Override
+            public Object call() throws Exception {
+                int a = 10;
+                int b = 20;
+                int c = a + b;
+
+                return c;
+            }
+        }*/
+/*
+        ExecuteFrameworkExample ef = new ExecuteFrameworkExample();
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        for (int i = 1; i <10 ; i++)
+        {
+            executorService.execute(ef);
+        }
+
+
+        executorService.shutdown();*/
+
+
 
 
