@@ -1,10 +1,14 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.sohailspringbootproject.collections.SpringBootApplication;
+import com.codexbox.springboot.app.sohailspringbootproject.jdbc.JdbcExample;
+import com.codexbox.springboot.app.sohailspringbootproject.jdbc.Student;
 import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread;
 import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread1;
 import com.codexbox.springboot.app.sohailspringbootproject.multithreading.MyThread2;
 import com.codexbox.springboot.app.sohailspringbootproject.multithreading.Task;
+
+import java.sql.SQLException;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -110,7 +114,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 //		Task task = new Task();
 
-	MyThread1 thread1 = new MyThread1();
+/*	MyThread1 thread1 = new MyThread1();
 	Thread thread = new Thread(thread1);
 
 
@@ -124,19 +128,15 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		System.out.println("Catch ");
 	}
 	myThread.start();
-		thread.start();
+		thread.start();*/
 
+		JdbcExample jdbcExample = new JdbcExample();
 
-
-
-
-
-
-
-
-
-
-
+		try {
+			jdbcExample.jdbcMethod();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 
 
 	}
