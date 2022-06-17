@@ -4,6 +4,8 @@ import com.codexbox.springboot.app.LinkedListExample;
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
 import com.codexbox.springboot.app.abhilash.Diamond;
 import com.codexbox.springboot.app.abhilash.Employee;
+import com.codexbox.springboot.app.abhilash.JdbcExample.ConnectionExample;
+import com.codexbox.springboot.app.abhilash.JdbcExample.PreparedstatementExample;
 import com.codexbox.springboot.app.abhilash.filehandling.FileHandlingExample;
 import com.codexbox.springboot.app.abhilash.multithreading.MultithreadingExample2;
 import com.codexbox.springboot.app.abhilash.multithreading.MultitreadingExample;
@@ -12,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.swing.plaf.multi.MultiInternalFrameUI;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -23,6 +26,20 @@ public class MainApplication {
     public static void main(String[] args) throws IOException {
 
 		SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
+//		ConnectionExample con = new ConnectionExample();
+//		try {
+//			con.establish();
+//		} catch (SQLException e) {
+//			throw new RuntimeException(e);
+//		}
+		PreparedstatementExample preparedstatementExample = new PreparedstatementExample();
+		try {
+			preparedstatementExample.establish();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
+
 //        Scanner sc = new Scanner(System.in);
 //        List<Employee> list = new LinkedList<>();
 //
@@ -87,8 +104,8 @@ public class MainApplication {
 //		}
 //		System.out.println("started");
 
-		MultitreadingExample mi1 = new MultitreadingExample();
-		System.out.println("MultitreadingExample .run()");
+		/*MultitreadingExample mi1 = new MultitreadingExample();
+		System.out.println("MultitreadingExample.run()");
 		mi1.start();
 		mi1.run();
 		mi1.mythread();
@@ -117,7 +134,7 @@ public class MainApplication {
 		}
 		System.out.println("diamond thread state is: " + d.getState());
 
-
+*/
 	}
 }
 

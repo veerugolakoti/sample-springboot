@@ -1,5 +1,6 @@
 package com.codexbox.springboot.app;
 
+import com.codexbox.springboot.app.abhilash.JdbcExample.PreparedstatementExample;
 import com.codexbox.springboot.app.abhilash.collection.SetArrayExample;
 import com.codexbox.springboot.app.abhilash.collection.SetExample;
 import com.codexbox.springboot.app.abhilash.collection.StackExample;
@@ -12,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.awt.*;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Set;
 
 @SpringBootTest
@@ -57,5 +59,14 @@ public void testSampleByteOutput() {
     public void testSequenceinputExample() {
         SequenceinputExample si = new SequenceinputExample();
         si.sequenceEx();
+    }
+    @Test
+    public void testPreparedstatementExample(){
+        PreparedstatementExample preparedstatementExample = new PreparedstatementExample();
+        try {
+            preparedstatementExample.establish();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
