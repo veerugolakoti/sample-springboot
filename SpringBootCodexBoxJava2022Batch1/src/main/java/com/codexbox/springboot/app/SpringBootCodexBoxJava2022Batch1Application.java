@@ -1,33 +1,16 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Employee;
+import com.codexbox.springboot.app.dhivya.assisment.StudentList;
+import com.codexbox.springboot.app.dhivya.collections.DuplicateElements;
+import com.codexbox.springboot.app.dhivya.file.InputOutputStream;
+import com.codexbox.springboot.app.dhivya.threads.ThreadExample1;
+import com.codexbox.springboot.app.dhivya.threads.ThreadExample2;
+import com.codexbox.springboot.app.dhivya.threads.ThreadExamples;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.IOException;
+import java.util.*;
 
 @SpringBootApplication
-public class SpringBootCodexBoxJava2022Batch1Application {
+public class SpringBootCodexBoxJava2022Batch1Application {}
 
-	public static void main(String[] args) {
-		//int count = 1;
-		List<Employee> empList = new ArrayList<>();
-		Scanner scanner = new Scanner(System.in);
-		for (int i = 1; i <= 29 ; i++) {
-
-			System.out.println("Enter Employee" + i + " Details: ");
-			System.out.println("Enter emp name: ");
-			String name = scanner.next();
-			System.out.println("Enter emp id: ");
-			Integer id = scanner.nextInt();
-			System.out.println("Enter emp address: ");
-			String address = scanner.next();
-
-			Employee employee = new Employee(name, id, address);
-			empList.add(employee);
-		}
-		System.out.println("My total employees : " + empList.size());
-	}
-
-}
