@@ -1,14 +1,37 @@
 package com.codexbox.springboot.app.vamshi;
 
+import com.codexbox.springboot.app.vamshi.jdbc.EmployeeJdbc;
+import com.codexbox.springboot.app.vamshi.jdbc.JdbcSample;
+import com.codexbox.springboot.app.vamshi.jdbc.SamplePreparedStatment;
 import com.codexbox.springboot.app.vamshi.multithreading.MyRunnableSample;
 import com.codexbox.springboot.app.vamshi.multithreading.MyThreadSample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.sql.SQLException;
+import java.util.List;
+
 @SpringBootApplication
 public class MainSpringBootApi {
         public static void main(String[] args) {
-                MyRunnableSample myRunnableSample = new MyRunnableSample();
+                SamplePreparedStatment samplePreparedStatment = new SamplePreparedStatment();
+                try {
+                        samplePreparedStatment.getBatchdetails();
+                        System.out.println();
+                } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                }
+
+
+
+               /* JdbcSample jdbcSample = new JdbcSample();
+                List<EmployeeJdbc>employeeJdbc =jdbcSample.getEmployee();
+                for (EmployeeJdbc emp:employeeJdbc) {
+                        System.out.println(emp.getPersonID()+","+emp.getLastName()+""+emp.getFirstName()+", "+emp.getAddress()+", "+emp.getCity());
+                }*/
+
+
+              /*  MyRunnableSample myRunnableSample = new MyRunnableSample();
                 MyThreadSample m1 = new MyThreadSample();
                 m1.isAlive();
                 Thread t1 = new Thread(myRunnableSample);
@@ -33,7 +56,7 @@ public class MainSpringBootApi {
                 t5.start();
                 Thread t6 = new Thread(myRunnableSample);
                 t6.isDaemon();
-                t6.start();
+                t6.start();*/
 
        /* MyThreadSample myThreadSample = new MyThreadSample();
         MyRunnableSample myRunnableSample1 = new MyRunnableSample(myThreadSample);
