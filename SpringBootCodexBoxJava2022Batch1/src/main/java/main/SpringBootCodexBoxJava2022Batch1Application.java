@@ -1,26 +1,30 @@
 package main;
 
-import com.sun.xml.internal.ws.api.addressing.OneWayFeature;
-import ioStreams.ArrayStream;
-import ioStreams.BufferedStream;
+import jdbcConnections.PreparedStatementExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import selfAssessment.GenerateOtp;
-import threads.ExecutionFrameworkExample;
-import threads.RunableExample;
-import threads.ThreadExample;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.sql.SQLException;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 	public static void main(String[] args) {
-		ExecutorService executorService = Executors.newFixedThreadPool(5);
+		PreparedStatementExample ps=new PreparedStatementExample();
+		try {
+			ps.myPrepared();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 	}}
+		/*JdbcExample jdbc=new JdbcExample();
+		try {
+			jdbc.myJdbcExample();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}*/
+		/*ExecutionFrameworkExample executionFrameworkExample= new ExecutionFrameworkExample();
+		ExecutorService executorService=Executors.newFixedThreadPool(4);
+			executorService.submit(executionFrameworkExample);
+	}}*/
 	/*	GenerateOtp otp=new GenerateOtp();
 		otp.generateOTP();
 	}}*/
