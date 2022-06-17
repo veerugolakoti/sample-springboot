@@ -1,10 +1,12 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.renuProjects.multithreading.JoinThreadEx;
-import com.codexbox.springboot.app.renuProjects.multithreading.JoinThreadEx;
+import com.codexbox.springboot.app.renuProjects.jdbcPrograms.JdbdExample;
+import com.codexbox.springboot.app.renuProjects.jdbcPrograms.PreparedStatementExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -127,12 +129,20 @@ StudentDetails  studentDetails=null;
 		MyThread2 thread2=new MyThread2();
 		thread2.start();
 		System.out.println(thread2.getState());*/
+/*
 
 
 		JoinThreadEx  j1=new JoinThreadEx();
 		JoinThreadEx j2=new JoinThreadEx();
 		JoinThreadEx j3=new JoinThreadEx();
 		j1.start();
+		System.out.println(j1.getState());
+		j2.start();
+		System.out.println(j2.getState());
+		j3.start();
+		System.out.println(j3.getState());
+
+*/
 
 
 
@@ -178,9 +188,35 @@ StudentDetails  studentDetails=null;
 			throw new RuntimeException(e);
 		}*/
 
+/*
+
+		Table table=new Table();
+		MySynchronised s1=new MySynchronised(table);
+		MySynchronised2 s2=new MySynchronised2(table);
+		s1.start();
+		s2.start();
+*/
+
+/*
+		ExecutorService executor = Executors.newFixedThreadPool(5);
+		for(int i=1; i<=5; i++){
+			Runnable thread=new MyThreadPool();
+			executor.execute(thread);
+		}
+          executor.shutdown();
+		System.out.println("finished all threads");
+	}*/
+
+/*
+
+		JdbdExample example=new JdbdExample();
+		example.jdbcmethod();
+*/
 
 
-
+		PreparedStatementExample example=new PreparedStatementExample();
+		example.prepairedmethod();
 
 	}
+
 }
