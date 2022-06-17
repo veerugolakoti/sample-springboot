@@ -1,11 +1,14 @@
 package com.codexbox.springboot.app;
 
+import com.codexbox.springboot.app.rajat.jdbc.JdbcEmployee;
+import com.codexbox.springboot.app.rajat.jdbc.JdbcPrepairedStatement;
 import com.codexbox.springboot.app.rajat.multithreading.*;
 import com.codexbox.springboot.app.rajat.synchronization.SynchronizedMethodClass;
 import com.codexbox.springboot.app.rajat.synchronization.ThreadClass1;
 import com.codexbox.springboot.app.rajat.synchronization.ThreadClass2;
 import org.junit.jupiter.api.Test;
 
+import java.sql.SQLException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -182,8 +185,18 @@ public class TestRajatProgram {
         ExecutorsClass executorsClass = new ExecutorsClass();
        ExecutorsClass executorsClass1 = new ExecutorsClass();
         ExecutorService executorService = Executors.newFixedThreadPool(3);
-        executorService.execute(executorsClass);
-       executorService.execute(executorsClass1);
+//        executorService.execute(executorsClass);
+//       executorService.execute(executorsClass1);
         executorService.shutdown();
+    }
+    @Test
+ public void testJdbc()  {
+        JdbcEmployee jdbcEmployee = new JdbcEmployee();
+        jdbcEmployee.getEmployee();
+    }
+    @Test
+    public void testPrepairedStatement(){
+        JdbcPrepairedStatement jdbcPrepairedStatement= new JdbcPrepairedStatement();
+        jdbcPrepairedStatement.getEmployee();
     }
 }
