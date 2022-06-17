@@ -1,18 +1,17 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Employee;
+import JdbcExamples.JdbcExamples1;
+import JdbcExamples.Student;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
 		//int count = 1;
-		List<Employee> empList = new ArrayList<>();
+		/*List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
 		for (int i = 1; i <= 29 ; i++) {
 
@@ -27,7 +26,18 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			Employee employee = new Employee(name, id, address);
 			empList.add(employee);
 		}
-		System.out.println("My total employees : " + empList.size());
+		System.out.println("My total employees : " + empList.size());*/
+		 JdbcExamples1 jdbcExamples=new JdbcExamples1();
+		List<Student> student=jdbcExamples.getDetails();
+		for (Student stdlist:student) {
+			System.out.println(stdlist.getSid());
+			System.out.println(stdlist.getSname());
+			System.out.println(stdlist.getSmarks());
+			System.out.println(stdlist.getSgrade());
+
+		}
+
+
 	}
 
 }

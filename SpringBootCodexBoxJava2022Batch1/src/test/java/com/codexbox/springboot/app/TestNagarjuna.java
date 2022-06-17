@@ -55,7 +55,7 @@ public class TestNagarjuna {
         ba.inputOutputOperations();*/
        /* ByteArrayOutStream bao=new ByteArrayOutStream();
         bao.inputOutputOperations();*/
-  public void ownThread() {
+//  public void ownThread() {
 
 
       /* ThreadExample te = new ThreadExample();
@@ -150,21 +150,25 @@ Thread thread1=new Thread();
         System.out.println("current thread value "+Thread.currentThread().getPriority());
         MyPrirority myPrirority3=new MyPrirority();
         System.out.println("new thread prirority value"+myPrirority3.getPriority());*/
-     final int maxthreads=3;
-Runnable r1=new TaskPoll("task1");
+
+/*Runnable r1=new TaskPoll("task1");
 Runnable r2=new TaskPoll("task2");
 Runnable r3=new TaskPoll("task3");
 Runnable r4=new TaskPoll("task4");
 Runnable r5=new TaskPoll("task5");
-Runnable r6=new TaskPoll("task6");
-          ExecutorService ex=Executors.newFixedThreadPool(maxthreads);
+//Runnable r6=new TaskPoll("task6");
+          ExecutorService ex=Executors.newFixedThreadPool(3);
           ex.execute(r1);
           ex.execute(r2);
           ex.execute(r3);
           ex.execute(r4);
           ex.execute(r5);
-          ex.execute(r6);
-          ex.shutdown();
+//          ex.execute(r6);
+          ex.shutdown();*/
+    public void getDetails(){
+
+
+
     }
 }
 
