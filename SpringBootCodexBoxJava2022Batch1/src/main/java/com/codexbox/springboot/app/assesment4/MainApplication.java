@@ -1,24 +1,30 @@
 package com.codexbox.springboot.app.assesment4;
 
+import com.codexbox.springboot.app.rehana.jdbc.JdbcExample;
+import com.codexbox.springboot.app.rehana.jdbc.StudentEx;
 import com.codexbox.springboot.app.rehana.multithreading.MyRunnable;
 import com.codexbox.springboot.app.rehana.multithreading.MyThreadExample3;
 import com.codexbox.springboot.app.rehana.multithreading.ThreadpriorityEx;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class MainApplication {
-    public static void main(String[] args) throws IOException {
-        MyRunnable myRunnable = new MyRunnable();
+    public static void main(String[] args) throws IOException, SQLException {
+        JdbcExample jdbcExample = new JdbcExample();
+        jdbcExample.studentDeatils();
+
+       /* MyRunnable myRunnable = new MyRunnable();
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
         for (int i = 1; i < 15; i++) {
             executorService.execute(myRunnable);
 
         }
-        executorService.shutdown();
+        executorService.shutdown();*/
 
 
        /* MyThreadExample3 myThreadEx3 = new MyThreadExample3();
