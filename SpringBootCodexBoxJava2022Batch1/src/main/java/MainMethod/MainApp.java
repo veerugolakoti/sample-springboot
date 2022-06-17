@@ -5,10 +5,13 @@ import Enumeration.EnumerationEx;
 import Enumeration.EnumerationWeekDay;
 import FilesOperations.*;
 import FilesOperationsChallenge.*;
+import JdbcPrograms.JdbcExample;
+import JdbcPrograms.JdbcPreparedStatement;
 import MultiThreadeing.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.sql.SQLException;
 import java.util.PriorityQueue;
 
 import static MultiThreadeing.ThreadPriorityEx2.addition;
@@ -204,7 +207,7 @@ public class MainApp {
         tjoins2.start();
         tjoins3.start();*/
 
-        ThreadJoinEx2 tjoin1 = new ThreadJoinEx2();
+        /*ThreadJoinEx2 tjoin1 = new ThreadJoinEx2();
         ThreadJoinEx2 tjoin2 = new ThreadJoinEx2();
         ThreadJoinEx2 tjoin3 = new ThreadJoinEx2();
 
@@ -215,6 +218,17 @@ public class MainApp {
             throw new RuntimeException(e);
         }
         tjoin2.start();
-        tjoin3.start();
+        tjoin3.start();*/
+
+        /*JdbcExample jdbc = new JdbcExample();
+        jdbc.jdbcPrograms();*/
+
+        JdbcPreparedStatement prepared = new JdbcPreparedStatement();
+        try {
+            prepared.preparedStatement();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
