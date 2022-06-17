@@ -1,11 +1,15 @@
 package feature_ranjan.mainmethod;
 
 import feature_ranjan.fileiooperation.*;
+import feature_ranjan.jdbc.JdbcExample;
+import feature_ranjan.jdbc.JdbcUsingCollection;
+import feature_ranjan.jdbc.StoredProcedureProgram;
 import feature_ranjan.thread.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,7 +18,7 @@ import java.util.concurrent.Executors;
 public class MainMethod {
     static final int MAXNO = 5;
     @Bean
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, SQLException {
        /* InputOutputExample inputOutputExample = new InputOutputExample();
         inputOutputExample.fileInputOutput();*/
 
@@ -134,7 +138,7 @@ public class MainMethod {
         //executorService.shutdown();
 
         //SynchronizedExample
-        SynchronizeEx syExample = new SynchronizeEx();
+       /* SynchronizeEx syExample = new SynchronizeEx();
         syExample.synchExamJT(5);
 
         SynchronizedExample synchExample = new SynchronizedExample();
@@ -148,6 +152,15 @@ public class MainMethod {
             synchExample3.join();
         }catch(Exception e){
             System.out.println(e);
-        }
+        }*/
+
+      /*  JdbcExample jdbcExample = new JdbcExample();
+        jdbcExample.getDatabase();*/
+
+       /* JdbcUsingCollection jdbc = new JdbcUsingCollection();
+        jdbc.getDatabase();*/
+
+        StoredProcedureProgram storedProcedureProgram = new StoredProcedureProgram();
+        storedProcedureProgram.storedProcedure();
     }
 }
