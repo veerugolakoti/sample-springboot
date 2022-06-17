@@ -2,6 +2,8 @@ package com.codexbox.springboot.app;
 
 //Test;
 import com.codexbox.springboot.app.vidyadarna.StudentAssesment;
+import com.codexbox.springboot.app.vidyadarna.jdbcexample.JdbcExample;
+import com.codexbox.springboot.app.vidyadarna.jdbcexample.PreparedStmtExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.*;
@@ -16,6 +18,15 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 
 	public static void main(String[] args) {
+
+//		JdbcExample jdbc = new JdbcExample();
+//		jdbc.jdbcExample();
+
+		PreparedStmtExample preparedStmtExample = new PreparedStmtExample();
+		preparedStmtExample.preparedexample();
+
+
+
 
 //		Test1 test = new Test1(EnumExample.MEDIUM);
 //		test.orderPizza();
@@ -68,7 +79,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 //
 //		}3
 
-		List<StudentAssesment> studentList = new ArrayList<>();
+	/*	List<StudentAssesment> studentList = new ArrayList<>();
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("enter number of students");
@@ -162,6 +173,6 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			System.out.println("student number " + entry.getKey().getStudentId() + " : " + entry.getValue());
 
 		}
-
+*/
 	}
 }

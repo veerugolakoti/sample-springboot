@@ -1,7 +1,7 @@
 package com.codexbox.springboot.app.vidyadarna.threadconcepts;
 
 public class SynchronizExample extends Thread{
-    void printvalues() {
+ public    void run() {
         int n = 5;
 
         for (int i = 1; i <= 5 ; i++){

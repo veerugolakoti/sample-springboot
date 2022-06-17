@@ -9,8 +9,8 @@ public class SynchronizationExample2 extends Thread{
     public synchronized void  run() {
      int n = 2;
      for (int i =1;i<=5; i++){
-         System.out.println(n*i);
-         System.out.println("my SynchronizedExample1 state " );
+       //  System.out.println(n*i);
+         System.out.println("my SynchronizedExample1 state " +n*i);
      }
 
     }

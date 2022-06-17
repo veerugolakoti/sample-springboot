@@ -4,6 +4,7 @@ import com.codexbox.springboot.app.Veeru.Collections.StackExample;
 import com.codexbox.springboot.app.Veeru.Employee;
 import com.codexbox.springboot.app.vidyadarna.collections.ExampleStack;
 import com.codexbox.springboot.app.vidyadarna.fileInputOutput.*;
+import com.codexbox.springboot.app.vidyadarna.jdbcexample.JdbcExample;
 import com.codexbox.springboot.app.vidyadarna.threadconcepts.*;
 
 import org.junit.jupiter.api.Test;
@@ -11,6 +12,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @SpringBootTest
 class SpringBootCodexBoxJava2022Batch1ApplicationTests {
@@ -389,14 +393,42 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 
 		}
 		@Test
-		public  void TestSynchronizationExample(){
+		public  void TestSynchronizationExample() throws InterruptedException {
 			SynchronizExample syn = new SynchronizExample();
 			SynchronizationExample2 syn2 = new SynchronizationExample2();
 			SynchronizationExample3 syn3 = new SynchronizationExample3();
+			syn.start();
+			//syn.run();
+			System.out.println("my thread state  " +syn.getState());
+
               syn2.start();
 			  syn3.start();
+			  Thread.sleep(1000l);
+			System.out.println("my main thread state is " +Thread.currentThread().getState());
 		}
-	}
+		@Test
+		public void  TestExutorExample(){
+			ExecutorService executorService = Executors.newFixedThreadPool(3);
+		//	executorService.shutdown();
+			ExcutorExample example = new ExcutorExample();
+			example.run();
+			executorService.shutdown();
+//			List<Integer> employee = new ArrayList<>();
+//			employee.add(1);
+//			employee.add(23);
+//			employee.add(87);
+//			employee.add(90);
+//			employee.add(75);
+//			employee.add(12);
+//			for (Integer eid:employee) {
+//				System.out.println("employee " +eid);
+//			}
+		}
+
+
+
+		}
+
 }
 
 
