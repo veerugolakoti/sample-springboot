@@ -1,5 +1,7 @@
 package com.codexbox.springboot.app.vamshi;
 
+import com.codexbox.springboot.app.vamshi.assessmentcustomerdetails.CustomerDetails;
+import com.codexbox.springboot.app.vamshi.assessmentcustomerdetails.CustomerTable;
 import com.codexbox.springboot.app.vamshi.jdbc.EmployeeJdbc;
 import com.codexbox.springboot.app.vamshi.jdbc.JdbcSample;
 import com.codexbox.springboot.app.vamshi.jdbc.SamplePreparedStatment;
@@ -14,13 +16,32 @@ import java.util.List;
 @SpringBootApplication
 public class MainSpringBootApi {
         public static void main(String[] args) {
-                SamplePreparedStatment samplePreparedStatment = new SamplePreparedStatment();
+                CustomerDetails customerDetails = new CustomerDetails();
+                try {
+                        customerDetails.insertDetails();
+                } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                }
+               /* CustomerTable customerTable = new CustomerTable();
+                try {
+                        customerTable.customerTableCreation();
+                } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                }*/
+
+
+
+
+
+
+
+               /* SamplePreparedStatment samplePreparedStatment = new SamplePreparedStatment();
                 try {
                         samplePreparedStatment.getBatchdetails();
                         System.out.println();
                 } catch (SQLException e) {
                         throw new RuntimeException(e);
-                }
+                }*/
 
 
 

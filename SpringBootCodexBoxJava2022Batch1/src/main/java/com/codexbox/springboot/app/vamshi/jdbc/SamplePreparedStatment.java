@@ -9,6 +9,7 @@ public class SamplePreparedStatment {
     ResultSet resultSet=null;
 
     public void getBatchdetails() throws SQLException {
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/myjavabatch4", "root", "vamshi@V2");
