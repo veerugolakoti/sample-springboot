@@ -1,21 +1,16 @@
 package com.codexbox.springboot.app.assesment4;
 
-import com.codexbox.springboot.app.rehana.jdbc.JdbcExample;
-import com.codexbox.springboot.app.rehana.jdbc.StudentEx;
-import com.codexbox.springboot.app.rehana.multithreading.MyRunnable;
-import com.codexbox.springboot.app.rehana.multithreading.MyThreadExample3;
-import com.codexbox.springboot.app.rehana.multithreading.ThreadpriorityEx;
+import com.codexbox.springboot.app.rehana.customepurchaseHistory.Scannerclass;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class MainApplication {
     public static void main(String[] args) throws IOException, SQLException {
-        JdbcExample jdbcExample = new JdbcExample();
-        jdbcExample.studentDeatils();
+        Scannerclass sc = new Scannerclass();
+        sc.insertCustomerDetails();
+        /*JdbcExample jdbcExample = new JdbcExample();
+        jdbcExample.studentDeatils();*/
 
        /* MyRunnable myRunnable = new MyRunnable();
         ExecutorService executorService = Executors.newFixedThreadPool(2);
