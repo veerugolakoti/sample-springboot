@@ -1,94 +1,66 @@
 package com.codexbox.springboot.app;
 
 
-import com.codexbox.springboot.app.jhansiproject.multithreading.*;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
+import com.codexbox.springboot.app.Veeru.employee.Employee;
+import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.*;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
-	/*	SetPriorityExample set=new SetPriorityExample();
-		set.setPriority(Thread.MAX_PRIORITY);
 
-		set.start();
-		SetPriorityExample set1=new SetPriorityExample();
-		set1.setPriority(Thread.MIN_PRIORITY);
-		System.out.println("priority of thread is:"+set1.getPriority());
-		set1.setPriority(Thread.NORM_PRIORITY);
-		System.out.println(set1.getPriority());
+		/*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
+		assessment4.studentAndTheirGrades();*/
+		/*Map<String, Integer> myHashMap = new HashMap<>();
+		myHashMap.put("Name1", 1);
+		myHashMap.put("Name1", 2);
+		myHashMap.put(null, 3);
+		myHashMap.put(null, 4);
+		System.out.println(myHashMap.get(null));
 
-	}
-*/
-		ThreadPracticing thread=new ThreadPracticing();
-		thread.start();
-		Thread tr=new Thread();//to change the name of the thread.
-		tr.setName("this is my thread");
-		System.out.println(tr.getName());
-	    ThreadExample2 th2=new ThreadExample2();
-		ThreadExample2 th3=new ThreadExample2();
+		System.out.println(myHashMap);*/
 
-		th2.start();
+		List<Integer> testNumbers = new ArrayList<>();
+		testNumbers.add(1);
+		testNumbers.add(2);
+		testNumbers.add(3);
+		System.out.println(Seasons.SUMMER.name());
+		System.out.println(Seasons.SPRING.ordinal());
+		System.out.println(Seasons.SPRING.getValue());
 
-		try {
-			th2.join(500);
-		} catch (InterruptedException e) {
-			throw new RuntimeException(e);
-
+	/*ListIterator myIterator = testNumbers.();
+		while (myIterator.hasNext()) {
+			System.out.println(myIterator.next());
+			myIterator.previous()
 		}
-		th3.start();
 
-	}
+		for
+		}*/
 
 
-	}
-	/*	System.out.println(Thread.currentThread().getPriority());
-		ThreadExample thread=new ThreadExample();
-		thread.multithreading();
-		thread.run();
-		thread.start();
-		System.out.println(thread.getState());
-		ThreadExample thread1=new ThreadExample();
-		System.out.println(thread.getId());
-		System.out.println(thread.getName());
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			throw new RuntimeException(e);
+	} /*{
+		//int count = 1;
+
+		List<Employee> empList = new ArrayList<>();
+		Scanner scanner = new Scanner(System.in);
+		for (int i = 1; i <= 29 ; i++) {
+
+			System.out.println("Enter Employee" + i + " Details: ");
+			System.out.println("Enter emp name: ");
+			String name = scanner.next();
+			System.out.println("Enter emp id: ");
+			Integer id = scanner.nextInt();
+			System.out.println("Enter emp address: ");
+			String address = scanner.next();
+
+			Employee employee = new Employee(name, id, address);
+			empList.add(employee);
 		}
-		System.out.println(thread1.getState());
-		ThreadExample threads = new ThreadExample();
-		threads.multithreading();
-		threads.getName();
-		System.out.println("Sleep method");
-		MyRunnable run=new MyRunnable();
-		run.hashCode();
-		System.out.println("this is my thread");
-		thread.getState();
-		try {
-			Thread.sleep(10000l);
-		} catch (InterruptedException e) {
-			throw new RuntimeException(e);
-		}
-		System.out.println(thread.getState());
-*/
-
-
-		/*SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
-		LinkedListExample example = new LinkedListExample();
-		System.out.println(example.loadMyList());
-*/
-		/*StackExample str=new StackExample();
-		str.Stackoperations();
-*/
-
-
-	/*	EnumerationWeekday day=new EnumerationWeekday(EnumerationWeekday.WeekDay.valueOf("TUESDAY"));
-		day.weekdaymethod();*/
-
-
-
-
-
+		System.out.println("My total employees : " + empList.size());
+	}*/
+}
 

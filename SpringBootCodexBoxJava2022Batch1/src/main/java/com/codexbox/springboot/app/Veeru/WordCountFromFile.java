@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+
 public class WordCountFromFile {
     public static void main(String[] args) {
         System.out.println("This program will count the words from the input file specified in path");
