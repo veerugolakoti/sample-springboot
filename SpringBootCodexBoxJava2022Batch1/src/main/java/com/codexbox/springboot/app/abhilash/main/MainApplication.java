@@ -2,6 +2,8 @@ package com.codexbox.springboot.app.abhilash.main;
 
 import com.codexbox.springboot.app.LinkedListExample;
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
+import com.codexbox.springboot.app.abhilash.Assessment5.Customer_Demographic_Details;
+import com.codexbox.springboot.app.abhilash.Assessment5.InsertCustomerDetails;
 import com.codexbox.springboot.app.abhilash.Diamond;
 import com.codexbox.springboot.app.abhilash.Employee;
 import com.codexbox.springboot.app.abhilash.JdbcExample.ConnectionExample;
@@ -9,6 +11,7 @@ import com.codexbox.springboot.app.abhilash.JdbcExample.PreparedstatementExample
 import com.codexbox.springboot.app.abhilash.filehandling.FileHandlingExample;
 import com.codexbox.springboot.app.abhilash.multithreading.MultithreadingExample2;
 import com.codexbox.springboot.app.abhilash.multithreading.MultitreadingExample;
+import com.mysql.cj.x.protobuf.MysqlxCrud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -26,18 +29,27 @@ public class MainApplication {
     public static void main(String[] args) throws IOException {
 
 		SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
-//		ConnectionExample con = new ConnectionExample();
+//		Customer_Demographic_Details customer_demographic_details = new Customer_Demographic_Details();
+//		customer_demographic_details.create();
+		InsertCustomerDetails insertCustomerDetails = new InsertCustomerDetails();
+		insertCustomerDetails.insertCustomers();
+
+
+
+
+
+		//		ConnectionExample con = new ConnectionExample();
 //		try {
 //			con.establish();
 //		} catch (SQLException e) {
 //			throw new RuntimeException(e);
 //		}
-		PreparedstatementExample preparedstatementExample = new PreparedstatementExample();
-		try {
-			preparedstatementExample.establish();
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
+//		PreparedstatementExample preparedstatementExample = new PreparedstatementExample();
+//		try {
+//			preparedstatementExample.establish();
+//		} catch (SQLException e) {
+//			throw new RuntimeException(e);
+//		}
 
 
 //        Scanner sc = new Scanner(System.in);

@@ -3,6 +3,8 @@ package com.codexbox.springboot.app.abhilash.JdbcExample;
         import java.sql.*;
         import java.util.*;
 
+        import static com.codexbox.springboot.app.abhilash.JdbcExample.SingletonConnection.connection;
+
 public class PreparedstatementExample {
     public void establish() throws SQLException {
         System.out.println("Enter number of employees want to insert:");
@@ -19,24 +21,23 @@ public class PreparedstatementExample {
             System.out.println("enter address of employee");
             address = sc.next();
         }
-        Connection connection = null;
-//        Statement stmt = null;
+ //       Connection connection = null;
 //        ResultSet resultSet;
         PreparedStatement preparedStatement = null;
         //step1 :load driver
         try {
+
             Class.forName("com.mysql.cj.jdbc.Driver");
+            SingletonConnection.getInstance();
             // step 2: making connection
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/codexbox","root","ABHIL@sh123");
-            //step 3: create statement
-            String query = "insert into codexbox.employee values(?,?, ?)";
-            //stmt = connection.createStatement();
+  //          connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/codexbox","root","ABHIL@sh123");
+            //step 3: create prepared statement
+            String query = "insert into codexbox.employee values(?,?,?)";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1,id);
             preparedStatement.setString(2,name);
             preparedStatement.setString(3,address);
             /*resultSet = preparedStatement.executeQuery();
-
             while(resultSet.next()) {
                 System.out.println("[" + resultSet.getString("id")+" "+
                         resultSet.getString("name")+ " "+
@@ -46,8 +47,7 @@ public class PreparedstatementExample {
             System.out.println( i+ " new employee updated");
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
-        }
-        finally {
+        } finally {
 
             if(null != preparedStatement)preparedStatement.close();
             if(null != connection)connection.close();
