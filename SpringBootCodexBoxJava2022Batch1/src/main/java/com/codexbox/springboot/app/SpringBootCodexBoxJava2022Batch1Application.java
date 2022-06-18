@@ -1,8 +1,10 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.swathi.assesment.EmployeeDetails;
-import com.codexbox.springboot.app.swathi.assesment.collections.StackExample;
-import org.springframework.boot.SpringApplication;
+
+import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
+import com.codexbox.springboot.app.Veeru.employee.Employee;
+import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.*;
@@ -11,6 +13,7 @@ import java.util.*;
 public class SpringBootCodexBoxJava2022Batch1Application {
 
 	public static void main(String[] args) {
+
             //SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
             //
 /*
@@ -72,3 +75,4 @@ variable.add(30);
 */
 
     }}
+
