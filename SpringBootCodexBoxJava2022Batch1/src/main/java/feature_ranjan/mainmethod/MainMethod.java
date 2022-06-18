@@ -1,10 +1,15 @@
 package feature_ranjan.mainmethod;
 
+import feature_ranjan.assignmentofcustomerpurshasehistory.CustomerAlterQuery;
+import feature_ranjan.assignmentofcustomerpurshasehistory.CustomerDemographicDetails;
+import feature_ranjan.assignmentofcustomerpurshasehistory.CustomerEntry;
+import feature_ranjan.assignmentofcustomerpurshasehistory.ValueModification;
 import feature_ranjan.fileiooperation.*;
 import feature_ranjan.jdbc.JdbcExample;
 import feature_ranjan.jdbc.JdbcUsingCollection;
 import feature_ranjan.jdbc.StoredProcedureProgram;
 import feature_ranjan.thread.*;
+import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
@@ -160,7 +165,24 @@ public class MainMethod {
        /* JdbcUsingCollection jdbc = new JdbcUsingCollection();
         jdbc.getDatabase();*/
 
-        StoredProcedureProgram storedProcedureProgram = new StoredProcedureProgram();
-        storedProcedureProgram.storedProcedure();
+        /*StoredProcedureProgram storedProcedureProgram = new StoredProcedureProgram();
+        storedProcedureProgram.storedProcedure();*/
+
+
+
+        /*ValueModification valueModification= new ValueModification();
+        valueModification.databaseValueModification();*/
+
+//Assessment
+     // table created
+        /*CustomerEntry customerEntry = new CustomerEntry();
+        customerEntry.customerEntry();*/
+    //Executing
+        CustomerDemographicDetails customerDemographicDetails = new CustomerDemographicDetails();
+        customerDemographicDetails.customerDetails();
+
+    //modification
+       /* CustomerAlterQuery customerAlterQuery = new CustomerAlterQuery();
+        customerAlterQuery.alterQuery();*/
     }
 }

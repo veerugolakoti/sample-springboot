@@ -10,7 +10,7 @@ public class StoredProcedureProgram {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/codexboxbatch3", "root", "Smruti@94");
-            callableStatement = connection.prepareCall("select * from student where sid = 2");
+            callableStatement = connection.prepareCall("select * from student");
             resultSet = callableStatement.executeQuery();
             while(resultSet.next()){
                 System.out.println(resultSet.getInt("sid")+ "-" + resultSet.getString("sname")+ "-" +resultSet.getString("saddress"));
