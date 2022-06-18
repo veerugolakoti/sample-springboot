@@ -1,6 +1,6 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.ramdurgaprasad.Student;
+import com.codexbox.springboot.app.ramdurgaprasad.mysqlexample.Student;
 import com.codexbox.springboot.app.ramdurgaprasad.mysqlexample.MySqlExampleMain;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

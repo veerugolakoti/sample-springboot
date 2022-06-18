@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.ramdurgaprasad;
+package com.codexbox.springboot.app.ramdurgaprasad.mysqlexample;
 
 public class Student {
     private int student;

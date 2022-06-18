@@ -1,7 +1,5 @@
 package com.codexbox.springboot.app.ramdurgaprasad.mysqlexample;
 
-import com.codexbox.springboot.app.ramdurgaprasad.Student;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
