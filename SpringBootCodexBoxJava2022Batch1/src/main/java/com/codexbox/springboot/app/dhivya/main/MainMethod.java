@@ -1,15 +1,43 @@
 package com.codexbox.springboot.app.dhivya.main;
 
-import com.codexbox.springboot.app.dhivya.jdbc.EmployeeList;
-import com.codexbox.springboot.app.dhivya.jdbc.JdbcExamples;
-import com.codexbox.springboot.app.dhivya.threads.ThreadExample1;
-import com.codexbox.springboot.app.dhivya.threads.ThreadExamples;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.codexbox.springboot.app.dhivya.jdbc.CustomerPurchaseHistory;
 
 public class MainMethod {
     public static void main(String[] args) {
+
+       CustomerPurchaseHistory customerPurchaseHistory=new CustomerPurchaseHistory();
+        customerPurchaseHistory.insertingCustomerDetails();
+        /*CustomerTable customerTable=new CustomerTable();
+        customerTable.creatingTable();*/
+        /*UpdateStatement updateStatement=new UpdateStatement();
+        updateStatement.update();
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         //SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
@@ -137,14 +165,17 @@ public class MainMethod {
         students.add(11);
         students.add(12);
         students.add(15);*/
-        JdbcExamples jdbcExamples=new JdbcExamples();
+        /*JdbcExamples jdbcExamples=new JdbcExamples();
         List<EmployeeList>employeeLists=jdbcExamples.getEmployeeLists();
         for (EmployeeList emplist:employeeLists) {
             System.out.println(emplist.getEmployeeId());
             System.out.println(emplist.getEmployeeName());
             System.out.println(emplist.getEmployeeAddress());
-            System.out.println(emplist.getSalary());
-        }
+            System.out.println(emplist.getSalary());}*/
+
+//Assesment creating table for customer purchase details
+
+
 
     }
 }
