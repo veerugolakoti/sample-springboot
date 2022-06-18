@@ -1,23 +1,17 @@
 package com.codexbox.springboot.app.HarshaDeepthi;
 
-import com.codexbox.springboot.app.HarshaDeepthi.Fileoperations.Bufferinputstreamexample;
-import com.codexbox.springboot.app.HarshaDeepthi.Fileoperations.Fileoutputstreamexample;
-import com.codexbox.springboot.app.HarshaDeepthi.Fileoperations.Inputoutputstreamreader;
-import com.codexbox.springboot.app.HarshaDeepthi.Fileoperations.Sequencestreamexample;
-import com.codexbox.springboot.app.HarshaDeepthi.Methodoverriding.Animal;
-import org.springframework.boot.web.servlet.server.Session;
+import com.codexbox.springboot.app.HarshaDeepthi.CustomerPurchaseHistory.CustomerDetails;
+import com.codexbox.springboot.app.HarshaDeepthi.CustomerPurchaseHistory.CustomersInputs;
+import com.codexbox.springboot.app.HarshaDeepthi.JDBC.InsertPrepared;
+import com.codexbox.springboot.app.HarshaDeepthi.JDBC.JdbcExample;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class MainMethod {
-    private static  final int MAX_T = 3;
+    //  private static  final int MAX_T = 3;
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws SQLException {
        /* StudentGrade stGrade = new StudentGrade(); //studentgrade
         stGrade.studentAndTheirGrades();*/
 
@@ -89,10 +83,8 @@ public class MainMethod {
         System.out.println(mythread4.getName());*/
 
 
-      //  mythread1.wait();
-       //mythread1.start();
-
-
+        //  mythread1.wait();
+        //mythread1.start();
 
 
 //        try {
@@ -129,7 +121,7 @@ javaSuspend2.start();
 
 javaSuspend3.start();
 */
-                                           //Inturuptthread t1=new Inturuptthread();  //task implimented Runnable
+        //Inturuptthread t1=new Inturuptthread();  //task implimented Runnable
 /*
 t1.start();
        try
@@ -144,7 +136,7 @@ t1.start();
 t1.interrupt();
 /**/
 
-       Runnable r1 = new Task("task 1");     //task implimented Runnable
+    /*   Runnable r1 = new Task("task 1");     //task implimented Runnable
         Runnable r2 = new Task("task 2");
         Runnable r3 = new Task("task 3");
         Runnable r4 = new Task("task 4");
@@ -156,14 +148,59 @@ t1.interrupt();
         pool.execute(r2);
         pool.execute(r3);
         pool.execute(r4);
-        pool.execute(r5);
+        pool.execute(r5);*/
+
+        //Table table=new Table();
+        //  MyThread1 myThread1=new MyThread1();
+
+       /* List<Integer> employees = new ArrayList<>();
+        employees.add(1);
+        employees.add(34);
+        employees.add(25);
+        employees.add(30);
+        employees.add(50);
+        employees.add(55);
+        employees.add(60);
+        employees.add(65);
+        employees.add(56);
+        employees.add(58);
+        employees.add(35);
+        employees.add(10);
+        employees.add(5);
+        employees.add(59);
+        employees.add(65);
+        employees.add(70);
+        employees.add(77);*/
+
+       /* for (int i = 1; i <= 5; i++) {
+        MyRunnable myRunnable = new MyRunnable();
+
+            ExecutorService executorServic = Executors.newFixedThreadPool(1);
+       *//* for (Integer eid:employees) {
+            executorServic.execute(myRunnable);*//*
+
+            //}
+            executorServic.execute(myRunnable);
+           // executorServic.execute(myRunnable);
+           // executorServic.execute(myRunnable);
+
+            executorServic.shutdown();*/
+
+       /* JdbcExample jdbcExample=new JdbcExample();
+        jdbcExample.getDbms(); */
+        /**/
 
 
 
+        CustomerDetails customerDetails=new CustomerDetails();
+        customerDetails.details();
 
 
 
+      CustomersInputs inputs=new CustomersInputs();
+        inputs.customerInputs();
 
+
+        }
 
     }
-}
