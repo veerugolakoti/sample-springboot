@@ -15,7 +15,7 @@ public enum Seasons {
 
 
 
-    Seasons(String value) {
+    Seasons(String str) {
         this.value = value;
     }
 }

@@ -1,16 +1,104 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
-import com.codexbox.springboot.app.Veeru.employee.Employee;
-import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
+import com.codexbox.springboot.app.jdbc.ConsumerDeatils;
+import com.codexbox.springboot.app.jdbc.CustomerPurchaseHistory;
+import com.codexbox.springboot.app.jdbc.JdbcExample;
+import com.codexbox.springboot.app.thread.RunnableImpl;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.*;
+import java.sql.SQLException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+		/*RunnableImpl runnable = new RunnableImpl();
+		ExecutorService executors = Executors.newFixedThreadPool(2);
+		for(int i =0; i<=3; i++) {
+
+			executors.execute(runnable);
+		}
+		executors.shutdown();
+
+*/
+		/*JdbcExample jdbcExample = new JdbcExample();
+		jdbcExample.employeeDetails();
+*/
+		/*CustomerPurchaseHistory customerPurchaseHistory = new CustomerPurchaseHistory();
+		customerPurchaseHistory.customerpurchasetable();*/
+
+		ConsumerDeatils consumerDetail = new ConsumerDeatils();
+		consumerDetail.consumerDetails();
+
+	}
+
+
+	}
+/*Thread.currentThread().setPriority(9);
+		System.out.println("main thread priority " + Thread.currentThread().getPriority());
+		DemoThread demoThread = new DemoThread(); //creating object to main thread
+		System.out.println("priority of demo thread " + demoThread.getPriority());
+	}*/
+	/*	RunnableExample runnableExample = new RunnableExample();
+		Thread thread = new Thread(runnableExample);
+		thread.start();
+		try {
+			thread.sleep(100);
+
+
+			System.out.println(thread.getState());
+
+			//System.out.println(thread.getStackTrace());
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}}
+*/
+
+		/*ThreadExample threadExample = new ThreadExample();
+		threadExample.run();
+
+		ThreadExample threadExample1 = new ThreadExample();
+		System.out.println(threadExample1.getName());
+		System.out.println(threadExample1.getId());
+		//System.out.println(threadExample1.getPriority());
+		System.out.println(threadExample1.getState());
+
+		ThreadExample threadExample2 = new ThreadExample();
+		System.out.println(threadExample2.getName());
+		System.out.println(threadExample2.getId());
+		//System.out.println(threadExample2.getPriority(threadExample1));
+	}}*/
+		// System.out.println(threadExample2.getState());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/*IOStreamExample ios = new IOStreamExample();
+		try {
+			ios.ioStreamEx();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+
+		*/
+
 		/*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
 		assessment4.studentAndTheirGrades();*/
 		/*Map<String, Integer> myHashMap = new HashMap<>();
@@ -21,14 +109,14 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		System.out.println(myHashMap.get(null));
 
 		System.out.println(myHashMap);*/
-
-		List<Integer> testNumbers = new ArrayList<>();
-		testNumbers.add(1);
-		testNumbers.add(2);
-		testNumbers.add(3);
-		System.out.println(Seasons.SUMMER.name());
-		System.out.println(Seasons.SPRING.ordinal());
-		System.out.println(Seasons.SPRING.getValue());
+//
+//		List<Integer> testNumbers = new ArrayList<>();
+//		testNumbers.add(1);
+//		testNumbers.add(2);
+//		testNumbers.add(3);
+//		System.out.println(Seasons.SUMMER.name());
+//		System.out.println(Seasons.SPRING.ordinal());
+//		System.out.println(Seasons.SPRING.getValue());
 
 	/*ListIterator myIterator = testNumbers.();
 		while (myIterator.hasNext()) {
@@ -39,8 +127,10 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		for
 		}*/
 
+/*
 
-	} /*{
+	}
+	{
 		//int count = 1;
 
 		List<Employee> empList = new ArrayList<>();
@@ -59,6 +149,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			empList.add(employee);
 		}
 		System.out.println("My total employees : " + empList.size());
-	}*/
+	}
 }
 
+*/
