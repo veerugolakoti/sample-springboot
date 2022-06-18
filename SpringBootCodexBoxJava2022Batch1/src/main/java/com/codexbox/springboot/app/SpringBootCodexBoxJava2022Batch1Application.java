@@ -2,6 +2,8 @@ package com.codexbox.springboot.app;
 
 //Test;
 import com.codexbox.springboot.app.vidyadarna.StudentAssesment;
+import com.codexbox.springboot.app.vidyadarna.coustmerPercheasDetails_Assesment.CustomerDetails;
+import com.codexbox.springboot.app.vidyadarna.coustmerPercheasDetails_Assesment.CustomersEntryDetails;
 import com.codexbox.springboot.app.vidyadarna.jdbcexample.JdbcExample;
 import com.codexbox.springboot.app.vidyadarna.jdbcexample.PreparedStmtExample;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,10 +24,16 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 //		JdbcExample jdbc = new JdbcExample();
 //		jdbc.jdbcExample();
 
-		PreparedStmtExample preparedStmtExample = new PreparedStmtExample();
-		preparedStmtExample.preparedexample();
+//		PreparedStmtExample preparedStmtExample = new PreparedStmtExample();
+//		preparedStmtExample.preparedexample();
 
 
+	CustomersEntryDetails details = new CustomersEntryDetails();
+	details.customerTable();
+
+
+//        CustomerDetails Details = new CustomerDetails();
+//		Details.customerDetails();
 
 
 //		Test1 test = new Test1(EnumExample.MEDIUM);
