@@ -1,18 +1,21 @@
 package com.codexbox.springboot.app.mounika.main;
 
+import com.codexbox.springboot.app.mounika.assesment5.InsertTable;
+import com.codexbox.springboot.app.mounika.jdbcExample.ConnectionsExample;
 import com.codexbox.springboot.app.mounika.multithreading.MyRunnable;
 import com.codexbox.springboot.app.mounika.multithreading.Threading;
+import org.springframework.boot.SpringApplication;
 
 public class MainMethod {
     public static void main(String[] args) throws InterruptedException {
-//		SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
-//		LinkedListExample example = new LinkedListExample();
-//		System.out.println(example.loadMyList());
+		//SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
+	//	LinkedListExample example = new LinkedListExample();
+		//System.out.println(example.loadMyList());
 
 
-//		List<EmployeeDetails> list = new ArrayList<>();
-//		Scanner sc = new Scanner(System.in);
-//
+	//List<EmployeeDetails> list = new ArrayList<>();
+		//Scanner sc = new Scanner(System.in);
+
 //		for (int i = 0; i < 2; i++) {
 //
 //			System.out.println("enter employee  " + i + "  details");
@@ -42,7 +45,7 @@ public class MainMethod {
 
 		/*InputOutputStream inputOutputStream=new InputOutputStream();
 		inputOutputStream.iooperation();
-*/
+
 
 
 		/*List<StudentList> myStudentList=new ArrayList<>();
@@ -94,7 +97,7 @@ public class MainMethod {
 		System.out.println(thread1.getId());
 		System.out.println(thread1.getName());
 
-		*/
+
 
         System.out.println(Thread.currentThread().getPriority());
         Threading threading = new Threading();
@@ -113,6 +116,11 @@ public class MainMethod {
 		threading.setPriority();
 		System.out.println("This is my thread");*/
 
+
+
+
+
+
         Threading threading5 =new Threading();
         threading5.start();
         //threading5.hashCode();
@@ -126,7 +134,14 @@ public class MainMethod {
         MyRunnable runnable=new MyRunnable();
         runnable.hashCode();
         System.out.println("mouni");
-        System.out.println(threading.getState());
+        System.out.println(threading5.getState());
+
+        ConnectionsExample connectionsExample=new ConnectionsExample();
+
+        connectionsExample.personsDetails();
+
+        InsertTable insertTable=new InsertTable();
+        insertTable.customervalues();
 
 
 
