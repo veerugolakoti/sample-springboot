@@ -1,10 +1,8 @@
 package com.codexbox.springboot.app;
 
-import JdbcExamples.JdbcExamples1;
-import JdbcExamples.Student;
+import CustemerAssessment.Custemer;
+import CustemerAssessment.CustomerDetails;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.List;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -27,17 +25,27 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			empList.add(employee);
 		}
 		System.out.println("My total employees : " + empList.size());*/
-		 JdbcExamples1 jdbcExamples=new JdbcExamples1();
+		/* JdbcExamples1 jdbcExamples=new JdbcExamples1();
 		List<Student> student=jdbcExamples.getDetails();
 		for (Student stdlist:student) {
 			System.out.println(stdlist.getSid());
 			System.out.println(stdlist.getSname());
 			System.out.println(stdlist.getSmarks());
-			System.out.println(stdlist.getSgrade());
+			System.out.println(stdlist.getSgrade());*/
+		/*JdbcPrepare prepare=new JdbcPrepare();
+		prepare.getDetails();*/
+		/*Custemer custemer=new Custemer();
+		custemer.createTable();*/
+
+		CustomerDetails customerDetails=new CustomerDetails();
+		customerDetails.createCustomerDetails();
+
+
+
 
 		}
 
 
 	}
 
-}
+
