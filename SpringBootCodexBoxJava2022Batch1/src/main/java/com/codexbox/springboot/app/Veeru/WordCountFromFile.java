@@ -6,6 +6,7 @@ import com.codexbox.springboot.app.renuProjects.assessments.EmployeeDetails;
 import java.io.*;
 import java.util.*;
 
+
 public class WordCountFromFile {
     public static void main(String[] args) {
         System.out.println("This program will count the words from the input file specified in path");
