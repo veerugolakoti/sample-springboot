@@ -3,6 +3,8 @@ package com.codexbox.springboot.app.TejaAravind;
 
 import com.codexbox.springboot.app.TejaAravind.MultiThreading.*;
 import com.codexbox.springboot.app.TejaAravind.Streams.ReadWriteData;
+import com.codexbox.springboot.app.TejaAravind.jdbc.Employee;
+import com.codexbox.springboot.app.TejaAravind.jdbc.JdbcExample;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +80,7 @@ public class NewMain {
 
     }*/
 
- public static void main(String[] args) {
+/* public static void main(String[] args) {
     SynchronuousExample se1 = new SynchronuousExample();
 
     Demo1 demo1 = new Demo1(se1);
@@ -96,7 +98,7 @@ public class NewMain {
          System.out.print(i + "  ");
 
      }
- }
+ }*/
 
 
 
@@ -135,5 +137,19 @@ public class NewMain {
        System.out.println("main method");
        BlocksTest bt = new BlocksTest();
    }*/
+
+
+    public static void main(String[] args) {
+        JdbcExample jdbc = new JdbcExample();
+        List<Employee> empList = jdbc.getDetails();
+        for (Employee emp : empList) {
+            System.out.println(emp.getEmpId());
+            System.out.println(emp.getEmpName());
+            System.out.println(emp.getEmpAddress());
+            System.out.println(emp.getEmpSalary());
+            System.out.println(emp.getPhoneNo());
+        }
+
+    }
 }
 
