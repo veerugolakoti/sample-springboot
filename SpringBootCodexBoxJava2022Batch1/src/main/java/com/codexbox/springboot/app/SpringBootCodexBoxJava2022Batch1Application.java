@@ -1,5 +1,7 @@
 package com.codexbox.springboot.app;
 
+import com.codexbox.springboot.app.jdbc.ConsumerDeatils;
+import com.codexbox.springboot.app.jdbc.CustomerPurchaseHistory;
 import com.codexbox.springboot.app.jdbc.JdbcExample;
 import com.codexbox.springboot.app.thread.RunnableImpl;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +13,7 @@ import java.util.concurrent.Executors;
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		/*RunnableImpl runnable = new RunnableImpl();
 		ExecutorService executors = Executors.newFixedThreadPool(2);
 		for(int i =0; i<=3; i++) {
@@ -21,10 +23,16 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		executors.shutdown();
 
 */
-		JdbcExample jdbcExample = new JdbcExample();
+		/*JdbcExample jdbcExample = new JdbcExample();
 		jdbcExample.employeeDetails();
+*/
+		/*CustomerPurchaseHistory customerPurchaseHistory = new CustomerPurchaseHistory();
+		customerPurchaseHistory.customerpurchasetable();*/
 
+		ConsumerDeatils consumerDetail = new ConsumerDeatils();
+		consumerDetail.consumerDetails();
 
+	}
 
 
 	}
@@ -144,4 +152,3 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 }
 
 */
-	}
