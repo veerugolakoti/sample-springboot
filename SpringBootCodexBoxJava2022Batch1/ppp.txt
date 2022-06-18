@@ -1,0 +1,3 @@
+SequenceInputStream class
+is used to read data from multiple streams
+. It reads data sequentially (one by one).

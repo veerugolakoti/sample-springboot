@@ -1,0 +1,7 @@
+Java FileInputStream class obtains input bytes from a file.                                                                                                       .
+
+123456789
+1232345769
+!@#$%^&*()
+Java BufferedInputStream class is used to read information from stream.
+It internally uses buffer mechanism to make the performance fast.

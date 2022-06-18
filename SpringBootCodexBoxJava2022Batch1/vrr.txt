@@ -1,0 +1,4 @@
+SequenceInputStream(InputStream s1, InputStream s2)
+creates a new input stream by reading the data of two input stream in order, first s1 and then s2.
+SequenceInputStream(Enumeration e)
+creates a new input stream by reading the data of an enumeration whose type is InputStream.
