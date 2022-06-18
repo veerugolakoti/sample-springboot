@@ -3,6 +3,9 @@ package com.codexbox.springboot.app;
 import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
 import com.codexbox.springboot.app.Veeru.employee.Employee;
 import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
+import com.codexbox.springboot.app.rajat.assessment5.CreateCustomerDemographicDetailTable;
+import com.codexbox.springboot.app.rajat.assessment5.InputCustomerData;
+import com.codexbox.springboot.app.rajat.assessment5.ShowCustomerTableData;
 import com.codexbox.springboot.app.rajat.jdbc.DeleteOperation;
 import com.codexbox.springboot.app.rajat.jdbc.ExecuteUpdateMethod;
 import com.codexbox.springboot.app.rajat.jdbc.JdbcCallableStatement;
@@ -21,10 +24,17 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		ExecuteUpdateMethod executeUpdateMethod = new ExecuteUpdateMethod();
 		executeUpdateMethod.setEmployee();
 		JdbcCallableStatement jdbcCallableStatement = new JdbcCallableStatement();
-		jdbcCallableStatement.getStoreAndRetriveData();*/
+		jdbcCallableStatement.getStoreAndRetriveData();
 
 		DeleteOperation deleteOperation = new DeleteOperation();
-		deleteOperation.getEmployee();
+		deleteOperation.getEmployee();*/
+
+		CreateCustomerDemographicDetailTable demographicDetailTable = new CreateCustomerDemographicDetailTable();
+		demographicDetailTable.createTable();
+		InputCustomerData inputCustomerData = new InputCustomerData();
+		inputCustomerData.setCustomerData();
+		ShowCustomerTableData showCustomerTableData = new ShowCustomerTableData();
+		showCustomerTableData.getCustomer();
 
 
 
@@ -45,9 +55,7 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 
 
 
-
-
-	/*	*//*	*//**//*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
+		/*	*//*	*//**//*StudentGradeAssessment assessment4 = new StudentGradeAssessment();
 		assessment4.studentAndTheirGrades();*//**//*
 		 *//**//*Map<String, Integer> myHashMap = new HashMap<>();
 		myHashMap.put("Name1", 1);

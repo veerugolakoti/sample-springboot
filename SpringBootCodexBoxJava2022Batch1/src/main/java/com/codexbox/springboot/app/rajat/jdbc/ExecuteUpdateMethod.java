@@ -30,7 +30,14 @@ public class ExecuteUpdateMethod {
             pStatement.setInt(4,sal);
 
             int resultSet = pStatement.executeUpdate();
-            System.out.println("Update Successfully");
+            if (resultSet == 1) {
+                System.out.println("Update Successfully");
+                JdbcEmployee jdbcEmployee = new JdbcEmployee();
+                jdbcEmployee.getEmployee();
+            }else{
+                System.out.println("Invalid entries...");
+            }
+
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } catch (SQLException e) {
