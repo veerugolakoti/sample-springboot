@@ -1,24 +1,31 @@
 package com.codexbox.springboot.app.swathi.assesment.mainmethod;
 
-import com.codexbox.springboot.app.swathi.assesment.Assessment3.Student;
-import com.codexbox.springboot.app.swathi.assesment.EmployeeDetails;
-import com.codexbox.springboot.app.swathi.assesment.MultiThreading.MyThread;
-import com.codexbox.springboot.app.swathi.assesment.MultiThreading.ThreadExample;
-import com.codexbox.springboot.app.swathi.assesment.enumeration.Day;
-import com.codexbox.springboot.app.swathi.assesment.enumeration.EnumerationWeekday;
-import com.codexbox.springboot.app.swathi.assesment.filehandling.BufferExample;
-import com.codexbox.springboot.app.swathi.assesment.filehandling.FileHandling;
-import com.codexbox.springboot.app.swathi.assesment.filehandling.Inputoutputstream;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.codexbox.springboot.app.swathi.assesment.assessment5.CustomerTable;
+import com.codexbox.springboot.app.swathi.assesment.assessment5.InsertionData;
 
 import java.io.*;
-import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+      /*  JdbcExample jdbcExample = new JdbcExample();
+        jdbcExample.Studentdetails();
+        */
+
+      /*  CustomerTable customerTable=new CustomerTable() ;
+        customerTable.customermethod();
+*/
+
+       InsertionData insertionData=new InsertionData();
+        insertionData.insertmethod();
+
     }
-    }
+
+
+}
+
+
+
+
         // SpringApplication.run(SpringBootCodexBoxJava2022Batch1Application.class, args);
 
       /*  List<EmployeeDetails> employees = new ArrayList<>();
@@ -138,30 +145,20 @@ public class Main {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            try {
-                mythread.wait(8000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+
             mythread.m1();
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            try {
-                mythread.wait(5000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+
             mythread.m2();
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
-
             mythread.m3();
             MyThread examples = new MyThread();
             System.out.println("this is my thread " + examples.hashCode());
