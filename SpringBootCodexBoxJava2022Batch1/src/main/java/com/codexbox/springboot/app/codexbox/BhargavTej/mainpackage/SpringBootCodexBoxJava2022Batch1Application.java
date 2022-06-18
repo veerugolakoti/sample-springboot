@@ -1,4 +1,6 @@
 package com.codexbox.springboot.app.codexbox.BhargavTej.mainpackage;
+import com.codexbox.springboot.app.codexbox.BhargavTej.Jdbc.Employee;
+import com.codexbox.springboot.app.codexbox.BhargavTej.Jdbc.JdbcExample;
 import com.codexbox.springboot.app.codexbox.BhargavTej.assesment3.CodexBoxEmployee;
 import com.codexbox.springboot.app.codexbox.BhargavTej.filehandling.InputOutputStream;
 import com.codexbox.springboot.app.codexbox.BhargavTej.filehandling.InputOutputStreamExample2;
@@ -14,23 +16,33 @@ import java.util.Scanner;
 
 public class SpringBootCodexBoxJava2022Batch1Application {
     public static void main(String[] args) throws InterruptedException {
-        SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
+//        SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
+        JdbcExample jdbcExample = new JdbcExample();
+        List<Employee> employeeList = jdbcExample.getEmployessData();
+
+
+
+
+
+
+
+
 //        SequenceStreams sequenceStreams = new SequenceStreams();
 //        System.out.println(sequenceStreams.sequenceMethod());
 
         //Main method of MultiThreadExamples2
-        MultiThreadExamples2 multithread = new MultiThreadExamples2();
-        System.out.println("calling start method");
-        multithread.start();
-//        multithread.run();
-//        System.out.println("calling run method");
-        System.out.println(multithread.getState());
-        Thread.sleep(3600l);
-        System.out.println("i am awake after 3.6sec");
-        multithread.wait();
-        multithread.notify();
-        System.out.println("i am still  waiting");
-
+//        MultiThreadExamples2 multithread = new MultiThreadExamples2();
+//        System.out.println("calling start method");
+//        multithread.start();
+////        multithread.run();
+////        System.out.println("calling run method");
+//        System.out.println(multithread.getState());
+//        Thread.sleep(3600l);
+//        System.out.println("i am awake after 3.6sec");
+//        multithread.wait();
+//        multithread.notify();
+//        System.out.println("i am still  waiting");
+//
 
 
 
