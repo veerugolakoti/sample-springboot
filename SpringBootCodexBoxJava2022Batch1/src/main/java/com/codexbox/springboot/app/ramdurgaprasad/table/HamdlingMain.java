@@ -1,6 +1,6 @@
 package com.codexbox.springboot.app.ramdurgaprasad.table;
 
-import com.codexbox.springboot.app.ramdurgaprasad.FileHandling;
+import com.codexbox.springboot.app.ramdurgaprasad.collections.FileHandling;
 
 import java.io.IOException;
 
