@@ -1,6 +1,6 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.ganesh.saturday.CreateTable;
+import com.codexbox.springboot.app.ganesh.saturday.CustomorPurchaseHistory;
 
 import java.sql.SQLException;
 
@@ -27,18 +27,18 @@ public class GaneshMainClass {
         //SingletonExample se =SingletonExample.dis();
 
 
-/*
+
 
      CustomorPurchaseHistory cph = new CustomorPurchaseHistory();
         cph.custmordemographicdetails();
-*/
 
 
 
-        CreateTable ct =new CreateTable();
+
+    /*    CreateTable ct =new CreateTable();
         ct.m2();
 
-
+*/
 
 
 

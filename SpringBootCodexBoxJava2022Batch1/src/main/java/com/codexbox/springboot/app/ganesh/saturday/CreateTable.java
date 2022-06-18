@@ -11,36 +11,32 @@ public class CreateTable {
             throw new RuntimeException(e);
         }
         Connection con = null;
+
+        PreparedStatement ps= null;
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ganesh_schema","root","Ganesh@1998");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ganesh_schema", "root", "Ganesh@1998");
+
+            //  String str = "CREATE TABLE customer_details ( ID int(20),Aadhar varchar(25), FirstName varchar(255), Address varchar(255),  City varchar(255))";
 
 
-            String str = "CREATE TABLE customer_details (\n" +
-                    "    ID int,\n" +
-                    "    Aadhar int(255),\n" +
-                    "    phonenumber int(255),\n" +
-                    "     dob varchar(255),\n" +
-                    "      EmailID varchar(255),\n" +
-                    "    Address varchar(255),\n" +
-                    "    PRIMARY KEY (ID)\n" +")";
-/*
-            "CREATE TABLE customer_details (
-                    ID int NOT NULL,
-                    Aadhar varchar(255) NOT NULL,
-            FirstName varchar(255),
-                    Age int,
-            CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)
-)";*/
-
-
-            try {
-                Statement st = con.prepareStatement (str);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
+            String str = "CREATE TABLE customer_details ( ID int(10),Aadhar varchar(255),phonenumber varchar(25),DoB varchar(20),Email varchar(30),Address varchar(250),PRIMARY KEY (ID))";
+            ps = con.prepareStatement(str);
+            int k = ps.executeUpdate();
+            System.out.println("Table created");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        } finally {
+            if ((con!= null)&&(ps!=null)) {
+                try {
+                    con.close();
+                    ps.close();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+
         }
 
     }
