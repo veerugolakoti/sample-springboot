@@ -3,25 +3,29 @@ package com.codexbox.springboot.app.ravalispringboot.collections;
 public class StudentExample {
     String name;
     int id;
-    String address;
+    long marks;
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public StudentExample(String name, int id, String address) {
-        this.name = name;
+    public void setId(int id) {
         this.id = id;
-        this.address = address;
-
     }
 
+    public long getMarks() {
+        return marks;
+    }
+
+    public void setMarks(long marks) {
+        this.marks = marks;
+    }
 }

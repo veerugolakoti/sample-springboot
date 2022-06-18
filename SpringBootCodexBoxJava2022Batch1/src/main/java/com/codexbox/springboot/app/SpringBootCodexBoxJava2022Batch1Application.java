@@ -1,19 +1,21 @@
 package com.codexbox.springboot.app;
 
 import com.codexbox.springboot.app.ravalispringboot.inputoutputstrems.SequnceinputoutputstreamExample;
-import com.codexbox.springboot.app.ravalispringboot.multithreadingprgm.Mythread;
-import com.codexbox.springboot.app.ravalispringboot.multithreadingprgm.Mythread1;
+import com.codexbox.springboot.app.ravalispringboot.multithreadingprgm.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
+		JdbcExample jdbcExample= new JdbcExample();
+		jdbcExample.StudentExample();
 		/*Mythread mythread = new Mythread();
 		System.out.println(mythread.getState());
 		//System.out.println(mythread.getId());
@@ -27,10 +29,22 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 		System.out.println(" ");
 		System.out.println(mythread.getPriority());*/
 
-		Mythread1 mythread1 = new Mythread1(10);
+		/*Mythread1 mythread1 = new Mythread1();
+	    Thread thread=new Thread(mythread1);
+		Thread thread1=new Thread(mythread1);
+		thread1.start();
+		thread.start();
 		mythread1.run();
-		mythread1.start();
-		Runnable r1 = new Mythread1(10) ;
+*/
+		/*Numbers numbers= new Numbers();
+		NumberExample numberExample=new NumberExample(numbers);
+		NumberExample1 numberExample1=  new NumberExample1(numbers);
+		numberExample.start();
+		numberExample1.start();
+
+*/
+
+
 
 
         /*Mythread1 mythread2= new Mythread1();
