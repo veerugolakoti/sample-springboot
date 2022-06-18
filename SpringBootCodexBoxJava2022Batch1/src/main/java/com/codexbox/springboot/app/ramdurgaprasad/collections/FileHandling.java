@@ -1,4 +1,4 @@
-package com.codexbox.springboot.app.ramdurgaprasad;
+package com.codexbox.springboot.app.ramdurgaprasad.collections;
 
 import java.io.*;
 
