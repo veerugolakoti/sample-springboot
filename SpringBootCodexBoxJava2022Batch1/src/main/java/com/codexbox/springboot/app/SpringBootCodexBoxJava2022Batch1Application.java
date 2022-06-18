@@ -1,11 +1,9 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
-import com.codexbox.springboot.app.Veeru.employee.Employee;
-import com.codexbox.springboot.app.Veeru.enumeration.Seasons;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.*;
+import CustemerAssessment.Custemer;
+import CustemerAssessment.CustomerDetails;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
@@ -43,7 +41,6 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 	} /*{
 		//int count = 1;
 
-		List<Employee> empList = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
 		for (int i = 1; i <= 29 ; i++) {
 
@@ -58,6 +55,32 @@ public class SpringBootCodexBoxJava2022Batch1Application {
 			Employee employee = new Employee(name, id, address);
 			empList.add(employee);
 		}
+
+		System.out.println("My total employees : " + empList.size());*/
+		/* JdbcExamples1 jdbcExamples=new JdbcExamples1();
+		List<Student> student=jdbcExamples.getDetails();
+		for (Student stdlist:student) {
+			System.out.println(stdlist.getSid());
+			System.out.println(stdlist.getSname());
+			System.out.println(stdlist.getSmarks());
+			System.out.println(stdlist.getSgrade());*/
+		/*JdbcPrepare prepare=new JdbcPrepare();
+		prepare.getDetails();*/
+		/*Custemer custemer=new Custemer();
+		custemer.createTable();*/
+
+		CustomerDetails customerDetails=new CustomerDetails();
+		customerDetails.createCustomerDetails();
+
+
+
+
+		}
+
+
+	}
+
+
 		System.out.println("My total employees : " + empList.size());
 	}*/
 }

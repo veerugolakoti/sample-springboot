@@ -1,0 +1,12 @@
+my name is nagarjuna
+
+i am from kurnool
+
+advice represents action taken by aspect
+
+after advice
+before advice
+throws advice
+around advice
+action taken by advice
+datastage
