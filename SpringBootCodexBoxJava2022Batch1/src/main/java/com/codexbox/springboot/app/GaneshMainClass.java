@@ -1,11 +1,11 @@
 package com.codexbox.springboot.app;
 
-import com.codexbox.springboot.app.ganesh.jdbc.PreparedStatementExample;
+import com.codexbox.springboot.app.ganesh.saturday.CreateTable;
 
 import java.sql.SQLException;
 
 public class GaneshMainClass {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
        /* StatementExample se = new StatementExample();
         try {
@@ -17,9 +17,30 @@ public class GaneshMainClass {
 
 
         //prepare statement
+/*
 
         PreparedStatementExample pse = new PreparedStatementExample();
         pse.m2();
+*/
+
+
+        //SingletonExample se =SingletonExample.dis();
+
+
+/*
+
+     CustomorPurchaseHistory cph = new CustomorPurchaseHistory();
+        cph.custmordemographicdetails();
+*/
+
+
+
+        CreateTable ct =new CreateTable();
+        ct.m2();
+
+
+
+
 
     }
 
