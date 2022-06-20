@@ -1,15 +1,43 @@
 package com.codexbox.springboot.app.vasu.sample;
 
-import com.codexbox.springboot.app.vasu.sample.multithreading.MyThread;
-import com.codexbox.springboot.app.vasu.sample.multithreading.Thread1;
+import com.codexbox.springboot.app.vasu.sample.customerpurchasehistory.CustomerDetails;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import static java.lang.Integer.sum;
+import java.sql.SQLException;
 
 @SpringBootApplication
 
-public class MainMethod {public static void main(String[] args) {
-    System.out.println("Iam inside main method");
+public class MainMethod {
+    public static void main(String[] args) throws SQLException {
+        CustomerDetails customerDetails = new CustomerDetails();
+        customerDetails.insertDetails();
+
+        // assesment of customerpurchasehistory
+
+
+
+//        CreateTable createTable=new CreateTable();
+//        createTable.customerTable();
+        // statement
+    /*JdbcEx jdbcEx=new JdbcEx();
+    List<Employee1>employee1List=jdbcEx.getEmployee1List();
+    for (Employee1 emp:employee1List) {
+        System.out.println(emp.getId());
+        System.out.println(emp.getName());
+        System.out.println(emp.getSalary());
+        System.out.println(emp.getAddress());*/
+
+        // prepared statement
+       /* JdbcEx1 jdbcEx1 = new JdbcEx1();
+        List<Employee1> employee1List = jdbcEx1.employeeList();
+        for (Employee1 emp : employee1List) {
+            System.out.println(emp.getId());
+            System.out.println(emp.getName());
+            System.out.println(emp.getSalary());
+            System.out.println(emp.getAddress());
+
+        }*/
+    /*System.out.println("Iam inside main method");
     int x=50;
     int y=40;
     int sum=sum(x,y);
@@ -31,8 +59,12 @@ public class MainMethod {public static void main(String[] args) {
         throw new RuntimeException(e);
     }
     System.out.println("sleep method");
+    sum(20,30);
+    sum=x+y;
+    System.out.println("sum of two numbers");
+    System.out.println(thread1.getState());
 
-
+*/
 
 		/*Thread1 thread1=new Thread1();
 		thread1.run();
@@ -68,10 +100,8 @@ public class MainMethod {public static void main(String[] args) {
 		myThread3.checkAccess();
 		System.out.println(myThread3.getState());
 		System.out.println(myThread3.getContextClassLoader());
-*/sum(20,30);
-    sum=x+y;
-    System.out.println("sum of two numbers");
-    System.out.println(thread1.getState());
+*/
+    }
 }
 
-}
+

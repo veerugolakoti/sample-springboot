@@ -1,9 +1,11 @@
 package com.codexbox.springboot.app;
-import com.codexbox.springboot.app.Veeru.Collections.StackExample;
-import com.codexbox.springboot.app.Veeru.Collections.StudentGradeAssessment;
-import com.codexbox.springboot.app.Veeru.employee.Employee;
+
+import com.codexbox.springboot.app.vasu.sample.assesment.Employee;
+import com.codexbox.springboot.app.vasu.sample.streams.BufferedInputOutputStream;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.*;
 
 @SpringBootTest
 class SpringBootCodexBoxJava2022Batch1ApplicationTests {
@@ -20,7 +22,7 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 		hashSet.add("Divya");
 		hashSet.add("Divya");
 		System.out.println("Before sorting : " + hashSet);
-		hashSet.retainAll(queue);
+		//hashSet.retainAll(queue);
 
 		System.out.println("After retain all method : " + hashSet);
 
@@ -39,6 +41,8 @@ class SpringBootCodexBoxJava2022Batch1ApplicationTests {
 		map.put(2, "Ram");
 		map.put(3, "Ravali");
 		map.put(45, "Viswa");
+
+
 
 		Employee employee1 = new Employee("Bhargav", 202284, "Nellore");
 		Employee employee2 = new Employee("Kalayan", 202286, "NZB");
