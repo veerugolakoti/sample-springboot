@@ -1,23 +1,13 @@
 package feature_ranjan.mainmethod;
 
-import feature_ranjan.assignmentofcustomerpurshasehistory.CustomerAlterQuery;
-import feature_ranjan.assignmentofcustomerpurshasehistory.CustomerDemographicDetails;
-import feature_ranjan.assignmentofcustomerpurshasehistory.CustomerEntry;
-import feature_ranjan.assignmentofcustomerpurshasehistory.ValueModification;
-import feature_ranjan.fileiooperation.*;
-import feature_ranjan.jdbc.JdbcExample;
-import feature_ranjan.jdbc.JdbcUsingCollection;
-import feature_ranjan.jdbc.StoredProcedureProgram;
-import feature_ranjan.thread.*;
-import jdk.internal.org.objectweb.asm.tree.analysis.Value;
+import feature_ranjan.jdbcusingsingleton.JdbcQueryUsingSingletonObject;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.Properties;
 
 @SpringBootApplication
 public class MainMethod {
@@ -178,11 +168,20 @@ public class MainMethod {
         /*CustomerEntry customerEntry = new CustomerEntry();
         customerEntry.customerEntry();*/
     //Executing
-        CustomerDemographicDetails customerDemographicDetails = new CustomerDemographicDetails();
-        customerDemographicDetails.customerDetails();
+       /* CustomerDemographicDetails customerDemographicDetails = new CustomerDemographicDetails();
+        customerDemographicDetails.customerDetails();*/
 
     //modification
        /* CustomerAlterQuery customerAlterQuery = new CustomerAlterQuery();
         customerAlterQuery.alterQuery();*/
+        Properties prop = new Properties();
+        String db = "C:\\WorkSpace\\JDBCSettings.properties";
+        FileReader fr = new FileReader(db);
+        prop.load(fr);
+
+        JdbcQueryUsingSingletonObject jdbcQuery = new JdbcQueryUsingSingletonObject();
+        jdbcQuery.databaseConnection();
+
+
     }
 }
