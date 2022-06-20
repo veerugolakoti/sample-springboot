@@ -20,7 +20,7 @@ public class CustomersEntryDetails {
             try {
 //            Class.forName("com.mysql.jdbc.Driver");
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/codexbox_java_batch1", "root", "vidyacodexbox");
-                String Query1 = "insert into customerDetails values(?,?,?,?,?,?,?)";
+                String Query1 = ("insert into customerDetails values(? ,? ,? ,? ,? ,? ,? )");
                 statement = connection.prepareStatement(Query1);
 
 
@@ -37,8 +37,8 @@ public class CustomersEntryDetails {
                 statement.setString(3, CustomerEmail);
 
                 System.out.println("enter the customer Aadharno : ");
-                int aadharno = scanner.nextInt();
-                statement.setInt(4, aadharno);
+                long aadharno = scanner.nextLong();
+                statement.setLong(4, aadharno);
 
                 System.out.println("enter the customer PhoneNo :");
                 long phoneNo = scanner.nextLong();

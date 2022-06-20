@@ -1,5 +1,7 @@
 package com.codexbox.springboot.app.vidyadarna.jdbcexample;
 
+import com.codexbox.springboot.app.vidyadarna.coustmerPercheasDetails_Assesment.CodexDataBaseSingleTon;
+
 import java.sql.*;
 
 public class PreparedStmtExample {
@@ -10,9 +12,11 @@ public class PreparedStmtExample {
     public  void    preparedexample() {
 //        step 1 load the jdbc driver
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-//         step 2 get connection
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/codexbox_java_batch1", "root", "vidyacodexbox");
+            CodexDataBaseSingleTon codexDataBaseSingleTon = new CodexDataBaseSingleTon();
+            codexDataBaseSingleTon.getCodexDataBaseSingleTon();
+            //            Class.forName("com.mysql.cj.jdbc.Driver");
+////         step 2 get connection
+//            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/codexbox_java_batch1", "root", "vidyacodexbox");
 //         step 3 create Statement
           String Query = "filtter into Persons(PersonId,LastName,FirstName)values(?,?,?)";
 
@@ -32,8 +36,8 @@ public class PreparedStmtExample {
                 System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3));
 
             }
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+//        } catch (ClassNotFoundException e) {
+//            throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

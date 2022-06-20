@@ -17,7 +17,7 @@ public class CustomerDetails {
 //            2 step get connection
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/codexbox_java_batch1", "root", "vidyacodexbox");
             statement=  connection.createStatement();
-            String customers = "Create table customerDetails (Customer_Name varchar(20),Customer_Id int(10) primary key,Customer_Email varChar(25) unique,Customer_Aadharno int(20) unique,Customer_Phoneno long(15) unique,Customer_DateOfBirth varchar(20) unique,Customer_Address varchar(25) unique )";
+            String customers = "Create table customerDetails (Customer_Name varchar(20),Customer_Id int(10) primary key,Customer_Email varChar(25) unique,Customer_Aadharno bigint unique,Customer_Phoneno bigint unique,Customer_DateOfBirth varchar(20) unique,Customer_Address varchar(25) unique )";
             statement.execute(customers);
             System.out.println("table created");
 //        } catch (ClassNotFoundException e) {
