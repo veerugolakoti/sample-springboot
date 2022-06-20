@@ -3,8 +3,11 @@ package com.codexbox.springboot.app.TejaAravind;
 
 import com.codexbox.springboot.app.TejaAravind.MultiThreading.*;
 import com.codexbox.springboot.app.TejaAravind.Streams.ReadWriteData;
+import com.codexbox.springboot.app.TejaAravind.jdbc.ConnectionSingleton;
 import com.codexbox.springboot.app.TejaAravind.jdbc.Employee;
+import com.codexbox.springboot.app.TejaAravind.jdbc.JdbcDynamicExample;
 import com.codexbox.springboot.app.TejaAravind.jdbc.JdbcExample;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -139,7 +142,7 @@ public class NewMain {
    }*/
 
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         JdbcExample jdbc = new JdbcExample();
         List<Employee> empList = jdbc.getDetails();
         for (Employee emp : empList) {
@@ -149,6 +152,20 @@ public class NewMain {
             System.out.println(emp.getEmpSalary());
             System.out.println(emp.getPhoneNo());
         }
+
+    }*/
+
+
+
+    public static void main(String[] args) {
+        JdbcDynamicExample example = new JdbcDynamicExample();
+        example.test();
+       /* ConnectionSingleton connectionSingleton = ConnectionSingleton.getConnectionSingleton();
+        System.out.println(connectionSingleton.driver);*/
+
+
+
+
 
     }
 }

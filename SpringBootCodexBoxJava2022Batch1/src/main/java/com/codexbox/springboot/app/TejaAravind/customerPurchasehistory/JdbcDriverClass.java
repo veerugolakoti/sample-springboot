@@ -125,36 +125,39 @@ public class JdbcDriverClass {
 
     }
     public boolean checkInDb(Integer value) throws SQLException {
-        List<Integer> list = new ArrayList<>();
         String query = "SELECT id FROM codexsample.customerpurchasehistory;";
         statement = connection.prepareStatement(query);
         resultSet = statement.executeQuery();
-
         while (resultSet.next()){
-           list.add(resultSet.getInt("id"));
+           if (resultSet.getInt("id")  == value){
+               return true;
+           }
         }
-         return list.contains(value);
+        return false;
+
     }
     public boolean checkInDb(Long value, String name) throws SQLException {
-        List<Long> list = new ArrayList<>();
         String query = "SELECT aadharNo,phoneNo FROM codexsample.customerpurchasehistory;";
         statement = connection.prepareStatement(query);
         resultSet = statement.executeQuery(query);
         while (resultSet.next()){
-            list.add(resultSet.getLong(name));
+            if (resultSet.getLong(name) == value){
+                return true;
+            }
         }
-        return list.contains(value);
+        return false;
 
     }
     public boolean checkInDb(String value, String name) throws SQLException {
-        List<String> list = new ArrayList<>();
         String query = "SELECT emailId FROM codexsample.customerpurchasehistory;";
         statement = connection.prepareStatement(query);
         resultSet = statement.executeQuery(query);
         while (resultSet.next()){
-            list.add(resultSet.getString(name));
+            if (resultSet.getString(name).equals(value)){
+                return  true;
+            }
         }
-        return list.contains(value);
+        return false;
 
     }
 
