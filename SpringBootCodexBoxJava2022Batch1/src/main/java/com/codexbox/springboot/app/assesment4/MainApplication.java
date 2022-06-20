@@ -1,14 +1,19 @@
 package com.codexbox.springboot.app.assesment4;
 
 import com.codexbox.springboot.app.rehana.customepurchaseHistory.Scannerclass;
+import com.codexbox.springboot.app.rehana.jdbc.JdbcSingletonClass;
+import com.codexbox.springboot.app.rehana.jdbc.SingletoneDataBaseConnection;
+import org.springframework.boot.autoconfigure.batch.BatchProperties;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class MainApplication {
     public static void main(String[] args) throws IOException, SQLException {
-        Scannerclass sc = new Scannerclass();
-        sc.insertCustomerDetails();
+        JdbcSingletonClass jdbcSingletonClass = new JdbcSingletonClass();
+        jdbcSingletonClass.test();
+        /*Scannerclass sc = new Scannerclass();
+        sc.insertCustomerDetails();*/
         /*JdbcExample jdbcExample = new JdbcExample();
         jdbcExample.studentDeatils();*/
 

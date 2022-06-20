@@ -10,12 +10,10 @@ public class JdbcExample {
         Statement statement = null;
         ResultSet resultSet = null;
         try {
-           // List<StudentEx> lists = new ArrayList<>();
             Class.forName("com.mysql.cj.jdbc.Driver");
              connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/rehana_schema","root","Choti@123");
             String query ="select * from student";
              statement = connection.createStatement();
-
             resultSet = statement.executeQuery(query);
             List<StudentEx> lists = new ArrayList<>();
             while (resultSet.next()){
