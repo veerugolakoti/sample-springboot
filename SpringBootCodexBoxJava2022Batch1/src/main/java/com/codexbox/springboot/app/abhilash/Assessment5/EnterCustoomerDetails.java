@@ -1,4 +1,6 @@
-package com.codexbox.springboot.app.abhilash.JdbcExample;
+package com.codexbox.springboot.app.abhilash.Assessment5;
+
+import com.codexbox.springboot.app.abhilash.JdbcExample.SingletonConnection;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

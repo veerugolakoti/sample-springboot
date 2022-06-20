@@ -1,8 +1,5 @@
 package com.codexbox.springboot.app.abhilash.Assessment5;
 
-import com.codexbox.springboot.app.abhilash.JdbcExample.EnterCustoomerDetails;
-import java.sql.SQLException;
-import java.util.Scanner;
 public class InsertCustomerDetails {
     public void insertCustomers() {
 //        System.out.println("Enter number of customers want to insert:");
