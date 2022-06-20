@@ -1,5 +1,7 @@
 package com.codexbox.springboot.app.sohailspringbootproject.jdbc;
 
+import com.codexbox.springboot.app.sohailspringbootproject.test.DataBaseSingletonConnection;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +18,8 @@ public class JdbcExample {
 //            1.Load the driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 //            2.Get the connection
-            connection= SingletonConnection.getConnection();
+            DataBaseSingletonConnection dataBaseSingletonConnection = DataBaseSingletonConnection.getdataBaseSingletonConnection();
+          dataBaseSingletonConnection.getConnection();
 //            3.create statement
             String query = "select * from student";
             statement =  connection.createStatement();

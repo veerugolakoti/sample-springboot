@@ -23,9 +23,6 @@ public class CustomerEntryDetails {
         this.name = name;
     }
 
-    public int getAadhar() {
-        return aadhar;
-    }
 
     public void setAadhar(int aadhar) {
         this.aadhar = aadhar;
