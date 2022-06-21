@@ -1,6 +1,6 @@
 package main;
 
-import assessment5.CustomerDetails;
+import jdbcConnections.MyDbConnections;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.sql.SQLException;
@@ -8,13 +8,19 @@ import java.sql.SQLException;
 @SpringBootApplication
 public class SpringBootCodexBoxJava2022Batch1Application {
 	public static void main(String[] args) {
-		CustomerDetails customerDetails=new CustomerDetails();
+		try {
+			MyDbConnections.mydataBaseConnection();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}}
+	/*	CustomerDetails customerDetails=new CustomerDetails();
 		try {
 			customerDetails.myCustomerDetails();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-	}}
+	}}*/
 	/*	PreparedStatementExample ps=new PreparedStatementExample();
 		try {
 			ps.myPrepared();

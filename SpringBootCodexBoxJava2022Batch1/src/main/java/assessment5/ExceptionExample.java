@@ -29,7 +29,6 @@ public class ExceptionExample {
            System.out.println("enter DateOfBirth : ");
            dob = sc.next();
        }
-
        Connection connection=null;
        PreparedStatement preparedStatement=null;
        ResultSet resultSet=null;

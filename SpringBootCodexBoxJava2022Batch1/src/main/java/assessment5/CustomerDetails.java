@@ -57,9 +57,8 @@ public class CustomerDetails {
             throw new RuntimeException(e);
         } catch (SQLException e) {
             System.out.println("you are entered element is duplicate and Try again ");
-            ExceptionExample exceptionExample=new ExceptionExample();
-            exceptionExample.myException();
-
+            CustomerDetails customerDetails=new CustomerDetails();
+            customerDetails.myCustomerDetails();
         }
         finally {
            if (resultSet != null)resultSet.close();
