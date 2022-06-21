@@ -8,12 +8,14 @@ import com.codexbox.springboot.app.abhilash.Diamond;
 import com.codexbox.springboot.app.abhilash.Employee;
 import com.codexbox.springboot.app.abhilash.JdbcExample.ConnectionExample;
 import com.codexbox.springboot.app.abhilash.JdbcExample.PreparedstatementExample;
+import com.codexbox.springboot.app.abhilash.JdbcExample.UsingApplicationProperties;
 import com.codexbox.springboot.app.abhilash.filehandling.FileHandlingExample;
 import com.codexbox.springboot.app.abhilash.multithreading.MultithreadingExample2;
 import com.codexbox.springboot.app.abhilash.multithreading.MultitreadingExample;
 import com.mysql.cj.x.protobuf.MysqlxCrud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 import javax.swing.plaf.multi.MultiInternalFrameUI;
 import java.io.IOException;
@@ -31,11 +33,14 @@ public class MainApplication {
 		SpringApplication.run(com.codexbox.springboot.app.SpringBootCodexBoxJava2022Batch1Application.class, args);
 //		Customer_Demographic_Details customer_demographic_details = new Customer_Demographic_Details();
 //		customer_demographic_details.create();
-		InsertCustomerDetails insertCustomerDetails = new InsertCustomerDetails();
-		insertCustomerDetails.insertCustomers();
-
-
-
+//		InsertCustomerDetails insertCustomerDetails = new InsertCustomerDetails();
+//		insertCustomerDetails.insertCustomers();
+		//UsingApplicationProperties obj = new UsingApplicationProperties();
+		try {
+			UsingApplicationProperties.example();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 
 
 		//		ConnectionExample con = new ConnectionExample();
